@@ -2,13 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} 
 
 body {
     background-color: #f2f2f2;
 }
 
-h1, h2, h3, h4 {
+h2, h3, h4 {
     text-align: center;
     color: #000;
 }
@@ -22,9 +22,52 @@ li {
     color: rgb(39, 155, 4);
 }
 
+.bkgwhite {
+    background-color: #fff;
+}
+
 .contenedor {
     width: 95%;
     max-width: 1200px;
     margin: auto;
     overflow: hidden;
+}
+
+.contenedor_nav {
+    display: flex;
+    height: inherit;
+}
+
+.nav {
+    height: 60px;
+    background-color: #000;
+    color: #fff;
+}
+
+.logo_sup {
+    height: 100%;
+}
+
+nav a {
+    color: #fff;
+}
+
+/* ? HERO */
+
+.hero {
+    background-image: url(../img/Fondo_Hero_1920.jpg);
+    height: 700px;
+}
+
+.hero p {
+    text-align: left;
+}
+
+/* ! -------------------------------------------------------------------------------------------------- */
+/* ! PAGINA: MENU */
+/* ! -------------------------------------------------------------------------------------------------- */
+
+table thead th {
+    background-color: black;
+    color: #fff;
 }
