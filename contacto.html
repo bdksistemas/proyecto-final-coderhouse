@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Final</title>
+
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div>
+            <img src="img/logo_small.png" alt="Logotipo">
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="menu.html">Menú</a>
+                <a href="promos.html">Promociones</a>
+                <a href="galeria.html">Galería</a>
+                <a href="blog.html">Blog</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <i class='bx bxs-cart-alt'></i>
+        </div>
+        <div>
+            <div>
+                <h1>Eventos y Reservaciones</h1>
+                <p>Ponte en contacto con nosotros para organizar tu evento o reservar una mesa para esa fecha especial</p>
+            </div>
+            <img src="img/picture_vacia.jpg" alt="">
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+        <section>
+            <h2>Envíanos los datos de tu evento</h2>
+            <form action="">
+                <fieldset >
+                    <legend>Formulario de contacto</legend>
+                    <div>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                        <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="telefono">Teléfono</label>
+                        <input type="phone" name="telefono" id="telefono" placeholder="9999999999" required>
+                        <label for="email">E-Mail</label>
+                        <input type="email" name="email" id="email" placeholder="Captura tu e-mail" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="evento">Tipo de evento</label>
+                        <select name="evento" id="evento">
+                            <option value="argentina">Reservación</option>
+                            <option value="argentina">Boda</option>
+                            <option value="mexico">Quinceñera</option>
+                            <option value="colombia">Posada</option>
+                            <option value="colombia">Reunión de trabajo</option>
+                            <option value="colombia">Cumpleaños</option>
+                        </select>
+                    </div>
+                    <br>
+                </fieldset>
+                <fieldset>
+                    <legend>Datos del evento</legend>
+                    <div>
+                        <label for="personas">Cantidad de personas</label>
+                        <input type="numbre" name="personas" id="persoinas">
+                        <label for="descrip">Cuéntanos más de tu evento</label>
+                        <textarea name="descrip" id="descrip" cols="50" rows="10" placeholder="Describe aquí tus requerimientos" required></textarea>
+                    </div>
+                </fieldset>
+                <div>
+                    <input type="submit" value="Enviar Datos">
+                    <input type="reset" value="Borrar datos">
+                    <input type="button" value="Sin acción">
+                </div>
+        </form>
+        </section>
+
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div>
+            <!-- Menu de Opciones -->
+            <div>
+                <h3>Menú</h3>
+                <div>
+                    <a href="index.html">Inicio</a>
+                    <a href="menu.html">Menú</a>
+                    <a href="promos.html">Promociones</a>
+                </div>
+                <div>
+                    <a href="galeria.html">Galería</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contacto.html">Contacto</a>
+                </div>
+            </div>
+            <!-- Dirección -->
+            <div>
+                <h2>Dirección</h2>
+                <p><i class='bx bxs-map' ></i> Av. Insurgentes 345, Centro, Mty, N.L.</p>
+                <p><i class='bx bxs-phone-call' ></i> +52 811 999 9999</p>
+                <p><i class='bx bx-mail-send' ></i> ventas@turesteak.com</p>
+                <p><i class='bx bxs-time-five' ></i> Lunes a Domingo de 12pm a 1am</p>
+
+            </div>
+            <!-- Redes Sociales -->
+            <div>
+                <h3>Redes Sociales</h3>
+                <div>
+                    <i class='bx bxl-facebook-circle' ></i>
+                    <i class='bx bxl-instagram-alt' ></i>
+                    <i class='bx bxl-youtube' ></i>
+                    <i class='bx bxl-whatsapp' ></i>
+                </div>
+                <i class='bx bxs-up-arrow-circle' ></i>
+            </div>
+        </div>
+        <div>
+            <p>Todos los derechos reservados</p>
+            <div>
+                <a href="#">Terminos y condiciones</a>
+                <p> / </p>
+                <a href="#">Política de privacidad</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
