@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Final</title>
 
+    <!-- FUENTE NUNITO DE GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
@@ -38,87 +43,110 @@
                     <a href="blog.html">Blog</a>
                     <a href="contacto.html">Contacto</a>
                 </nav>
-                <i class='bx bxs-cart-alt'></i>
+                <div class="iconosNav">
+                    <i class='bx bxs-cart-alt iconos'></i>
+                    <i class='bx bxs-dish iconos'></i>
+                </div>
             </div>
         </div>
         <div class="hero">
-            <div>
+            <div class="hero_content">
                 <img src="img/Logo_negro.png" alt="">
-                <h1>Steakhouse + Bar</h1>
-                <p>Los mejores cortes finos los encontrarás aquí</p>
-                <a href="menu.html">Ver menú</a>
+                <h1>Steakhouse <span>+Bar</span></h1>
+                <p class="preTitulo">Los mejores cortes finos los encontrarás aquí</p>
+                <a href="menu.html" class="boton">Ver menú</a>                
+            </div>
+            <div class="hero_content2">
+
             </div>
         </div>
-    </header>
+    </header> 
 
     <!-- MAIN -->
     <main>
 
-        <!-- PRESENTACIÓN -->
-        <article class="contenedor">
-            <h2>Bienvenido a TURESTEAK</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat ipsam harum qui cupiditate cumque animi blanditiis, debitis autem ab? Repellendus dolorum, totam quis commodi ducimus hic doloremque ab in quam.</p>
-            <div>
-                <img src="img/Master_Chef.jpg" alt="Foto del Master Chef">
-                <h3>Juan Perez</h3>
-                <p>Master Chef</p>
-            </div>
+        <!-- HISTORIA -->
+        <article class="contenedor historia">            
+            <div>        
+                <div>
+                    <picture>
+                        <source srcset="img/img_ourhistorywepe.webp">
+                        <source srcset="img/img_ourhistoryjpg.jpg">
+                        <img src="img/img_ourhistoryjpg.jpg" alt="Imagen de nuestra historia">
+                    </picture>
+                </div>                                      
+                <div>
+                    <p class="preTitulo preTitulo_mod">Sobre nosotros</p>
+                    <h2 class="titulo titulo_mod">Bienvenido a Hot Grill</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem autem obcaecati provident quo voluptatibus aspernatur sed. Eveniet quos ut, recusandae dicta enim deleniti magni? Mollitia repellat quidem quo alias? Deleniti nesciunt perspiciatis nihil voluptate quisquam a voluptas tempore. Molestias, sed est, delectus neque cupiditate aliquam placeat adipisci obcaecati dolor hic officia saepe, animi voluptates voluptas impedit illo. Vero sint delectus sunt eaque eligendi, quisquam, facere fugiat ut, quae fuga nihil reprehenderit. Aliquam repudiandae soluta animi dolorem optio ipsa molestias fugiat et ratione. A sed reiciendis error accusantium laborum modi nobis aliquid sapiente sequi deleniti corrupti iste, ex tempora similique ab.</p>
+                    <div>
+                        <img src="img/Master_Chef.jpg" alt="Foto del Master Chef">
+                        <div>
+                            <h3>Juan Perez</h3>
+                            <span>Master Chef</span>
+                        </div>
+                    </div>                
+                </div>
+            </div>
         </article>
 
         <!-- OFERTAS DESTACADAS -->
-        <section class="contenedor bkgwhite">
-            <h2>Ofertas destacadas</h2>
-            <p>Especial de la semana</p>
+        <section class="bkgwhite">
+            <p class="preTitulo">Especial de la semana</p>
+            <h2 class="titulo">Ofertas destacadas</h2>
 
-            <!-- CARD DE UNA PROMOCIÓN -->
-            <div>
+            <div class="contenedor ofertas">
                 <div>
-                    <h3>30 <span>%</span></h3>
+                    <!-- CARD DE UNA PROMOCIÓN -->
+                    <div>
+                        <div>
+                            <h4>30<span>%</span></h4>
+                        </div>
+                        <h3>Desayuno Buffet</h3>
+                        <ul class="incluye">
+                            <li>Variedad de platillos</li>
+                            <li>Café ilimitado</li>
+                            <li>Frutas</li>
+                            <li>Jugo de naranja</li>
+                        </ul>
+                        <a href="#" class="boton">Ordenar</a>
+                    </div>
+                    <!-- Card con foto de la promoción -->
+                    <div>
+                        <img src="img/desayuno-buffet.jpeg" alt="Desayuno Buffet">
+                        <p>Gran variedad de complementos a escoger</p>
+                    </div>
+        
+                    <!-- CARD DE UNA PROMOCIÓN 2 -->
+                    <div>
+                        <div>
+                            <h4>25<span>%</span></h4>
+                        </div>
+                        <h3>Desayuno Americano</h3>
+                        <ul>
+                            <li>Huevos al gusto</li>
+                            <li>Café ilimitado</li>
+                            <li>Pan</li>
+                            <li>Frutas</li>
+                        </ul>
+                        <a href="#" class="boton">Ordenar</a>
+                    </div>
+                    <!-- Card con foto de la promoción -->
+                    <div>
+                        <img src="img/desayuno-americano.jpg" alt="Desayuno Buffet">
+                        <p>Delicioso almuerzo especialmente cocinado para ti</p>
+                    </div>
                 </div>
-                <h3>Desayuno Buffet</h3>
-                <p>Incluye:</p>
-                <ul>
-                    <li>Variedad de platillos</li>
-                    <li>Café ilimitado</li>
-                    <li>Frutas</li>
-                    <li>Jugo de naranja</li>
-                </ul>
-                <a href="#">Ordenar</a>
+                <a href="promos.html" class="boton">Ver más promociones</a>
             </div>
-            <!-- Card con foto de la promoción -->
-            <div>
-                <img src="img/desayuno-buffet.jpeg" alt="Desayuno Buffet">
-                <p>Gran variedad de complementos a escoger</p>
-            </div>
-
-            <!-- CARD DE UNA PROMOCIÓN 2 -->
-            <div>
-                <div>
-                    <h3>25 <span>%</span></h3>
-                </div>
-                <h3>Desayuno Americano</h3>
-                <p>Incluye:</p>
-                <ul>
-                    <li>Huevos al gusto</li>
-                    <li>Café ilimitado</li>
-                    <li>Pan</li>
-                    <li>Frutas</li>
-                </ul>
-                <a href="#">Ordenar</a>
-            </div>
-            <!-- Card con foto de la promoción -->
-            <div>
-                <img src="img/desayuno-americano.jpg" alt="Desayuno Buffet">
-                <p>Delicioso almuerzo especialmente cocinado para ti</p>
-            </div>
-            <a href="promos.html">Ver más promociones</a>
         </section>
 
         <!-- DESTACADOS -->
         <section>
-            <h2>Lo que nos diferencía de los demás</h2>
+            <p class="preTitulo">Porqué elegirnos</p>
+            <h2 class="titulo">Lo que nos diferencía de los demás</h2>
             <!-- CARDS -->
-            <div class="contenedor" >
+            <div class="contenedor destacados" >
                 <div>
                     <i class='bx bx-dish'></i>
                     <h3>Comida de alta calidad</h3>
@@ -153,88 +181,104 @@
         </section>
 
         <!-- VÍDEO -->
-        <section>
+        <section class="bkgwhite">
             <!-- La sección llevaría una imagén de fondo -->
-            <h3>El mejor ambiente familiar</h3>
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/zLRdC9nxmqc?start=104" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="preTitulo">Gran ambiente</p>
+            <h3 class="titulo">El mejor ambiente familiar</h3>
+            <div class="contenedor">
+                <iframe width="100%" height="450" src="https://www.youtube.com/embed/zLRdC9nxmqc?start=104" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </section>
 
         <!-- PLATILLOS ESTRELLA -->
-        <section class="contenedor bkgwhite">
-            <h2>Nuestros platillos estrella</h2>
-            <div>
-                <!-- CARD PLATILLO-->
+        <section>
+            <p class="preTitulo">Delicios platillos a escoger</p>
+            <h2 class="titulo">Nuestros platillos estrella</h2>
+            <div class="contenedor menu">
                 <div>
-                    <img src="img/Platillo_1.jpg" alt="Imagén del platillo">
-                    <h3>Nombre del platillo</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed labore quis dolorem nobis! Hic repellendus ipsum animi obcaecati, minus placeat.</p>
-                    <ul>
-                        <li>400gr ribeye de la mejor calidad</li>
-                        <li>Papa asada</li>
-                        <li>Cebolla asada</li>
-                        <li>Incluye sopa del día</li>
-                    </ul>
+                    <!-- CARD PLATILLO-->
+                    <div>
+                        <img src="img/Platillo_1.jpg" alt="Imagén del platillo">
+                        <h3>Nombre del platillo</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed labore quis dolorem nobis! Hic repellendus ipsum animi obcaecati, minus placeat.</p>
+                        <ul>
+                            <li>400gr ribeye de la mejor calidad</li>
+                            <li>Papa asada</li>
+                            <li>Cebolla asada</li>
+                            <li>Incluye sopa del día</li>
+                        </ul>
+                        <span>$15.99</span>
+                        <a href="#" class="boton">Agregar al carrito</a>        
+                    </div>
+                    <div>
+                        <img src="img/Platillo_2.jpg" alt="Imagén del platillo">
+                        <h3>Nombre del platillo</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed labore quis dolorem nobis! Hic repellendus ipsum animi obcaecati, minus placeat.</p>
+                        <ul>
+                            <li>400gr ribeye de la mejor calidad</li>
+                            <li>Papa asada</li>
+                            <li>Cebolla asada</li>
+                            <li>Incluye sopa del día</li>
+                        </ul>
+                        <span>$15.99</span>
+                        <a href="#" class="boton">Agregar al carrito</a>        
+                    </div>
+                    <div>
+                        <img src="img/Platillo_3.jpg" alt="Imagén del platillo">
+                        <h3>Nombre del platillo</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed labore quis dolorem nobis! Hic repellendus ipsum animi obcaecati, minus placeat.</p>
+                        <ul>
+                            <li>400gr ribeye de la mejor calidad</li>
+                            <li>Papa asada</li>
+                            <li>Cebolla asada</li>
+                            <li>Incluye sopa del día</li>
+                        </ul>
+                        <span>$15.99</span>
+                        <a href="#" class="boton">Agregar al carrito</a>        
+                    </div>
+                    <div>
+                        <img src="img/Platillo_4.jpg" alt="Imagén del platillo">
+                        <h3>Nombre del platillo</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed labore quis dolorem nobis! Hic repellendus ipsum animi obcaecati, minus placeat.</p>
+                        <ul>
+                            <li>400gr ribeye de la mejor calidad</li>
+                            <li>Papa asada</li>
+                            <li>Cebolla asada</li>
+                            <li>Incluye sopa del día</li>
+                        </ul>
+                        <span>$15.99</span>
+                        <a href="#" class="boton">Agregar al carrito</a>        
+                    </div>
                 </div>
-                <div>
-                    <img src="img/Platillo_2.jpg" alt="Imagén del platillo">
-                    <h3>Nombre del platillo</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed labore quis dolorem nobis! Hic repellendus ipsum animi obcaecati, minus placeat.</p>
-                    <ul>
-                        <li>400gr ribeye de la mejor calidad</li>
-                        <li>Papa asada</li>
-                        <li>Cebolla asada</li>
-                        <li>Incluye sopa del día</li>
-                    </ul>
-                </div>
-                <div>
-                    <img src="img/Platillo_3.jpg" alt="Imagén del platillo">
-                    <h3>Nombre del platillo</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed labore quis dolorem nobis! Hic repellendus ipsum animi obcaecati, minus placeat.</p>
-                    <ul>
-                        <li>400gr ribeye de la mejor calidad</li>
-                        <li>Papa asada</li>
-                        <li>Cebolla asada</li>
-                        <li>Incluye sopa del día</li>
-                    </ul>
-                </div>
-                <div>
-                    <img src="img/Platillo_4.jpg" alt="Imagén del platillo">
-                    <h3>Nombre del platillo</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed labore quis dolorem nobis! Hic repellendus ipsum animi obcaecati, minus placeat.</p>
-                    <ul>
-                        <li>400gr ribeye de la mejor calidad</li>
-                        <li>Papa asada</li>
-                        <li>Cebolla asada</li>
-                        <li>Incluye sopa del día</li>
-                    </ul>
-                </div>
+                <a href="menu.html" class="boton">Ver el menú completo</a>
             </div>
-            <a href="menu.html">Ver el menú completo</a>
         </section>
 
         <!-- RESERVACIONES -->
-        <section>
-            <div>  <!-- Div para poner imagen de fondo -->
-                <h3>¡Reserva una mesa ahora!</h3>
-                <a href="contacto.html">Reservar ahora</a>
+        <section class="bkgwhite">
+            <div class="contenedor">  <!-- Div para poner imagen de fondo -->
+                <p class="preTitulo">No te quedes sin lugar</p>
+                <h3 class="titulo">¡Reserva una mesa ahora!</h3>
+                <a href="contacto.html" class="boton">Reservar ahora</a>
             </div>
         </section>
 
         <!-- CHEFS -->
-        <section class="contenedor bkgwhite">
-            <h3>Conoce a nuestros chefs</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente mollitia, perferendis aperiam minima sint illo consequatur laudantium modi pariatur facilis sed necessitatibus vel sequi nam ducimus, quae, dolores deserunt totam?</p>
+        <section class="contenedor">
+            <p class="preTitulo">Chefs</p>
+            <h3 class="titulo">Conoce a nuestros chefs</h3>
+
             <!-- CARDS CHEFS -->
-            <div>
+            <div class="chefs">
                 <!-- CARD CHEF -->
                 <div>
                     <img src="img/chef_01.jpg" alt="">
                     <h3>Nombre del Chef</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, dolore?</p>
                     <div>
-                        <i class='bx bxl-facebook-circle' ></i>
-                        <i class='bx bxl-instagram-alt' ></i>
-                        <i class='bx bxl-youtube' ></i>
+                        <i class='bx bxl-facebook-circle iconos' ></i>
+                        <i class='bx bxl-instagram-alt iconos' ></i>
+                        <i class='bx bxl-youtube iconos'></i>
                     </div>
                 </div>
                 <div>
@@ -242,9 +286,9 @@
                     <h3>Nombre del Chef</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, dolore?</p>
                     <div>
-                        <i class='bx bxl-facebook-circle' ></i>
-                        <i class='bx bxl-instagram-alt' ></i>
-                        <i class='bx bxl-youtube' ></i>
+                        <i class='bx bxl-facebook-circle iconos' ></i>
+                        <i class='bx bxl-instagram-alt iconos' ></i>
+                        <i class='bx bxl-youtube iconos' ></i>
                     </div>
                 </div>
                 <div>
@@ -252,101 +296,137 @@
                     <h3>Nombre del Chef</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, dolore?</p>
                     <div>
-                        <i class='bx bxl-facebook-circle' ></i>
-                        <i class='bx bxl-instagram-alt' ></i>
-                        <i class='bx bxl-youtube' ></i>
+                        <i class='bx bxl-facebook-circle iconos' ></i>
+                        <i class='bx bxl-instagram-alt iconos' ></i>
+                        <i class='bx bxl-youtube iconos' ></i>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- GALERÍA -->
-        <section>
-            <div>
-                <img src="img/Galeria1.jpg" alt="Fotos de la galería">
-                <img src="img/Galeria2.jpg" alt="Fotos de la galería">
-                <img src="img/Galeria3.jpg" alt="Fotos de la galería">
-                <img src="img/Galeria4.jpg" alt="Fotos de la galería">
-                <img src="img/Galeria5.jpg" alt="Fotos de la galería">
-                <img src="img/Galeria6.jpg" alt="Fotos de la galería">
+        <section class="bkgwhite">
+            <p class="preTitulo">Gran ambiente</p>
+            <h2 class="titulo">Galería de fotos</h2>
+            <div class="contenedor">
+                <div>
+                    <img src="img/Galeria1.jpg" alt="Fotos de la galería">
+                    <img src="img/Galeria2.jpg" alt="Fotos de la galería">
+                    <img src="img/Galeria3.jpg" alt="Fotos de la galería">
+                    <img src="img/Galeria4.jpg" alt="Fotos de la galería">
+                    <img src="img/Galeria5.jpg" alt="Fotos de la galería">
+                    <img src="img/Galeria6.jpg" alt="Fotos de la galería">
+                </div>
+                <a href="galeria.html" class="boton">Ver más fotos</a>
             </div>
-            <a href="galeria.html">Ver más fotos</a>
         </section>
 
-        <!-- MÁS CARACTERÍSTICAS -->
-        <section class="contenedor bkgwhite">
-            <div>
+        <!-- CALIDAD -->
+        <section>
+            <p class="preTitulo">Productos de calidad</p>
+            <h2 class="titulo">Seleccionamos lo mejor para ti</h2>
+            
+            <div class="contenedor calidad">
                 <div>
-                    <i class='bx bxs-wine' ></i>
                     <div>
-                        <h3>Carne fresca</h3>                    
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, assumenda?</p>
+                        <i class='bx bxs-wine' ></i>
+                        <div>
+                            <h3>Carne fresca</h3>                    
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, assumenda?</p>
+                        </div>
+                    </div>
+                    <div>
+                        <i class='bx bxs-wine' ></i>
+                        <div>
+                            <h3>Carne fresca</h3>                    
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, assumenda?</p>
+                        </div>
+                    </div>
+                    <div>
+                        <i class='bx bxs-wine' ></i>
+                        <div>
+                            <h3>Carne fresca</h3>                    
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, assumenda?</p>
+                        </div>
                     </div>
                 </div>
                 <div>
-                    <i class='bx bxs-wine' ></i>
+                    <img src="img/chef.png" alt="Chef presentando productos frescos">
+                </div>
+                <div>
                     <div>
-                        <h3>Carne fresca</h3>                    
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, assumenda?</p>
+                        <div>
+                            <h3>Carne fresca</h3>                    
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, assumenda?</p>
+                        </div>
+                        <i class='bx bxs-wine' ></i>
+                    </div>
+                    <div>
+                        <div>
+                            <h3>Carne fresca</h3>                    
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, assumenda?</p>
+                        </div>
+                        <i class='bx bxs-wine' ></i>
+                    </div>
+                    <div>
+                        <div>
+                            <h3>Carne fresca</h3>                    
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, assumenda?</p>
+                        </div>
+                        <i class='bx bxs-wine' ></i>
                     </div>
                 </div>
-                <div>
-                    <i class='bx bxs-wine' ></i>
-                    <div>
-                        <h3>Carne fresca</h3>                    
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, assumenda?</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <img src="img/chef.png" alt="Chef presentando productos frescos">
-            </div>
-            <div>
-                <div>
-                    <h3>Carne fresca</h3>                    
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, assumenda?</p>
-                </div>
-                <i class='bx bxs-wine' ></i>
-            </div>
-            <div>
-                <div>
-                    <h3>Carne fresca</h3>                    
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, assumenda?</p>
-                </div>
-                <i class='bx bxs-wine' ></i>
-            </div>
-            <div>
-                <div>
-                    <h3>Carne fresca</h3>                    
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, assumenda?</p>
-                </div>
-                <i class='bx bxs-wine' ></i>
             </div>
         </section>
 
         <!-- OPINIONES -->
-        <section>
-            <h2>Lo que opinan nuestros clientes</h2>
-            <div>
+        <section class="bkgwhite">
+            <p class="preTitulo">Las mejores recomendaciones</p>
+            <h2 class="titulo">Lo que opinan nuestros clientes</h2>
+            <div class="contenedor reseñas">
                 <div>
+                    <i class='bx bxs-quote-alt-right'></i>                    
                     <img src="img/Cliente_01.jpg" alt="Foto de cliente">
                     <div>
                         <h3>Nombre del cliente</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos repellat repudiandae alias provident aspernatur fugiat vel beatae, quasi nihil temporibus?</p>
                     </div>
+                    <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                    </div>
                 </div>
                 <div>
+                    <i class='bx bxs-quote-alt-right'></i>
                     <img src="img/Cliente_02.jpg" alt="Foto de cliente">
                     <div>
                         <h3>Nombre del cliente</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos repellat repudiandae alias provident aspernatur fugiat vel beatae, quasi nihil temporibus?</p>
                     </div>
+                    <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
+                    </div>
                 </div>
                 <div>
+                    <i class='bx bxs-quote-alt-right'></i>
                     <img src="img/Cliente_03.jpg" alt="Foto de cliente">
                     <div>
                         <h3>Nombre del cliente</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos repellat repudiandae alias provident aspernatur fugiat vel beatae, quasi nihil temporibus?</p>
+                    </div>
+                    <div class="stars">
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star' ></i>
+                        <i class='bx bxs-star-half' ></i>
                     </div>
                 </div>
             </div>
@@ -354,14 +434,16 @@
 
         <!-- UBICACIÓN -->
         <section>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.507275623487!2d-100.15269268461232!3d25.720733016571636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662e9979c4f69fd%3A0x1cd34d05b7ae832a!2sSan%20Fidel%20667%2C%20Jardines%20de%20San%20Patricio%2C%2066647%20Cd%20Apodaca%2C%20N.L.!5e0!3m2!1ses!2smx!4v1631135274539!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>        
+            <p class="preTitulo">No te pierdas</p>            
+            <h2 class="titulo">Conoce nuestra ubicación</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.507275623487!2d-100.15269268461232!3d25.720733016571636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662e9979c4f69fd%3A0x1cd34d05b7ae832a!2sSan%20Fidel%20667%2C%20Jardines%20de%20San%20Patricio%2C%2066647%20Cd%20Apodaca%2C%20N.L.!5e0!3m2!1ses!2smx!4v1631135274539!5m2!1ses!2smx" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" ></iframe>        
         </section>
 
     </main>
 
     <!-- FOOTER -->
     <footer>
-        <div>
+        <div class="footer">
             <!-- Menu de Opciones -->
             <div>
                 <h3>Menú</h3>
@@ -378,7 +460,7 @@
             </div>
             <!-- Dirección -->
             <div>
-                <h2>Dirección</h2>
+                <h3>Dirección</h3>
                 <p><i class='bx bxs-map' ></i> Av. Insurgentes 345, Centro, Mty, N.L.</p>
                 <p><i class='bx bxs-phone-call' ></i> +52 811 999 9999</p>
                 <p><i class='bx bx-mail-send' ></i> ventas@turesteak.com</p>
@@ -397,8 +479,8 @@
                 <i class='bx bxs-up-arrow-circle' ></i>
             </div>
         </div>
-        <div>
-            <p>Todos los derechos reservados</p>
+        <div class="derechos">
+            <p>Todos los derechos reservados 2021 -  Desarrollado por <span>Alejandro Rdz</span></p>
             <div>
                 <a href="#">Terminos y condiciones</a>
                 <p> / </p>

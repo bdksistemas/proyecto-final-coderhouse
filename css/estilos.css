@@ -1,26 +1,93 @@
+:root {
+    --red: #ff2a00;
+    --black: #000;
+    --orange: #ff8a00;
+    --yellow: #ffac00;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+}
+
 * {
-    margin: 0;
-    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    margin: 0; padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: initial;
+    transition: all .2s linear;    
+} 
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 5rem;
 } 
 
 body {
     background-color: #f2f2f2;
 }
 
-h2, h3, h4 {
-    text-align: center;
-    color: #000;
+h1 {
+    font-size: 5.6rem;
 }
 
-p {
-    text-align: center;
-    color: red;
+
+.boton {
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff2a00+40,ff8a00+68,ff8a00+68,ffac00+100 */
+    background: #ff2a00; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #ff2a00 40%, #ff8a00 68%, #ff8a00 68%, #ffac00 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  #ff2a00 40%,#ff8a00 68%,#ff8a00 68%,#ffac00 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  #ff2a00 40%,#ff8a00 68%,#ff8a00 68%,#ffac00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2a00', endColorstr='#ffac00',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
-li {
-    color: rgb(39, 155, 4);
+.boton:hover {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffac00+40,ff8a00+68,ff8a00+68,ff2a00+100 */
+    background: #ffac00; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #ffac00 40%, #ff8a00 68%, #ff8a00 68%, #ff2a00 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #ffac00 40%,#ff8a00 68%,#ff8a00 68%,#ff2a00 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #ffac00 40%,#ff8a00 68%,#ff8a00 68%,#ff2a00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffac00', endColorstr='#ff2a00',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    letter-spacing: .1rem;
 }
+
+.titulo {
+    text-align: center;
+    color: var(--black);
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.titulo_mod {
+    text-align: left;
+}
+
+.preTitulo {
+    text-align: center;
+    color: var(--red);
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+.preTitulo_mod {
+    text-align: left;
+}
+
 
 .bkgwhite {
     background-color: #fff;
@@ -33,15 +100,23 @@ li {
     overflow: hidden;
 }
 
-.contenedor_nav {
-    display: flex;
-    height: inherit;
-}
+/* ? BARRA DE NAVEGACIÓN */
+/* ?___________________________________________________________________________________________________________________________________________ */
+
 
 .nav {
+    position: fixed;
+    width: 100%;
     height: 60px;
     background-color: #000;
     color: #fff;
+}
+
+.contenedor_nav {
+    display: flex;
+    height: inherit;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo_sup {
@@ -49,18 +124,283 @@ li {
 }
 
 nav a {
-    color: #fff;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    color: var(--yellow)
 }
 
+nav a.active,
+nav a:hover {
+    color: #fff;
+
+    background: #ff2a00; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #ff2a00 40%, #ff8a00 68%, #ff8a00 68%, #ffac00 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  #ff2a00 40%,#ff8a00 68%,#ff8a00 68%,#ffac00 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  #ff2a00 40%,#ff8a00 68%,#ff8a00 68%,#ffac00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2a00', endColorstr='#ffac00',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+.iconos {
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: #fff;
+    border-radius: 50%;
+
+    background: #ff2a00; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #ff2a00 40%, #ff8a00 68%, #ff8a00 68%, #ffac00 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  #ff2a00 40%,#ff8a00 68%,#ff8a00 68%,#ffac00 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  #ff2a00 40%,#ff8a00 68%,#ff8a00 68%,#ffac00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2a00', endColorstr='#ffac00',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    
+}
+
+.iconos:hover {
+    color: #fff;
+    transform: rotate(360deg);
+
+    background: #ffac00; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #ffac00 40%, #ff8a00 68%, #ff8a00 68%, #ff2a00 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #ffac00 40%,#ff8a00 68%,#ff8a00 68%,#ff2a00 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #ffac00 40%,#ff8a00 68%,#ff8a00 68%,#ff2a00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffac00', endColorstr='#ff2a00',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+
 /* ? HERO */
+/* ?___________________________________________________________________________________________________________________________________________ */
 
 .hero {
+    /* height: 70rem; */
     background-image: url(../img/Fondo_Hero_1920.jpg);
-    height: 700px;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 9rem;
+    gap: 2rem;
+    margin-bottom: 5rem;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.hero span {
+    color: #ff2a00;
 }
 
 .hero p {
+    font-size: 2.5rem;
     text-align: left;
+}
+
+.hero_content, 
+.hero_content2 {
+    width: 40%;
+}
+
+.hero_content {
+    margin-bottom: 5rem;
+}
+
+.hero_content img {
+    width: 50rem;
+    max-width: 100%;
+}
+
+
+/* ? HISTORIA */
+/* ?___________________________________________________________________________________________________________________________________________ */
+
+.historia {
+
+    padding: 5rem;
+}
+
+.historia p {
+    font-size: 1.5rem;
+}
+
+.historia h3 {
+    font-size: 2.5rem;
+}
+
+.historia span {
+    font-size: 1.4rem;
+    color: var(--red);
+}
+
+
+/* ? OFERTAS */
+/* ?___________________________________________________________________________________________________________________________________________ */
+
+.ofertas h3 {
+    font-size: 2.5rem;
+}
+
+.ofertas h4 {
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+.ofertas span {
+    color: var(--red);
+    font-size: 2rem;
+}
+
+.ofertas ul {
+    list-style-type: disc ; 
+    list-style-position: inside;
+}
+
+.ofertas li {    
+    font-size: 1.5rem;
+    color: var(--red);
+}
+
+.ofertas p {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--light-color);
+}
+
+/* ? DESTACADOS */
+/* ?___________________________________________________________________________________________________________________________________________ */
+
+.destacados h3 {
+    font-size: 2rem;
+}
+
+.destacados p {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--light-color);
+}
+
+.destacados i {
+    font-size: 2rem;
+    color: var(--red);
+}
+
+/* ? MENÚ */
+/* ?___________________________________________________________________________________________________________________________________________ */
+
+.menu h3 {
+    font-size: 1.8rem;
+}
+
+.menu p {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--light-color);
+}
+
+.menu ul {
+    list-style-type: disc ; 
+    list-style-position: inside;
+}
+
+.menu li {    
+    font-size: 1.5rem;
+    color: var(--red);
+}
+
+.menu span {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+/* ? CHEFS */
+/* ?___________________________________________________________________________________________________________________________________________ */
+
+.chefs h3 {
+    font-size: 1.8rem;
+}
+
+.chefs p {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--light-color);
+}
+
+/* ? CALIDAD */
+/* ?___________________________________________________________________________________________________________________________________________ */
+
+.calidad {
+    display: flex;
+}
+
+.calidad h3 {
+    font-size: 1.8rem;
+}
+
+.calidad p {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--light-color);
+}
+
+.calidad i {
+    font-size: 2rem;
+    color: var(--red);
+}
+
+
+/* ? RESEÑAS */
+/* ?___________________________________________________________________________________________________________________________________________ */
+
+.reseñas h3 {
+    font-size: 1.8rem;
+}
+
+.reseñas p {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--light-color);
+}
+
+.reseñas .stars {
+    padding: 1rem 0;
+}
+
+.reseñas .stars i {
+    font-size: 1.7rem;
+    color: var(--orange);
+}
+
+
+/* ? FOOTER */
+/* ?___________________________________________________________________________________________________________________________________________ */
+
+.footer {
+    display: flex;
+}
+
+.footer h3 {
+    font-size: 1.8rem;
+}
+
+.derechos {
+    background-color: var(--black);
+    color: var(--red);
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.derechos a {
+    color: #fff;
+}
+
+.derechos span {
+    color: #fff;
 }
 
 /* ! -------------------------------------------------------------------------------------------------- */

@@ -8,32 +8,41 @@
 
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/estilos.css">
-}
+
 </head>
 <body>
 
-    <!-- HEADER -->
+    <!-- ?HEADER -->
     <header>
-        <div>
-            <img src="img/logo_small.png" alt="Logotipo">
-            <nav>
-                <a href="index.html">Inicio</a>
-                <a href="menu.html">Menú</a>
-                <a href="promos.html">Promociones</a>
-                <a href="galeria.html">Galería</a>
-                <a href="blog.html">Blog</a>
-                <a href="contacto.html">Contacto</a>
-            </nav>
-            <i class='bx bxs-cart-alt'></i>
-        </div>
-        <div>
-            <div>
-                <h1>Promociones de la semana</h1>
-                <p>Especiales para ti y tu familia</p>
+        <div class="nav">                    
+            <div class="contenedor contenedor_nav">
+                <img src="img/Logo_blanco.png" alt="Logotipo" class="logo_sup">
+                <nav>
+                    <a href="index.html">Inicio</a>
+                    <a href="menu.html">Menú</a>
+                    <a href="promos.html">Promociones</a>
+                    <a href="galeria.html">Galería</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+                <div class="iconosNav">
+                    <i class='bx bxs-cart-alt iconos'></i>
+                    <i class='bx bxs-dish iconos'></i>
+                </div>
             </div>
-            <img src="img/picture_vacia.jpg" alt="">
         </div>
-    </header>
+        <div class="hero">
+            <div class="hero_content">
+                <img src="img/Logo_negro.png" alt="">
+                <h1>Steakhouse <span>+Bar</span></h1>
+                <p class="preTitulo">Los mejores cortes finos los encontrarás aquí</p>
+                <a href="menu.html" class="boton">Ver menú</a>                
+            </div>
+            <div class="hero_content2">
+
+            </div>
+        </div>
+    </header> 
 
     <!-- MAIN -->
     <main>
@@ -90,7 +99,7 @@
 
     <!-- FOOTER -->
     <footer>
-        <div>
+        <div class="footer">
             <!-- Menu de Opciones -->
             <div>
                 <h3>Menú</h3>
@@ -107,7 +116,7 @@
             </div>
             <!-- Dirección -->
             <div>
-                <h2>Dirección</h2>
+                <h3>Dirección</h3>
                 <p><i class='bx bxs-map' ></i> Av. Insurgentes 345, Centro, Mty, N.L.</p>
                 <p><i class='bx bxs-phone-call' ></i> +52 811 999 9999</p>
                 <p><i class='bx bx-mail-send' ></i> ventas@turesteak.com</p>
@@ -126,15 +135,15 @@
                 <i class='bx bxs-up-arrow-circle' ></i>
             </div>
         </div>
-        <div>
-            <p>Todos los derechos reservados</p>
+        <div class="derechos">
+            <p>Todos los derechos reservados 2021 -  Desarrollado por <span>Alejandro Rdz</span></p>
             <div>
                 <a href="#">Terminos y condiciones</a>
                 <p> / </p>
                 <a href="#">Política de privacidad</a>
             </div>
         </div>
-    </footer>
+    </footer> 
 
 </body>
 </html>
