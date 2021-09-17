@@ -20,7 +20,7 @@
                 <nav>
                     <a href="index.html">Inicio</a>
                     <a href="menu.html">Menú</a>
-                    <a href="promos.html">Promociones</a>
+                    <a href="promos.html" class="active">Promociones</a>
                     <a href="galeria.html">Galería</a>
                     <a href="blog.html">Blog</a>
                     <a href="contacto.html">Contacto</a>
@@ -29,17 +29,15 @@
                     <i class='bx bxs-cart-alt iconos'></i>
                     <i class='bx bxs-dish iconos'></i>
                 </div>
-            </div>
-        </div>
-        <div class="hero">
-            <div class="hero_content">
-                <img src="img/Logo_negro.png" alt="">
-                <h1>Steakhouse <span>+Bar</span></h1>
-                <p class="preTitulo">Los mejores cortes finos los encontrarás aquí</p>
-                <a href="menu.html" class="boton">Ver menú</a>                
-            </div>
-            <div class="hero_content2">
-
+            </div> 
+        </div>        
+        <div class="hero">            
+            <div class="hero_fondo heroFiltro">
+                <img src="img/Fondo_Promos.jpg" alt="">
+            </div>     
+            <div class="hero_content heroModify">
+                <h1>Porque queremos verte <span>feliz</span></h1>
+                <p class="preTitulo">Tenemos las mejores promociones para ti</p>
             </div>
         </div>
     </header> 
@@ -48,50 +46,52 @@
     <main>
 
         <!-- OFERTAS DESTACADAS -->
-        <section class="contenedor">
-            <h2>Ofertas destacadas</h2>
-            <p>Especial de la semana</p>
+        <section class="bkgwhite">
+            <p class="preTitulo">Especial de la semana</p>
+            <h2 class="titulo">Ofertas destacadas</h2>
 
-            <!-- CARD DE UNA PROMOCIÓN -->
-            <div>
+            <div class="contenedor ofertas">
                 <div>
-                    <h3>30 <span>%</span></h3>
+                    <!-- CARD DE UNA PROMOCIÓN -->
+                    <div>
+                        <div>
+                            <h4>30<span>%</span></h4>
+                        </div>
+                        <h3>Desayuno Buffet</h3>
+                        <ul class="incluye">
+                            <li>Variedad de platillos</li>
+                            <li>Café ilimitado</li>
+                            <li>Frutas</li>
+                            <li>Jugo de naranja</li>
+                        </ul>
+                        <a href="#" class="boton">Ordenar</a>
+                    </div>
+                    <!-- Card con foto de la promoción -->
+                    <div>
+                        <img src="img/desayuno-buffet.jpeg" alt="Desayuno Buffet">
+                        <p>Gran variedad de complementos a escoger</p>
+                    </div>
+        
+                    <!-- CARD DE UNA PROMOCIÓN 2 -->
+                    <div>
+                        <div>
+                            <h4>25<span>%</span></h4>
+                        </div>
+                        <h3>Desayuno Americano</h3>
+                        <ul>
+                            <li>Huevos al gusto</li>
+                            <li>Café ilimitado</li>
+                            <li>Pan</li>
+                            <li>Frutas</li>
+                        </ul>
+                        <a href="#" class="boton">Ordenar</a>
+                    </div>
+                    <!-- Card con foto de la promoción -->
+                    <div>
+                        <img src="img/desayuno-americano.jpg" alt="Desayuno Buffet">
+                        <p>Delicioso almuerzo especialmente cocinado para ti</p>
+                    </div>
                 </div>
-                <h3>Desayuno Buffet</h3>
-                <p>Incluye:</p>
-                <ul>
-                    <li>Variedad de platillos</li>
-                    <li>Café ilimitado</li>
-                    <li>Frutas</li>
-                    <li>Jugo de naranja</li>
-                </ul>
-                <a href="#">Ordenar</a>
-            </div>
-            <!-- Card con foto de la promoción -->
-            <div>
-                <img src="img/desayuno-buffet.jpeg" alt="Desayuno Buffet">
-                <p>Gran variedad de complementos a escoger</p>
-            </div>
-
-            <!-- CARD DE UNA PROMOCIÓN 2 -->
-            <div>
-                <div>
-                    <h3>25 <span>%</span></h3>
-                </div>
-                <h3>Desayuno Americano</h3>
-                <p>Incluye:</p>
-                <ul>
-                    <li>Huevos al gusto</li>
-                    <li>Café ilimitado</li>
-                    <li>Pan</li>
-                    <li>Frutas</li>
-                </ul>
-                <a href="#">Ordenar</a>
-            </div>
-            <!-- Card con foto de la promoción -->
-            <div>
-                <img src="img/desayuno-americano.jpg" alt="Desayuno Buffet">
-                <p>Delicioso almuerzo especialmente cocinado para ti</p>
             </div>
         </section>
 

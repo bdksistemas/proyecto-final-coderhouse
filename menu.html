@@ -19,7 +19,7 @@
                 <img src="img/Logo_blanco.png" alt="Logotipo" class="logo_sup">
                 <nav>
                     <a href="index.html">Inicio</a>
-                    <a href="menu.html">Menú</a>
+                    <a href="menu.html" class="active">Menú</a>
                     <a href="promos.html">Promociones</a>
                     <a href="galeria.html">Galería</a>
                     <a href="blog.html">Blog</a>
@@ -31,15 +31,13 @@
                 </div>
             </div>
         </div>
-        <div class="hero">
+        <div class="hero heroModify">
+            <div class="hero_fondo heroFiltro">
+                <img src="img/FondoMenu.jpg" alt="Fondo de la página principal">
+            </div>     
             <div class="hero_content">
-                <img src="img/Logo_negro.png" alt="">
-                <h1>Steakhouse <span>+Bar</span></h1>
-                <p class="preTitulo">Los mejores cortes finos los encontrarás aquí</p>
-                <a href="menu.html" class="boton">Ver menú</a>                
-            </div>
-            <div class="hero_content2">
-
+                <h1>Cielo, Mar y <span>Tierra</span></h1>
+                <p class="preTitulo">Conoce nuestro menú especialmente diseñado para satisfacer todos tus gustos.</p>
             </div>
         </div>
     </header> 
@@ -48,119 +46,79 @@
     <main>
 
         <!-- PLATILLOS ESTRELLA -->
-        <section class="contenedor">
-            <h2>Nuestros platillos estrella</h2>
-            <div>
-                <!-- CARD PLATILLO-->
-                <div>
-                    <img src="img/imagen_card.png" alt="Imagén del platillo">
-                    <h3>Nombre del platillo</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed labore quis dolorem nobis! Hic repellendus ipsum animi obcaecati, minus placeat.</p>
+        <section>
+            <p class="preTitulo">Delicios platillos a escoger</p>
+            <h2 class="titulo">Nuestros platillos estrella</h2>
+            
+            <div class="contenedor menu">
+
+                <div class="categorias">
                     <ul>
-                        <li>400gr ribeye de la mejor calidad</li>
-                        <li>Papa asada</li>
-                        <li>Cebolla asada</li>
-                        <li>Incluye sopa del día</li>
+                        <li class="botonFiltro catActvie">Entradas</li>
+                        <li class="botonFiltro">Cortes Finos</li>
+                        <li class="botonFiltro">Mariscos</li>
+                        <li class="botonFiltro">Aves</li>
+                        <li class="botonFiltro">Snack</li>
+                        <li class="botonFiltro">Bebidas</li>
                     </ul>
                 </div>
+    
                 <div>
-                    <img src="img/imagen_card.png" alt="Imagén del platillo">
-                    <h3>Nombre del platillo</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed labore quis dolorem nobis! Hic repellendus ipsum animi obcaecati, minus placeat.</p>
-                    <ul>
-                        <li>400gr ribeye de la mejor calidad</li>
-                        <li>Papa asada</li>
-                        <li>Cebolla asada</li>
-                        <li>Incluye sopa del día</li>
-                    </ul>
-                </div>
-                <div>
-                    <img src="img/imagen_card.png" alt="Imagén del platillo">
-                    <h3>Nombre del platillo</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed labore quis dolorem nobis! Hic repellendus ipsum animi obcaecati, minus placeat.</p>
-                    <ul>
-                        <li>400gr ribeye de la mejor calidad</li>
-                        <li>Papa asada</li>
-                        <li>Cebolla asada</li>
-                        <li>Incluye sopa del día</li>
-                    </ul>
-                </div>
-                <div>
-                    <img src="img/imagen_card.png" alt="Imagén del platillo">
-                    <h3>Nombre del platillo</h3>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed labore quis dolorem nobis! Hic repellendus ipsum animi obcaecati, minus placeat.</p>
-                    <ul>
-                        <li>400gr ribeye de la mejor calidad</li>
-                        <li>Papa asada</li>
-                        <li>Cebolla asada</li>
-                        <li>Incluye sopa del día</li>
-                    </ul>
+                    <!-- CARD PLATILLO-->
+                    <div>
+                        <img src="img/Platillo_1.jpg" alt="Imagén del platillo">
+                        <h3>Nombre del platillo</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed labore quis dolorem nobis! Hic repellendus ipsum animi obcaecati, minus placeat.</p>
+                        <ul>
+                            <li>400gr ribeye de la mejor calidad</li>
+                            <li>Papa asada</li>
+                            <li>Cebolla asada</li>
+                            <li>Incluye sopa del día</li>
+                        </ul>
+                        <span>$15.99</span>
+                        <a href="#" class="boton">Agregar al carrito</a>        
+                    </div>
+                    <div>
+                        <img src="img/Platillo_2.jpg" alt="Imagén del platillo">
+                        <h3>Nombre del platillo</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed labore quis dolorem nobis! Hic repellendus ipsum animi obcaecati, minus placeat.</p>
+                        <ul>
+                            <li>400gr ribeye de la mejor calidad</li>
+                            <li>Papa asada</li>
+                            <li>Cebolla asada</li>
+                            <li>Incluye sopa del día</li>
+                        </ul>
+                        <span>$15.99</span>
+                        <a href="#" class="boton">Agregar al carrito</a>        
+                    </div>
+                    <div>
+                        <img src="img/Platillo_3.jpg" alt="Imagén del platillo">
+                        <h3>Nombre del platillo</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed labore quis dolorem nobis! Hic repellendus ipsum animi obcaecati, minus placeat.</p>
+                        <ul>
+                            <li>400gr ribeye de la mejor calidad</li>
+                            <li>Papa asada</li>
+                            <li>Cebolla asada</li>
+                            <li>Incluye sopa del día</li>
+                        </ul>
+                        <span>$15.99</span>
+                        <a href="#" class="boton">Agregar al carrito</a>        
+                    </div>
+                    <div>
+                        <img src="img/Platillo_4.jpg" alt="Imagén del platillo">
+                        <h3>Nombre del platillo</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed labore quis dolorem nobis! Hic repellendus ipsum animi obcaecati, minus placeat.</p>
+                        <ul>
+                            <li>400gr ribeye de la mejor calidad</li>
+                            <li>Papa asada</li>
+                            <li>Cebolla asada</li>
+                            <li>Incluye sopa del día</li>
+                        </ul>
+                        <span>$15.99</span>
+                        <a href="#" class="boton">Agregar al carrito</a>        
+                    </div>
                 </div>
             </div>
-        </section>
-
-        <!-- OTROS PRODUCTOS -->
-        <section class="contenedor">
-            <table border="1" cellpadding=10px cellspacing=5px>
-                <caption>MÁS DE NUESTROS PRODUCTOS</caption>
-                <thead>
-                    <th>Platillo</th>
-                    <th>Descripción</th>
-                    <th>Precio</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Hamburguesa de Ribeye</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat aliquam temporibus cupiditate! Delectus, officiis et.</td>
-                        <td>$100.00</td>
-                    </tr>
-                    <tr>
-                        <td>Hamburguesa de Ribeye</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat aliquam temporibus cupiditate! Delectus, officiis et.</td>
-                        <td>$100.00</td>
-                    </tr>
-                    <tr>
-                        <td>Hamburguesa de Ribeye</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat aliquam temporibus cupiditate! Delectus, officiis et.</td>
-                        <td>$100.00</td>
-                    </tr>
-                    <tr>
-                        <td>Hamburguesa de Ribeye</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat aliquam temporibus cupiditate! Delectus, officiis et.</td>
-                        <td>$100.00</td>
-                    </tr>
-                    <tr>
-                        <td>Hamburguesa de Ribeye</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat aliquam temporibus cupiditate! Delectus, officiis et.</td>
-                        <td>$100.00</td>
-                    </tr>
-                    <tr>
-                        <td>Hamburguesa de Ribeye</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat aliquam temporibus cupiditate! Delectus, officiis et.</td>
-                        <td>$100.00</td>
-                    </tr>
-                    <tr>
-                        <td>Hamburguesa de Ribeye</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat aliquam temporibus cupiditate! Delectus, officiis et.</td>
-                        <td>$100.00</td>
-                    </tr>
-                    <tr>
-                        <td>Hamburguesa de Ribeye</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat aliquam temporibus cupiditate! Delectus, officiis et.</td>
-                        <td>$100.00</td>
-                    </tr>
-                    <tr>
-                        <td>Hamburguesa de Ribeye</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat aliquam temporibus cupiditate! Delectus, officiis et.</td>
-                        <td>$100.00</td>
-                    </tr>
-                    <tr>
-                        <td>Hamburguesa de Ribeye</td>
-                        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat aliquam temporibus cupiditate! Delectus, officiis et.</td>
-                        <td>$100.00</td>
-                    </tr>
-                </tbody>
-            </table>
         </section>
 
     </main>

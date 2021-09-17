@@ -66,6 +66,27 @@ h1 {
     letter-spacing: .1rem;
 }
 
+.botonFiltro {
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+    background-color: var(--red);
+}
+
+.botonFiltro:hover {
+    background-color: var(--orange);
+    letter-spacing: .1rem;
+}
+
+.catActvie {
+    background-color: var(--black);
+}
+
+
 .titulo {
     text-align: center;
     color: var(--black);
@@ -110,6 +131,7 @@ h1 {
     height: 60px;
     background-color: #000;
     color: #fff;
+    z-index: 10000;
 }
 
 .contenedor_nav {
@@ -132,7 +154,7 @@ nav a {
 
 nav a.active,
 nav a:hover {
-    color: #fff;
+    color: #fff; 
 
     background: #ff2a00; /* Old browsers */
     background: -moz-linear-gradient(45deg,  #ff2a00 40%, #ff8a00 68%, #ff8a00 68%, #ffac00 100%); /* FF3.6-15 */
@@ -178,19 +200,29 @@ nav a:hover {
 /* ?___________________________________________________________________________________________________________________________________________ */
 
 .hero {
-    /* height: 70rem; */
-    background-image: url(../img/Fondo_Hero_1920.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-
-    align-items: center;
-    flex-wrap: wrap;
-    padding-top: 9rem;
-    gap: 2rem;
-    margin-bottom: 5rem;
-
     display: flex;
-    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 6rem; 
+    flex-wrap: wrap;    
+    height: 70rem;
+}
+
+.hero_fondo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.hero_fondo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.heroFiltro {
+    -webkit-filter: brightness(.5);
+    filter: brightness(.5);
 }
 
 .hero span {
@@ -200,20 +232,29 @@ nav a:hover {
 .hero p {
     font-size: 2.5rem;
     text-align: left;
-}
-
-.hero_content, 
-.hero_content2 {
-    width: 40%;
+    color: var(--orange);
+    padding: 0;
 }
 
 .hero_content {
-    margin-bottom: 5rem;
+    position: absolute;
+    left: 15rem;
+    width: 65rem;
 }
 
 .hero_content img {
     width: 50rem;
     max-width: 100%;
+}
+
+.heroModify h1 {
+    color: #fff;
+}
+
+.heroModify p {
+    font-size: 2.5rem;
+    text-align: left;
+    color: var(--orange);
 }
 
 
@@ -238,6 +279,29 @@ nav a:hover {
     color: var(--red);
 }
 
+.historia_imagen {
+    width: 60rem;
+    float: left;
+    margin: 5rem;
+}
+
+.historia_imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.historia_firma {
+    margin-top: 3rem;
+} 
+
+.historia_firma img {
+    width: 5rem;
+    border-radius: 50%;
+    float: left;
+    margin-right: 2rem;
+}
 
 /* ? OFERTAS */
 /* ?___________________________________________________________________________________________________________________________________________ */
@@ -407,7 +471,50 @@ nav a:hover {
 /* ! PAGINA: MENU */
 /* ! -------------------------------------------------------------------------------------------------- */
 
+/* ? MENÚ - CATEGORIAS */
+/* ?___________________________________________________________________________________________________________________________________________ */
+
+.categorias {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.categorias ul {
+    list-style-type: none ;     
+}
+
+.categorias ul li {
+    color: #fff;
+}
+
 table thead th {
     background-color: black;
     color: #fff;
 }
+
+
+/* ! -------------------------------------------------------------------------------------------------- */
+/* ! PAGINA: PROMOCIONES */
+/* ! -------------------------------------------------------------------------------------------------- */
+
+
+
+/* ! -------------------------------------------------------------------------------------------------- */
+/* ! PAGINA: GALERIA */
+/* ! -------------------------------------------------------------------------------------------------- */
+
+
+
+/* ! -------------------------------------------------------------------------------------------------- */
+/* ! PAGINA: BLOG */
+/* ! -------------------------------------------------------------------------------------------------- */
+
+
+
+/* ! -------------------------------------------------------------------------------------------------- */
+/* ! PAGINA: CONTACTO */
+/* ! -------------------------------------------------------------------------------------------------- */
+
+
+
