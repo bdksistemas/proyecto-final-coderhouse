@@ -245,7 +245,7 @@ h1 {
 .hero_fondo {
     width: 100%;
     height: 100%;
-    /* object-fit: cover; */
+    object-fit: cover;
     overflow: hidden;
 }
 
@@ -304,23 +304,10 @@ h1 {
     flex-wrap: wrap;
 }
 
-.historia p {
-    font-size: 1.5rem;
-}
-
-.historia h3 {
-    font-size: 2.5rem;
-}
-
-.historia span {
-    font-size: 1.4rem;
-    color: var(--red);
-}
-
 .historia_imagen {
     width: 45%;
     padding: .5rem;
-    /* margin: 5rem; */
+    margin: 5rem;
 }
 
 .historia_imagen img {
@@ -334,6 +321,20 @@ h1 {
     width: 45%;
     text-align: justify;
 }
+
+.historia_content p {
+    font-size: 1.5rem;
+}
+
+.historia_content h3 {
+    font-size: 2.5rem;
+}
+
+.historia_content span {
+    font-size: 1.4rem;
+    color: var(--red);
+}
+
 .historia_firma {
     display: flex;
     margin-top: 3rem;
@@ -513,6 +514,109 @@ h1 {
     font-style: italic;
     color: var(--light-color);
 }
+
+/* ? SECCIÓN VÍDEO */
+/* ?___________________________________________________________________________________________________________________________________________ */
+
+.secVideo {
+    position: relative;
+    width: 100%;
+    min-height: 50vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;   
+}
+
+.secVideo .fondoVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.videoContent {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.play {
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    display: block;
+    transition: .5s;
+    border-radius: 50%;
+    margin-top: 15px;
+
+    -webkit-animation: ripple 2.5s linear 1s infinite;
+    animation: ripple 2.5s linear 1s infinite
+
+}
+
+.play img {
+    width: 80px;
+    transition: width 0.5s;
+}
+
+.play:hover {
+    background: var(--red);
+}
+
+@keyframes ripple {
+    0% {
+      box-shadow: 0 0 0 .7rem rgba(255,255,255, 0.2),
+                  0 0 0 1.5rem rgba(255,255,255, 0.2),
+                  0 0 0 5rem rgba(255,255,255, 0.2);
+    }
+    100% {
+      box-shadow: 0 0 0 1.5rem rgba(255,255,255, 0.2),
+                  0 0 0 4rem rgba(255,255,255, 0.2),
+                  0 0 0 8rem rgba(255,255,255, 0);
+    }
+}
+
+.videoPopup {
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(25px);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.videoPopup.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.videoPopup video {
+    max-width: 1200px;
+    outline: none;
+}
+
+.close {
+    position: absolute;
+    top: 30px;  right: 30px;
+    cursor: pointer;
+    filter: invert(1);
+    max-width: 32px;
+}
+
+
 
 /* ? MENÚ */
 /* ?___________________________________________________________________________________________________________________________________________ */
@@ -899,34 +1003,51 @@ table thead th {
 /* * -------------------------------------------------------------------------------------------------- */
 
 /* ! 1024 */
-
 @media screen and (max-width: 1024px) {
-
-    .historia_imagen  {        
-        width: 100%;
-    }
-
-    .historia_content  {        
-        width: 100%;
-    }
-
-}
-
-/* ! 768 */
-
-@media screen and (max-width: 768px) {
-
-    .nav .menuSup {
-        display: none;
-    }
 
     .hero_content {
         left: 5rem;
         width: 55rem;
     }
 
+    .historia_imagen  {        
+        width: 100%;
+        margin: 0 ;
+    }
+
+    .historia_content  {        
+        width: 100%;
+        margin: 15px 0 0 0;
+    }
+
     .secOfertas {
         padding: 20px 0 30px 0;
+    }
+
+    .videoPopup video {
+        max-width: 90%;        
+    }
+
+    .secMenu {
+        padding: 20px 0 30px 0;
+    }
+
+    .menu {
+        justify-content: space-between;
+    }
+
+    .menu .box {
+        width: 30%;
+    }
+
+
+}
+
+/* ! 768 */
+@media screen and (max-width: 768px) {
+
+    .nav .menuSup {
+        display: none;
     }
 
     .ofertas {
@@ -972,10 +1093,6 @@ table thead th {
         font-size: 1.2rem;
     }
 
-    .secMenu {
-        padding: 20px 0 30px 0;
-    }
-
     .menu .box {
         width: 45%;
     }
@@ -992,12 +1109,95 @@ table thead th {
         padding: 20px 0 30px 0;
     }
 
+}
 
+/* ! 600 */
+@media screen and (max-width: 600px) {
+ 
+    .titulo {
+        font-size: 2rem;
+    }
 
+    .preTitulo {
+        font-size: 1.5rem;
+    }
 
+    .hero {
+        height: 50rem;
+    }
 
+    .hero_content {
+        width: 30rem;
+    }
 
+    .hero_content h1 {
+        font-size: 3.5rem
+    }
 
+    .hero_content p {
+        font-size: 1.5rem
+    }
 
+    .historia {
+        padding: 2rem ;
+    }
 
+    .ofertas_card {
+        width: 45%;
+    }
+
+    .destacados .destacados_card {
+        width: 40%;
+    }
+
+}
+
+/* ! 480 */
+@media screen and (max-width: 480px) {
+
+    .titulo {
+        font-size: 1.8rem;
+    }
+
+    .preTitulo {
+        font-size: 1.3rem;
+    }
+
+    .hero {
+        height: 45rem;
+    }
+
+    .ofertas_content .descuento {
+        height: 65px;
+        width: 65px;    
+    }
+
+    .ofertas_content .descuento h4 {
+        font-size: 3rem;
+    }
+    
+    .ofertas_content .nomOferta h3 {
+        font-size: 1.5rem;
+    }
+    
+    .ofertas_content .nomOferta li {    
+        font-size: 1.2rem;
+    }
+   
+    .menu .box {
+        width: 48%;
+        margin: 2px;
+    }
+
+    .menu .box .box_content p {
+        font-size: 1.2rem;
+    }
+
+    .menu .box .box_content ul {
+        display: none;
+    }
+
+    .menu .box .box_content a {
+        font-size: 1.1rem;
+    }    
 }

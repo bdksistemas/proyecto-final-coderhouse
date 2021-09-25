@@ -76,7 +76,7 @@
     </header> 
 
     <!-- MAIN -->
-    <main>
+    <main> 
 
         <!-- HISTORIA -->
         <article class="contenedor historia">            
@@ -236,13 +236,19 @@
         </section> 
 
         <!-- VÍDEO -->
-        <section class="bkgwhite">
-            <!-- La sección llevaría una imagén de fondo -->
-            <p class="preTitulo">Gran ambiente</p>
-            <h3 class="titulo">El mejor ambiente familiar</h3>
-            <div class="contenedor">
-                <iframe width="100%" height="450" src="https://www.youtube.com/embed/zLRdC9nxmqc?start=104" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <section class="bkgwhite secVideo">
+            
+            <img src="img/FondoVideo.jpg" alt="Fondo de la sección de vídeo" class="fondoVideo heroFiltro">        
+            <div class="videoContent">
+                <p class="preTitulo txtWhite">Gran ambiente</p>
+                <h3 class="titulo txtWhite">El mejor ambiente familiar</h3>
+                <a href="#" class="play" id="play"><img src="img/play.png" alt="" id="imgPlay"></a>
             </div>
+            <div class="videoPopup">
+                <video src="img/videoRest.mp4" controls="true"></video>
+                <img src="img/close.png" alt="" class="close" id="close">
+            </div>
+    
         </section>
 
         <!-- PLATILLOS ESTRELLA -->
@@ -467,7 +473,7 @@
         <!-- CHEFS -->
         <section class="contenedor secChefs">
             <p class="preTitulo">Los respoonsables</p>
-            <h3 class="titulo">Conoce a nuestros chefs</h3>
+            <h3 class="titulo">Conoce a nuestros chefs</h3> 
 
             <!-- CARDS CHEFS -->
             <div class="chefs">
