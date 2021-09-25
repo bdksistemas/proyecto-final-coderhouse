@@ -57,8 +57,8 @@
                     </ul>
                 </nav>
                 <div class="iconosNav">
-                    <i class='bx bxs-cart-alt iconos'></i>
-                    <i class='bx bxs-dish iconos'></i>
+                    <i class="fas fa-shopping-cart iconos"></i>
+                    <i class="fas fa-bars iconos"></i>
                 </div>
             </div>
         </div>
@@ -93,7 +93,7 @@
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem autem obcaecati provident quo voluptatibus aspernatur sed. Eveniet quos ut, recusandae dicta enim deleniti magni? Mollitia repellat quidem quo alias? Deleniti nesciunt perspiciatis nihil voluptate quisquam a voluptas tempore. Molestias, sed est, delectus neque cupiditate aliquam placeat adipisci obcaecati dolor hic officia saepe, animi voluptates voluptas impedit illo. Vero sint delectus sunt eaque eligendi, quisquam, facere fugiat ut, quae fuga nihil reprehenderit. Aliquam repudiandae soluta animi dolorem optio ipsa molestias fugiat et ratione. A sed reiciendis err.</p>
                 <div class="historia_firma">
                     <img src="img/Master_Chef.jpg" alt="Foto del Master Chef">
-                    <div>
+                    <div class="historia_cheff">
                         <h3>Juan Perez</h3>
                         <span>Master Chef</span>
                     </div>
@@ -185,7 +185,7 @@
         </section>
 
         <!-- DESTACADOS -->
-        <section>
+        <section class="secDestacados">
             <p class="preTitulo">Porqué elegirnos</p>
             <h2 class="titulo">Lo que nos diferencía de los demás</h2>
             <!-- CARDS -->
@@ -233,7 +233,7 @@
                     <div>
                     </div>
             </div>
-        </section>
+        </section> 
 
         <!-- VÍDEO -->
         <section class="bkgwhite">
@@ -456,70 +456,91 @@
         </section>
 
         <!-- RESERVACIONES -->
-        <section class="bkgwhite">
-            <div class="contenedor">  <!-- Div para poner imagen de fondo -->
-                <p class="preTitulo">No te quedes sin lugar</p>
-                <h3 class="titulo">¡Reserva una mesa ahora!</h3>
+        <div class="reservaciones parallax">
+            <div class="contenedor reservaciones_content">  <!-- Div para poner imagen de fondo -->
+                <p class="preTitulo txtWhite">No te quedes sin lugar</p>
+                <h3 class="titulo txtWhite">¡Reserva una mesa ahora!</h3>
                 <a href="contacto.html" class="boton">Reservar ahora</a>
             </div>
-        </section>
+        </div>
 
         <!-- CHEFS -->
-        <section class="contenedor">
+        <section class="contenedor secChefs">
             <p class="preTitulo">Los respoonsables</p>
             <h3 class="titulo">Conoce a nuestros chefs</h3>
 
-        <!-- CARDS CHEFS -->
-        <div class="chefs">
+            <!-- CARDS CHEFS -->
+            <div class="chefs">
                 <!-- CARD CHEF -->
-                <div>
-                    <img src="img/chef_01.jpg" alt="">
-                    <h3>Nombre del Chef</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, dolore?</p>
-                    <div>
-                        <i class='bx bxl-facebook-circle iconos' ></i>
-                        <i class='bx bxl-instagram-alt iconos' ></i>
-                        <i class='bx bxl-youtube iconos'></i>
+                <div class="chef_card">
+                    <div class="chef_img">
+                        <img src="img/chef_01_transparente.png" alt="">
+                    </div>
+                    <div class="chef_content">
+                        <h3>Nombre del Chef</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, dolore?</p>
+                        <div class="chef_social">
+                            <i class="fab fa-facebook iconos"></i>
+                            <i class="fab fa-instagram iconos"></i>
+                            <i class="fab fa-youtube iconos"></i>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <img src="img/chef_02.jpg" alt="">
-                    <h3>Nombre del Chef</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, dolore?</p>
-                    <div>
-                        <i class='bx bxl-facebook-circle iconos' ></i>
-                        <i class='bx bxl-instagram-alt iconos' ></i>
-                        <i class='bx bxl-youtube iconos' ></i>
+
+                <!-- CARD CHEF -->
+                <div class="chef_card">
+                    <div class="chef_img">
+                        <img src="img/chef_02_transparente.png" alt="">
+                    </div>
+                    <div class="chef_content">
+                        <h3>Nombre del chef</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, dolore?</p>
+                        <div class="chef_social">
+                            <i class="fab fa-facebook iconos"></i>
+                            <i class="fab fa-instagram iconos"></i>
+                            <i class="fab fa-youtube iconos"></i>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <img src="img/chef_03.jpg" alt="">
-                    <h3>Nombre del Chef</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, dolore?</p>
-                    <div>
-                        <i class='bx bxl-facebook-circle iconos' ></i>
-                        <i class='bx bxl-instagram-alt iconos' ></i>
-                        <i class='bx bxl-youtube iconos' ></i>
+
+                                <!-- CARD CHEF -->
+                <div class="chef_card">
+                    <div class="chef_img">
+                        <img src="img/chef_03_transparente.png" alt="">
+                    </div>
+                    <div class="chef_content">
+                        <h3>Nombre del Chef</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, dolore?</p>
+                        <div class="chef_social">
+                            <i class="fab fa-facebook iconos"></i>
+                            <i class="fab fa-instagram iconos"></i>
+                            <i class="fab fa-youtube iconos"></i>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
         <!-- GALERÍA -->
-        <section class="bkgwhite">
+        <section class="bkgwhite galeria">
             <p class="preTitulo">Una mirada vale más que 1000 palabras</p>
             <h2 class="titulo">Galería de fotos</h2>
-            <div class="contenedor">
-                <div>
-                    <img src="img/Galeria1.jpg" alt="Fotos de la galería">
-                    <img src="img/Galeria2.jpg" alt="Fotos de la galería">
-                    <img src="img/Galeria3.jpg" alt="Fotos de la galería">
-                    <img src="img/Galeria4.jpg" alt="Fotos de la galería">
-                    <img src="img/Galeria5.jpg" alt="Fotos de la galería">
-                    <img src="img/Galeria6.jpg" alt="Fotos de la galería">
-                </div>
-                <a href="galeria.html" class="boton">Ver más fotos</a>
+            <div class="galeria_content">
+                <img src="img/Galeria1.jpg" alt="Fotos de la galería">
+                <img src="img/Galeria2.jpg" alt="Fotos de la galería">
+                <img src="img/Galeria3.jpg" alt="Fotos de la galería">
+                <img src="img/Galeria4.jpg" alt="Fotos de la galería">
+                <img src="img/Galeria5.jpg" alt="Fotos de la galería">
+                <img src="img/Galeria6.jpg" alt="Fotos de la galería">
+                <img src="img/Galeria3.jpg" alt="Fotos de la galería">
+                <img src="img/Galeria4.jpg" alt="Fotos de la galería">
+                <img src="img/Galeria1.jpg" alt="Fotos de la galería">
+                <img src="img/Galeria6.jpg" alt="Fotos de la galería">
+                <img src="img/Galeria2.jpg" alt="Fotos de la galería">
+                <img src="img/Galeria5.jpg" alt="Fotos de la galería">
             </div>
+            <a href="galeria.html" class="boton">Ver más fotos</a>
         </section>
 
         <!-- CALIDAD -->
