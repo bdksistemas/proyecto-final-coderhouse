@@ -6,31 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto Final</title>
 
-    <!-- FUENTE NUNITO DE GOOGLE FONTS -->
+    <!-- ? FUENTE NUNITO DE GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap" rel="stylesheet">
 
-        <!-- FONTAWESOM -->
+    <!-- ? BOOTSTRAPT -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <!-- ? FONTAWESOM -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <!-- ? LIBRERÍA PARA EL SLIDER : SWIPER = Tiene también JS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
     <link rel="stylesheet" href="css/estilos.css"> 
 </head>
 <body>
-
-    <!-- ?PROYECTO FINAL
-    * Será una página web para restaurantes en la que se vea un poco de la historia del restaurante.
-    
-    ! FUNCIONALIDADES
-    * Tendrá una página principal en donde podremos conocer los chefs, promociones principales, productos estrellas, características principales del negocio, etc
-    * Tendrá opciones para ver el menú completo
-    * Sección para ver todas las promociones
-    * Sección en donde los clientes podrán ver fotos del ambiente del negocio
-    * Tendrá una sección  para ver las ultimas noticias del negocio, como para publicar eventos o cosas por el estilo
-    * Y tendrá la sección de contacto, en donde el usuario podrá enviar un mail para realizar una reservación, ya sea para comer o para algún evento especial
-
-    * Adicionalmente quisiera que tuviera la opción de CARRITO para que los clientes puedan realizar pedidos a domicilio desde la página
-    *  Pero creo que eso es para otro curso, ya que en este creo que no se va a ver nada de eso.  -->
 
     <!-- ?HEADER -->
     <header>
@@ -39,21 +31,12 @@
                 <img src="img/Logo_blanco.png" alt="Logotipo" class="logo_sup">
                 <nav class="menuSup">
                     <ul>
-                        <li class="active"><a href="index.html">Inicio</a></li>
-                        <li><a href="menu.html">Menú</a>
-                            <ul class="subMenu">
-                                <li><a href="menu.html">Entradas</a></li>
-                                <li><a href="menu.html">Cortes Finos</a></li>
-                                <li><a href="menu.html">Mariscos</a></li>
-                                <li><a href="menu.html">Aves</a></li>
-                                <li><a href="menu.html">Snack</a></li>
-                                <li><a href="menu.html">Bebidas</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="promos.html">Promociones</a></li>
-                        <li><a href="galeria.html">Galería</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
+                        <li class="active" id="msInicio"><a href="index.html">Inicio</a></li>
+                        <li><a href="menu.html" id="msMenu">Menú</a></li>
+                        <li><a href="promos.html" id="msPromos">Promociones</a></li> 
+                        <li><a href="galeria.html" id="msGaleria">Galería</a></li>
+                        <li><a href="blog.html" id="msBlog">Blog</a></li>
+                        <li><a href="contacto.html" id="msContacto">Contacto</a></li>
                     </ul>
                 </nav>
                 <div class="iconosNav">
@@ -62,7 +45,7 @@
                 </div>
             </div>
         </div>
-        <div class="hero">            
+        <div class="hero" id="inicio">            
             <div class="hero_fondo">
                 <img src="img/FondoPrincipal.jpg" alt="Fondo de la página principal">
             </div>     
@@ -70,8 +53,11 @@
                 <img src="img/Logo_negro.png" alt="">
                 <h1>Steakhouse <span>+Bar</span></h1>
                 <p class="preTitulo">Los mejores cortes finos los encontrarás aquí</p>
-                <a href="menu.html" class="boton">Ver menú</a>                
+                <a href="#" class="boton" id="botMenu">Ver menú</a>
             </div>
+        </div>
+        <div class="botInicio">
+            <a href="#"><i class="fas fa-arrow-up iconos" id="botInicio"></i></a>
         </div>
     </header> 
 
@@ -79,7 +65,7 @@
     <main> 
 
         <!-- HISTORIA -->
-        <article class="contenedor historia">            
+        <article class="historia">            
             <div class="historia_imagen">
                 <picture>
                     <source srcset="img/img_ourhistorywepe.webp">
@@ -90,7 +76,9 @@
             <div class="historia_content">
                 <p class="preTitulo preTitulo_mod">Sobre nosotros</p>
                 <h2 class="titulo titulo_mod">Bienvenido a Hot Grill</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem autem obcaecati provident quo voluptatibus aspernatur sed. Eveniet quos ut, recusandae dicta enim deleniti magni? Mollitia repellat quidem quo alias? Deleniti nesciunt perspiciatis nihil voluptate quisquam a voluptas tempore. Molestias, sed est, delectus neque cupiditate aliquam placeat adipisci obcaecati dolor hic officia saepe, animi voluptates voluptas impedit illo. Vero sint delectus sunt eaque eligendi, quisquam, facere fugiat ut, quae fuga nihil reprehenderit. Aliquam repudiandae soluta animi dolorem optio ipsa molestias fugiat et ratione. A sed reiciendis err.</p>
+                <p>En Hot Grill surge de nuestra afición por los NY Deli.
+                    Una combinación de Ingredientes de calidad y altos estándares es lo que nos diferencia de otros restaurantes del área.
+                    Nuestra meta es satisfacer a cada uno de nuestros clientes.</p>
                 <div class="historia_firma">
                     <img src="img/Master_Chef.jpg" alt="Foto del Master Chef">
                     <div class="historia_cheff">
@@ -120,7 +108,7 @@
                                 <li>Variedad de platillos</li>
                                 <li>Café ilimitado</li>
                                 <li>Frutas</li>
-                                <li>Jugo de naranja</li>
+                                <li>Jugo de naranja</li> 
                             </ul>
                         </div>
                     </div>
@@ -141,9 +129,9 @@
                         <div class="nomOferta">
                             <h3>Desayuno Americano</h3>
                             <ul class="incluye">
-                                <li>Variedad de platillos</li>
+                                <li>Huevos a tu gusto</li>
                                 <li>Café ilimitado</li>
-                                <li>Frutas</li>
+                                <li>Hot Cakes</li>
                                 <li>Jugo de naranja</li>
                             </ul>
                         </div>
@@ -165,10 +153,9 @@
                         <div class="nomOferta">
                             <h3>Desayuno Buffet</h3>
                             <ul class="incluye">
-                                <li>Variedad de platillos</li>
+                                <li>Hot Cakes ilimitados</li>
                                 <li>Café ilimitado</li>
                                 <li>Frutas</li>
-                                <li>Jugo de naranja</li>
                             </ul>
                         </div>
                     </div>
@@ -181,7 +168,7 @@
                 </div>
                 
             </div>
-            <a href="promos.html" class="boton">Ver más promociones</a>
+            <a href="promos.html" class="boton" id="botPromos">Ver más promociones</a>
         </section>
 
         <!-- DESTACADOS -->
@@ -194,51 +181,51 @@
                     <div class="content">
                         <i class="fas fa-utensils"></i>
                         <h3>Comida de alta calidad</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae ducimus iusto, numquam nulla assumenda illo et quibusdam ipsum nostrum blanditiis?</p>
+                        <p>La calidad de los alimentos es el conjunto de cualidades que hacen aceptables los alimentos a los consumidores. Estas cualidades incluyen tanto las percibidas por los sentidos: sabor, olor, color, textura, forma y apariencia, tanto como las higiénicas y químicas.</p>
                     </div>
                 </div>
                 <div class="destacados_card">
                     <div class="content">
                         <i class="fas fa-cocktail"></i>
                         <h3>Recetas inspiradoras</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae ducimus iusto, numquam nulla assumenda illo et quibusdam ipsum nostrum blanditiis?</p>
+                        <p>Tenemos recetas inspiradas en el hogar, para que nunca más extrañes el sabor del hogar al comer fuera de el.</p>
                     </div>
                 </div>
                 <div class="destacados_card">
                     <div class="content">
                         <i class="fas fa-drumstick-bite"></i>
                         <h3>Comida saludable</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae ducimus iusto, numquam nulla assumenda illo et quibusdam ipsum nostrum blanditiis?</p>
+                        <p>Contamos con infinidad de recetas inspiradas en tu salud. Al comer con nosotros tendrás la seguridad de comer sano y cuidar tu salud.</p>
                     </div>
                 </div>
                 <div class="destacados_card">
                     <div class="content">
                         <i class="fas fa-carrot"></i>
                         <h3>Ingredientes frescos</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae ducimus iusto, numquam nulla assumenda illo et quibusdam ipsum nostrum blanditiis?</p>
+                        <p>Nuestros platillos siempre son cocinados con ingredientes recien salidos del campo. Con nosotros tienes la seguridad de que estás comiendo comida fresca y sana.</p>
                     </div>
                 </div>
                 <div class="destacados_card">
                     <div class="content">
                         <i class="fas fa-user-graduate"></i>
                         <h3>Personal de experiencia</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae ducimus iusto, numquam nulla assumenda illo et quibusdam ipsum nostrum blanditiis?</p>
+                        <p>Todo nuestro personal está ampliamente capacidado y con años de experiencia en todas nuestras áreas.</p>
                     </div>
                 </div>
                 <div class="destacados_card">
                     <div class="content">
                         <i class="fas fa-shipping-fast"></i>
                         <h3>Envíos rápidos</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae ducimus iusto, numquam nulla assumenda illo et quibusdam ipsum nostrum blanditiis?</p>
+                        <p>Si tu comida no llega caliente, es gratis... así de seguros estamos que tenemos uno de los envíos más rápidos de la zona.</p>
                     <div>
-                    </div>
+                </div>
             </div>
         </section> 
 
         <!-- VÍDEO -->
         <section class="bkgwhite secVideo">
             
-            <img src="img/FondoVideo.jpg" alt="Fondo de la sección de vídeo" class="fondoVideo heroFiltro">        
+            <img src="img/FondoVideo.jpg" alt="Fondo de la sección de vídeo" class="fondoSecciones heroFiltro">        
             <div class="videoContent">
                 <p class="preTitulo txtWhite">Gran ambiente</p>
                 <h3 class="titulo txtWhite">El mejor ambiente familiar</h3>
@@ -270,13 +257,13 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </div>    
-                        <h3>Nombre del platillo</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed labore quis dolorem nobis! Hic repellendus ipsum animi obcaecati, minus placeat.</p>
+                        <h3>Pizza de peperoni</h3>
+                        <p>La forma en que se combina el orégano fresco y el pepperoni es perfecta. Este es un buen ejemplo de que introducir un pequeño cambio en una receta, puede transformarla radicalmente.</p>
                         <ul>
-                            <li>400gr ribeye de la mejor calidad</li>
-                            <li>Papa asada</li>
-                            <li>Cebolla asada</li>
-                            <li>Incluye sopa del día</li>
+                            <li>Peperoni de pavo</li>
+                            <li>Salsa de tomate fresco</li>
+                            <li>Queso mozzarella</li>
+                            <li>Queso parmesano</li>
                         </ul>
                         <span>$15.99</span>
                         <a href="#" class="boton">Agregar al carrito</a>        
@@ -295,15 +282,14 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </div>    
-                        <h3>Nombre del platillo</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed labore quis dolorem nobis! Hic repellendus ipsum animi obcaecati, minus placeat.</p>
+                        <h3>Hamburguesa de Rib Eye</h3>
+                        <p>Deliciosa hamburguesa de carne de la más alta calidad.</p>
                         <ul>
-                            <li>400gr ribeye de la mejor calidad</li>
-                            <li>Papa asada</li>
-                            <li>Cebolla asada</li>
-                            <li>Incluye sopa del día</li>
+                            <li>200gr de carne molida de rib eye</li>
+                            <li>Queso camembert</li>
+                            <li>BBQ Rub Clasic</li>
                         </ul>
-                        <span>$15.99</span>
+                        <span>$12.99</span>
                         <a href="#" class="boton">Agregar al carrito</a>        
                     </div>
                 </div>
@@ -320,12 +306,12 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </div>    
-                        <h3>Nombre del platillo</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed labore quis dolorem nobis! Hic repellendus ipsum animi obcaecati, minus placeat.</p>
+                        <h3>Pechuga de pollo rellena</h3>
+                        <p>Deliciosa pechuga de pollo de alta calidad rellena de ricos champiñones y 4 diferentes quesos.</p>
                         <ul>
-                            <li>400gr ribeye de la mejor calidad</li>
-                            <li>Papa asada</li>
-                            <li>Cebolla asada</li>
+                            <li>200gr de pechuga de pollo</li>
+                            <li>Champiñones</li>
+                            <li>4 quesos</li>
                             <li>Incluye sopa del día</li>
                         </ul>
                         <span>$15.99</span>
@@ -345,15 +331,15 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </div>    
-                        <h3>Nombre del platillo</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed labore quis dolorem nobis! Hic repellendus ipsum animi obcaecati, minus placeat.</p>
+                        <h3>Chamorro con choucrut estilo alemán</h3>
+                        <p>El codillo alemán es una receta deliciosa y suculenta.</p>
                         <ul>
-                            <li>400gr ribeye de la mejor calidad</li>
+                            <li>1 codillo</li>
                             <li>Papa asada</li>
                             <li>Cebolla asada</li>
                             <li>Incluye sopa del día</li>
                         </ul>
-                        <span>$15.99</span>
+                        <span>$18.50</span>
                         <a href="#" class="boton">Agregar al carrito</a>        
                     </div>
                 </div>
@@ -370,15 +356,15 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </div>    
-                        <h3>Nombre del platillo</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed labore quis dolorem nobis! Hic repellendus ipsum animi obcaecati, minus placeat.</p>
+                        <h3>Carne asada a la tampiqueña</h3>
+                        <p>Uno de los platillos de comida mexicana más populares y deliciosos.</p>
                         <ul>
-                            <li>400gr ribeye de la mejor calidad</li>
-                            <li>Papa asada</li>
-                            <li>Cebolla asada</li>
-                            <li>Incluye sopa del día</li>
+                            <li>350gr High River Angus</li>
+                            <li>Arroz</li>
+                            <li>Frijoles</li>
+                            <li>Pico de gallo y tortillas</li>
                         </ul>
-                        <span>$15.99</span>
+                        <span>$17.99</span>
                         <a href="#" class="boton">Agregar al carrito</a>        
                     </div>
                 </div>
@@ -395,70 +381,20 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </div>    
-                        <h3>Nombre del platillo</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed labore quis dolorem nobis! Hic repellendus ipsum animi obcaecati, minus placeat.</p>
+                        <h3>Pierna de cordero al horno </h3>
+                        <p>Un platillo suculento, ideal para altos ejecutivos.</p>
                         <ul>
-                            <li>400gr ribeye de la mejor calidad</li>
+                            <li>400gr de pierna de cordero</li>
                             <li>Papa asada</li>
                             <li>Cebolla asada</li>
                             <li>Incluye sopa del día</li>
                         </ul>
-                        <span>$15.99</span>
-                        <a href="#" class="boton">Agregar al carrito</a>        
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="box_image">
-                        <img src="img/menu-7.jpg" alt="Imagén del platillo">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <div class="box_content">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>    
-                        <h3>Nombre del platillo</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed labore quis dolorem nobis! Hic repellendus ipsum animi obcaecati, minus placeat.</p>
-                        <ul>
-                            <li>400gr ribeye de la mejor calidad</li>
-                            <li>Papa asada</li>
-                            <li>Cebolla asada</li>
-                            <li>Incluye sopa del día</li>
-                        </ul>
-                        <span>$15.99</span>
-                        <a href="#" class="boton">Agregar al carrito</a>        
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="box_image">
-                        <img src="img/menu-8.jpg" alt="Imagén del platillo">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <div class="box_content">
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>    
-                        <h3>Nombre del platillo</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed labore quis dolorem nobis! Hic repellendus ipsum animi obcaecati, minus placeat.</p>
-                        <ul>
-                            <li>400gr ribeye de la mejor calidad</li>
-                            <li>Papa asada</li>
-                            <li>Cebolla asada</li>
-                            <li>Incluye sopa del día</li>
-                        </ul>
-                        <span>$15.99</span>
+                        <span>$19.99</span>
                         <a href="#" class="boton">Agregar al carrito</a>        
                     </div>
                 </div>
             </div>
-            <a href="menu.html" class="boton">Ver el menú completo</a>
+            <a href="menu.html" class="boton" id="botSecMenu">Ver el menú completo</a>
         </section>
 
         <!-- RESERVACIONES -->
@@ -466,7 +402,7 @@
             <div class="contenedor reservaciones_content">  <!-- Div para poner imagen de fondo -->
                 <p class="preTitulo txtWhite">No te quedes sin lugar</p>
                 <h3 class="titulo txtWhite">¡Reserva una mesa ahora!</h3>
-                <a href="contacto.html" class="boton">Reservar ahora</a>
+                <a href="contacto.html" class="boton" id="botReservar">Reservar ahora</a>
             </div>
         </div>
 
@@ -483,8 +419,8 @@
                         <img src="img/chef_01_transparente.png" alt="">
                     </div>
                     <div class="chef_content">
-                        <h3>Nombre del Chef</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, dolore?</p>
+                        <h3>Julian Carrero</h3>
+                        <p>Es conocido por saber representar de manera exquisita todos los sabores tradicionales de México, en una mezcla natural con la modernidad culinaria de la actualidad.</p>
                         <div class="chef_social">
                             <i class="fab fa-facebook iconos"></i>
                             <i class="fab fa-instagram iconos"></i>
@@ -499,8 +435,8 @@
                         <img src="img/chef_02_transparente.png" alt="">
                     </div>
                     <div class="chef_content">
-                        <h3>Nombre del chef</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, dolore?</p>
+                        <h3>Maria Fernanda Pineda</h3>
+                        <p>Es especialista en las carnitas, mole rojo, tostada de abulón, tlayudas de maíz dulce con queso cheddar y filetes con cereales, platillos que la han consagrado dentro de una profesión tan exigente y competitiva como lo es la cocina.</p>
                         <div class="chef_social">
                             <i class="fab fa-facebook iconos"></i>
                             <i class="fab fa-instagram iconos"></i>
@@ -515,8 +451,8 @@
                         <img src="img/chef_03_transparente.png" alt="">
                     </div>
                     <div class="chef_content">
-                        <h3>Nombre del Chef</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, dolore?</p>
+                        <h3>Emiliano Mendoza</h3>
+                        <p>Su estilo en la cocina se fundamenta en ofrecer un menú de degustación basado en la creatividad, con el objetivo de darle una nueva experiencia a los sentidos de sus clientes con cada plato.</p>
                         <div class="chef_social">
                             <i class="fab fa-facebook iconos"></i>
                             <i class="fab fa-instagram iconos"></i>
@@ -546,118 +482,159 @@
                 <img src="img/Galeria2.jpg" alt="Fotos de la galería">
                 <img src="img/Galeria5.jpg" alt="Fotos de la galería">
             </div>
-            <a href="galeria.html" class="boton">Ver más fotos</a>
+            <a href="galeria.html" class="boton" id="botSecGaleria">Ver más fotos</a>
         </section>
 
-        <!-- CALIDAD -->
-        <section>
+        <!-- CALIDAD --> 
+        <section class="secCalidad">
             <p class="preTitulo">Productos de calidad</p>
             <h2 class="titulo">Seleccionamos lo mejor para ti</h2>
             
             <div class="contenedor calidad">
                 <div>
-                    <div>
-                        <i class='bx bxs-wine' ></i>
-                        <div>
+                    <div class="calidad_content">
+                        <div class="calidad_der">
                             <h3>Carne fresca</h3>                    
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, assumenda?</p>
+                            <p>Tenemos para ti carne 100% calidad hangus, certificada.</p>
+                        </div>
+                        <div class="calidad_iconos">
+                            <i class="fas fa-drumstick-bite"></i>
                         </div>
                     </div>
-                    <div>
-                        <i class='bx bxs-wine' ></i>
-                        <div>
-                            <h3>Carne fresca</h3>                    
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, assumenda?</p>
+                    <div class="calidad_content">
+                        <div class="calidad_der">
+                            <h3>Alimentos envasados</h3>                    
+                            <p>El enlatado protege las vitaminas, minerales y sabor de los alimentos.</p>
+                        </div>
+                        <div class="calidad_iconos">
+                            <i class="fas fa-box-open"></i>
                         </div>
                     </div>
-                    <div>
-                        <i class='bx bxs-wine' ></i>
-                        <div>
-                            <h3>Carne fresca</h3>                    
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, assumenda?</p>
+                    <div class="calidad_content">
+                        <div class="calidad_der">
+                            <h3>Vegateles Premium</h3>                    
+                            <p>Variedad de vegetales premium, orgánicos y crudos.</p>
+                        </div>
+                        <div class="calidad_iconos">
+                            <i class="fas fa-carrot"></i>
                         </div>
                     </div>
                 </div>
-                <div>
+                <div class="calidad_imagen">
                     <img src="img/chef.png" alt="Chef presentando productos frescos">
                 </div>
                 <div>
-                    <div>
-                        <div>
-                            <h3>Carne fresca</h3>                    
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, assumenda?</p>
+                    <div class="calidad_content">
+                        <div class="calidad_iconos">
+                            <i class="fas fa-apple-alt"></i>
                         </div>
-                        <i class='bx bxs-wine' ></i>
+                        <div>
+                            <h3>Snacks Saludables</h3>                    
+                            <p>Acompaña tus carnes con snacks saludables libres de grasa.</p>
+                        </div>
                     </div>
-                    <div>
-                        <div>
-                            <h3>Carne fresca</h3>                    
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, assumenda?</p>
+                    <div class="calidad_content">
+                        <div class="calidad_iconos">
+                            <i class="fas fa-cocktail"></i>
                         </div>
-                        <i class='bx bxs-wine' ></i>
+                        <div>
+                            <h3>Bebidas Refrescantes</h3>                    
+                            <p>Deliciosas y refrescantes bebidas para combatir el calor.</p>
+                        </div>
                     </div>
-                    <div>
-                        <div>
-                            <h3>Carne fresca</h3>                    
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, assumenda?</p>
+                    <div class="calidad_content">
+                        <div class="calidad_iconos">
+                            <i class="fas fa-birthday-cake"></i>
                         </div>
-                        <i class='bx bxs-wine' ></i>
+                        <div>
+                            <h3>Postres Esquisitos</h3>                    
+                            <p>Postres finos para satisfaser los paladares más exigentes.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- OPINIONES -->
-        <section class="bkgwhite">
+        <section class="bkgwhite reseñas" id="reseñas">
             <p class="preTitulo">La mejor recomendación es tu opinión</p>
             <h2 class="titulo">Lo que opinan nuestros clientes</h2>
-            <div class="contenedor reseñas">
-                <div>
-                    <i class='bx bxs-quote-alt-right'></i>                    
-                    <img src="img/Cliente_01.jpg" alt="Foto de cliente">
-                    <div>
-                        <h3>Nombre del cliente</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos repellat repudiandae alias provident aspernatur fugiat vel beatae, quasi nihil temporibus?</p>
+
+            <div class="reseñas_slider swiper-container">
+                <div class="swiper-wrapper">
+
+                    <div class="slide swiper-slide"> 
+                        <i class="fas fa-quote-right"></i>
+                        <div class="cliente">
+                            <img src="img/Cliente_01.jpg" alt="Foto del cliente">
+                            <div class="cliente-info">
+                                <h3>Esther Barrero</h3>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>        
+                            </div>
+                        </div>
+                        <p>Sin duda uno de los mejores lugares para comer o cenar, me encantó!</p>
                     </div>
-                    <div class="stars">
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star-half' ></i>
+                    <div class="slide swiper-slide">
+                        <i class="fas fa-quote-right"></i>
+                        <div class="cliente">
+                            <img src="img/Cliente_02.jpg" alt="Foto del cliente">
+                            <div class="cliente-info">
+                                <h3>Roxana González</h3>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>        
+                            </div>
+                        </div>
+                        <p>Increíble lugar, me la pasé super con mis amigas... y no se diga la comida, ¡Deliciosa!</p>
                     </div>
-                </div>
-                <div>
-                    <i class='bx bxs-quote-alt-right'></i>
-                    <img src="img/Cliente_02.jpg" alt="Foto de cliente">
-                    <div>
-                        <h3>Nombre del cliente</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos repellat repudiandae alias provident aspernatur fugiat vel beatae, quasi nihil temporibus?</p>
+                    <div class="slide swiper-slide">
+                        <i class="fas fa-quote-right"></i>
+                        <div class="cliente">
+                            <img src="img/Cliente_03.jpg" alt="Foto del cliente">
+                            <div class="cliente-info">
+                                <h3>Francisco Salas</h3>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>        
+                            </div>
+                        </div>
+                        <p>Fui a comer con mi jefe y sin duda les recomiendo pedir un Rib Eye, se me hace agua la boca solo de acordarme.</p>
                     </div>
-                    <div class="stars">
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star-half' ></i>
+                    <div class="slide swiper-slide">
+                        <i class="fas fa-quote-right"></i>
+                        <div class="cliente">
+                            <img src="img/Cliente_04.png" alt="Foto del cliente">
+                            <div class="cliente-info">
+                                <h3>Silvia De La Fuente</h3>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>        
+                            </div>
+                        </div>
+                        <p>En la noche el ambiente está muy padre, los fines de semana tienen música en vivo y se pone muy padre.</p>
                     </div>
-                </div>
-                <div>
-                    <i class='bx bxs-quote-alt-right'></i>
-                    <img src="img/Cliente_03.jpg" alt="Foto de cliente">
-                    <div>
-                        <h3>Nombre del cliente</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos repellat repudiandae alias provident aspernatur fugiat vel beatae, quasi nihil temporibus?</p>
-                    </div>
-                    <div class="stars">
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star' ></i>
-                        <i class='bx bxs-star-half' ></i>
-                    </div>
+                        
                 </div>
             </div>
+
         </section>
 
         <!-- UBICACIÓN -->
@@ -672,53 +649,64 @@
     <!-- FOOTER -->
     <footer>
         <div class="footer">
+            <img src="img/FondoFooter.jpg" alt="Fondo en el Footer" class="fondoSecciones bkgFiltro">        
             <!-- Menu de Opciones -->
-            <div>
-                <h3>Menú</h3>
-                <div>
-                    <a href="index.html">Inicio</a>
-                    <a href="menu.html">Menú</a>
-                    <a href="promos.html">Promociones</a>
+            <div class="footer_content container m-auto row">
+                <div class="footer_Box col-4">
+                    <h3>Menú</h3>
+                    <div>
+                        <a href="index.html" id="miInicio">Inicio</a>
+                        <a href="#" id="miMenu">Menú</a>
+                        <a href="promos.html" id="miPromos">Promociones</a>
+                        <a href="galeria.html" id="miGaleria">Galería</a>
+                        <a href="blog.html" id="miBlog">Blog</a>
+                        <a href="contacto.html" id="miContacto">Contacto</a>
+                    </div>
                 </div>
-                <div>
-                    <a href="galeria.html">Galería</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="contacto.html">Contacto</a>
+                <!-- Dirección -->
+                <div class="footer_Box col-4">
+                    <h3>Dirección</h3>                    
+                    <div>
+                        <p><i class="fas fa-map-marker-alt"></i> Av. Insurgentes 345, Centro, Mty, N.L.</p>
+                        <a><i class="fas fa-phone-alt"></i> +52 811 999 9999</a>
+                        <a><i class="fas fa-envelope"></i> ventas@turesteak.com</a>
+                        <p><i class="fas fa-clock"></i> Lunes a Domingo de 12pm a 1am</p>
+                    </div>
                 </div>
-            </div>
-            <!-- Dirección -->
-            <div>
-                <h3>Dirección</h3>
-                <p><i class='bx bxs-map' ></i> Av. Insurgentes 345, Centro, Mty, N.L.</p>
-                <p><i class='bx bxs-phone-call' ></i> +52 811 999 9999</p>
-                <p><i class='bx bx-mail-send' ></i> ventas@turesteak.com</p>
-                <p><i class='bx bxs-time-five' ></i> Lunes a Domingo de 12pm a 1am</p>
-
-            </div>
-            <!-- Redes Sociales -->
-            <div>
-                <h3>Redes Sociales</h3>
-                <div>
-                    <i class='bx bxl-facebook-circle' ></i>
-                    <i class='bx bxl-instagram-alt' ></i>
-                    <i class='bx bxl-youtube' ></i>
-                    <i class='bx bxl-whatsapp' ></i>
+                <!-- Redes Sociales -->
+                <div class="footer_Box col-4">
+                    <h3>Redes Sociales</h3>
+                    <div class="redesSociales mt-4">
+                        <i class="fab fa-facebook iconos"></i>
+                        <i class="fab fa-instagram iconos"></i>
+                        <i class="fab fa-youtube iconos"></i>
+                        <i class="fab fa-whatsapp iconos"></i>
+                    </div>
                 </div>
-                <i class='bx bxs-up-arrow-circle' ></i>
             </div>
         </div>
         <div class="derechos">
-            <p>Todos los derechos reservados 2021 -  Desarrollado por <span>Alejandro Rdz</span></p>
-            <div>
+            <p class="mt-3">Todos los derechos reservados 2021 -  Desarrollado por <span>Alejandro Rdz</span></p>
+            <div class="legales">
                 <a href="#">Terminos y condiciones</a>
-                <p> / </p>
+                <p class="mx-5">-</p>
                 <a href="#">Política de privacidad</a>
             </div>
         </div>
     </footer> 
+    
+    <!-- ? JQUERY -->
+    <script src="js/jquery.js"></script>
+    
+    <!-- ? BOOTSTRAPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
-    <!-- ANIMACIONES CON VANILLA-TILT -->
+    <!-- ? SWIPER : Slider del hero -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- ?ANIMACIONES CON VANILLA-TILT -->
     <script src="js/vanilla-tilt.min.js"></script>
+
     <script src="js/main.js"></script>
 
 </body>

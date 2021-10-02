@@ -21,8 +21,6 @@
 html {
     font-size: 62.5%;
     overflow-x: hidden;
-    /* scroll-padding-top: 5.5rem; */
-    /* scroll-behavior: smooth; */
 }
 
 section {
@@ -37,6 +35,9 @@ h1 {
     font-size: 5.6rem;
 }
 
+a {
+    text-decoration: none;
+}
 
 .boton {
     margin-top: 1rem;
@@ -64,6 +65,7 @@ h1 {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffac00', endColorstr='#ff2a00',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
     letter-spacing: .1rem;
+    color: #fff;
 }
 
 .botonFiltro {
@@ -156,8 +158,16 @@ h1 {
         background-color: var(--black);    
     }
 
+    .menuSup ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;        
+    }
+
     .menuSup li {
-        display: inline-block;    
+        /* display: inline-block;     */
         border-radius: .5rem;
     }
 
@@ -267,8 +277,8 @@ h1 {
 }
 
 .hero_content img {
-    width: 100%;
-    max-width: 100%;
+    width: 90%;
+    max-width: 90%;
 }
 
 .hero_content span {
@@ -292,27 +302,33 @@ h1 {
     color: var(--orange);
 }
 
+.botInicio {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 10000;
+}
 
 /* ? HISTORIA */
 /* ?___________________________________________________________________________________________________________________________________________ */
 
 .historia {
-    padding: 5rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    height: 50vh;
+    margin: 3.5rem;
 }
 
 .historia_imagen {
-    width: 45%;
-    padding: .5rem;
-    margin: 5rem;
+    width: 50%;
+    overflow: hidden;    
 }
 
 .historia_imagen img {
     width: 100%;
-    height: 100%;
+    max-height: 45vh;
     object-fit: cover;
     border-radius: 1rem;
 }
@@ -320,6 +336,8 @@ h1 {
 .historia_content {
     width: 45%;
     text-align: justify;
+    padding: 1rem;
+    margin-right: 3rem;
 }
 
 .historia_content p {
@@ -406,6 +424,12 @@ h1 {
 .ofertas_content .descuento h4 {
     font-size: 5rem;
     font-weight: 800;
+    animation: animDesc infinite  2s;
+}
+
+@keyframes animDesc {
+    0% { opacity: 0; }
+    100% {opacity: 1;}
 }
 
 .ofertas_content .descuento span {
@@ -528,7 +552,7 @@ h1 {
     align-items: center;   
 }
 
-.secVideo .fondoVideo {
+.fondoSecciones {
     position: absolute;
     top: 0;
     left: 0;
@@ -878,75 +902,213 @@ h1 {
 /* ? CALIDAD */
 /* ?___________________________________________________________________________________________________________________________________________ */
 
-.calidad {
-    display: flex;
+.secCalidad {
+    padding-bottom: 0;
 }
 
-.calidad h3 {
+.calidad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calidad .calidad_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 10px;
+}
+
+.calidad .calidad_der {
+    text-align: right;
+}
+
+.calidad .calidad_content h3 {
     font-size: 1.8rem;
 }
 
-.calidad p {
+.calidad .calidad_content p {
     font-size: 1.3rem;
     font-style: italic;
     color: var(--light-color);
 }
 
-.calidad i {
-    font-size: 2rem;
-    color: var(--red);
+.calidad .calidad_iconos {
+    margin: 0 15px;
+}
+.calidad .calidad_iconos i {
+    height: 6.5rem;
+    line-height: 6.5rem;
+    width: 6.5rem;
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+    border-radius: 50%;
+
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff2a00+40,ff8a00+68,ff8a00+68,ffac00+100 */
+    background: #ff2a00; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #ff2a00 40%, #ff8a00 68%, #ff8a00 68%, #ffac00 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  #ff2a00 40%,#ff8a00 68%,#ff8a00 68%,#ffac00 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  #ff2a00 40%,#ff8a00 68%,#ff8a00 68%,#ffac00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2a00', endColorstr='#ffac00',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    
+    filter: grayscale(1);
+    transition: filter 0.5s;
 }
 
+.calidad .calidad_content:hover .calidad_iconos {
+    transform: scale(1.1, 1.1);
+}
+
+.calidad .calidad_content:hover .calidad_iconos i {
+    filter: grayscale(0);
+}
+
+
+.calidad .calidad_imagen {
+    height: 550px;
+}
+.calidad .calidad_imagen img {
+    height: 100%;
+}
 
 /* ? RESEÑAS */
 /* ?___________________________________________________________________________________________________________________________________________ */
 
-.reseñas h3 {
-    font-size: 1.8rem;
+.reseñas .slide {
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: 1rem;
+    position: relative;
 }
 
-.reseñas p {
+.reseñas .slide .fa-quote-right {
+    position: absolute;
+    top: 2rem; right: 2rem;
+    font-size: 6rem;
+    color: #ccc;
+}
+
+.reseñas .slide .cliente {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    padding-bottom: 1.5rem;
+}
+
+.reseñas .slide .cliente img {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.reseñas .slide .cliente h3 {
+    font-size: 2rem;
+    padding-bottom: .5rem;
+}
+
+.reseñas .slide .cliente i {
     font-size: 1.3rem;
-    font-style: italic;
-    color: var(--light-color);
-}
-
-.reseñas .stars {
-    padding: 1rem 0;
-}
-
-.reseñas .stars i {
-    font-size: 1.7rem;
     color: var(--orange);
+}
+
+.reseñas .slide p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: var(--light-color);
 }
 
 
 /* ? FOOTER */
 /* ?___________________________________________________________________________________________________________________________________________ */
 
-.footer {
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .footer {
+    position: relative;
+    width: 100%;
+    min-height: 30vh;
+    padding: 0;
     display: flex;
 }
 
-.footer h3 {
+.bkgFiltro {
+    -webkit-filter: brightness(.3);
+    filter: brightness(.3);
+}
+
+.footer .footer_content {
+    position: relative;
+    z-index: 1;
+    color: #f2f2f2;
+}
+
+.footer .footer_Box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer_content .footer_Box h3 {
+    padding: .5rem 0;
+    font-size: 2.5rem;
+    color: var(--red);
+}
+
+.footer_content .footer_Box p {
+    font-size: 1.5rem;
+    padding: .5rem 0;
+    margin-bottom: 0;
+}
+
+.footer_content .footer_Box .fas {
+    color: var(--orange);
     font-size: 1.8rem;
 }
 
-.derechos {
-    background-color: var(--black);
-    color: var(--red);
+.footer_content .footer_Box a {
+    display: block;
+    padding: .5rem 0;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.footer_content .footer_Box a:hover {
+    color: var(--yellow);
+    text-decoration: underline;
+}
+
+footer .derechos {
     text-align: center;
-    font-size: 1.2rem;
-}
-
-.derechos a {
+    font-size: 1.5rem;
+    background-color: var(--black);
     color: #fff;
+    padding: .5rem;
 }
 
-.derechos span {
-    color: #fff;
+footer .derechos a {
+    display: inline;
+    color: var(--orange);
 }
 
+footer .derechos span {
+    color: var(--red);
+}
+
+footer .derechos .legales {
+    display: flex;
+    justify-content: center;
+}
+
+footer .derechos .legales a {
+    
+}
 /* ! -------------------------------------------------------------------------------------------------- */
 /* ! PAGINA: MENU */
 /* ! -------------------------------------------------------------------------------------------------- */
@@ -1039,7 +1201,6 @@ table thead th {
     .menu .box {
         width: 30%;
     }
-
 
 }
 
@@ -1154,6 +1315,10 @@ table thead th {
 
 /* ! 480 */
 @media screen and (max-width: 480px) {
+
+    html {
+        font-size: 50%;
+    }
 
     .titulo {
         font-size: 1.8rem;
