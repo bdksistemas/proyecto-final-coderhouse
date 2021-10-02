@@ -63,54 +63,63 @@
     <!-- MAIN -->
     <main>
 
-        <section class="contenedor">
-            <h2>Envíanos los datos de tu evento</h2>
-            <form action="">
-                <fieldset >
-                    <legend>Formulario de contacto</legend>
-                    <div>
-                        <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-                        <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos">
+        <section class="container" id="order">
+            <h3 class="preTitulo">Separa tu evento</h3>
+            <h1 class="titulo">Reservaciones</h1>
+    
+            <form action="" class="formulario mx-3">
+                <div class="row my-3">
+                    <div class="col-sm-12 col-md-6">
+                        <span>Tu nombre:</span>
+                        <input type="text" class="form-control py-3 mb-3" placeholder="Captura tu nombre" required>
                     </div>
-                    <br>
-                    <div>
-                        <label for="telefono">Teléfono</label>
-                        <input type="phone" name="telefono" id="telefono" placeholder="9999999999" required>
-                        <label for="email">E-Mail</label>
-                        <input type="email" name="email" id="email" placeholder="Captura tu e-mail" required>
+                    <div class="col-sm-12 col-md-6">
+                        <span>Tu número de teléfono:</span>
+                        <input type="numbre" class="form-control py-3" placeholder="Captura tu teléfono" required>
                     </div>
-                    <br>
-                    <div>
-                        <label for="evento">Tipo de evento</label>
-                        <select name="evento" id="evento">
-                            <option value="argentina">Reservación</option>
-                            <option value="argentina">Boda</option>
-                            <option value="mexico">Quinceñera</option>
-                            <option value="colombia">Posada</option>
-                            <option value="colombia">Reunión de trabajo</option>
-                            <option value="colombia">Cumpleaños</option>
-                        </select>
-                    </div>
-                    <br>
-                </fieldset>
-                <fieldset>
-                    <legend>Datos del evento</legend>
-                    <div>
-                        <label for="personas">Cantidad de personas</label>
-                        <input type="numbre" name="personas" id="persoinas">
-                        <label for="descrip">Cuéntanos más de tu evento</label>
-                        <textarea name="descrip" id="descrip" cols="50" rows="10" placeholder="Describe aquí tus requerimientos" required></textarea>
-                    </div>
-                </fieldset>
-                <div>
-                    <input type="submit" value="Enviar Datos">
-                    <input type="reset" value="Borrar datos">
-                    <input type="button" value="Sin acción">
                 </div>
-        </form>
-        </section>
+                <div class="row my-3">
+                    <div class="col-sm-12 col-md-6">
+                        <span>Tu correo:</span>
+                        <input type="text" class="form-control py-3 mb-3" placeholder="Dirección de correo" required>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <span>Tipo de evento:</span>
+                        <select class="form-select py-3" aria-label="Default select example">
+                            <option selected>Selecciona el tipo de evento</option>
+                            <option value="1">Reunión - Comida</option>
+                            <option value="2">Posada</option>
+                            <option value="3">Cumpleaños</option>
+                          </select>                        
+                    </div>
+                </div>
+                <div class="row my-3">
+                    <div class="col-sm-12 col-md-6">
+                        <span>Cantidad de invitados:</span>
+                        <input type="number" class="form-control py-3 mb-3" placeholder="Cantidad">
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <span>Fecha y hora:</span>
+                        <input type="datetime-local"class="form-control py-3" >
+                    </div>
+                </div>
+                <div class="row my-3">
+                    <div class="col-sm-12 col-md-6">
+                        <span>Tu dirección:</span>
+                        <textarea name="" id="" cols="30" rows="10" class="form-control mb-3" placeholder="Especifica detalladamente tu dirección"></textarea>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <span>Tu mensaje:</span>
+                        <textarea name="" id="" cols="30" rows="10" class="form-control" placeholder="Observaciones adicionales"></textarea>
+                    </div>
+                </div>   
 
+                <input type="submit" value="Solicitar reservación" class="boton">
+                <p class="mt-4">Una vez que revisemos tu solicitud de reservación te enviaremos un correo con la clave de reservación.</p>
+            </form>
+    
+        </section>
+    
 
     </main>
 

@@ -1158,6 +1158,13 @@ table thead th {
 /* ! PAGINA: CONTACTO */
 /* ! -------------------------------------------------------------------------------------------------- */
 
+.formulario span,
+.formulario input,
+.formulario textarea,
+.formulario select,
+.formulario p {
+    font-size: 1.5rem;
+}
 
 
 /* * -------------------------------------------------------------------------------------------------- */
