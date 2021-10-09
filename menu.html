@@ -47,15 +47,37 @@
             </div>
         </div>
 
-        <div class="hero heroModify">
+        <!-- ? CARRUSEL HERO -->
+        <div class="heroMenu heroModify">
             <div class="hero_fondo heroFiltro">
-                <img src="img/FondoMenu.jpg" alt="Fondo de la página principal">
+                <div class="carousel slide carousel-fade" id="carouselExampleFade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/FondoMenu.jpg" alt="Imagen de fondo Camarones Zarandeados">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/FondoMenu2.jpg" alt="Imagen de fondo Carne Asada">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/FondoMenu3.jpg" alt="Imagen de fondo Alitas Picositas">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>            
+                </div>
             </div>     
-            <div class="hero_content">
+            <div class="heroMenu_content">
                 <h1>Cielo, Mar y <span>Tierra</span></h1>
                 <p class="preTitulo">Conoce nuestro menú especialmente diseñado para satisfacer todos tus gustos.</p>
             </div>
         </div>
+
         <div class="botInicio">
             <a href="#"><i class="fas fa-arrow-up iconos" id="botInicio"></i></a>
         </div>
@@ -66,11 +88,11 @@
     <main>
 
         <!-- PLATILLOS ESTRELLA -->
-        <section>
+        <section class="secMenu">
             <p class="preTitulo">Delicios platillos a escoger</p>
             <h2 class="titulo">Nuestros platillos estrella</h2>
             
-            <div class="contenedor menu">
+            <div class="menu">
 
                 <div class="categorias">
                     <ul>
@@ -245,8 +267,8 @@
         <div class="footer">
             <img src="img/FondoFooter.jpg" alt="Fondo en el Footer" class="fondoSecciones bkgFiltro">        
             <!-- Menu de Opciones -->
-            <div class="footer_content container m-auto row">
-                <div class="footer_Box col-4">
+            <div class="footer_content">
+                <div class="footer_Box">
                     <h3>Menú</h3>
                     <div>
                         <a href="index.html" id="miInicio">Inicio</a>
@@ -258,7 +280,7 @@
                     </div>
                 </div>
                 <!-- Dirección -->
-                <div class="footer_Box col-4">
+                <div class="footer_Box">
                     <h3>Dirección</h3>                    
                     <div>
                         <p><i class="fas fa-map-marker-alt"></i> Av. Insurgentes 345, Centro, Mty, N.L.</p>
@@ -268,9 +290,9 @@
                     </div>
                 </div>
                 <!-- Redes Sociales -->
-                <div class="footer_Box col-4">
+                <div class="footer_Box">
                     <h3>Redes Sociales</h3>
-                    <div class="redesSociales mt-4">
+                    <div class="redesSociales">
                         <i class="fab fa-facebook iconos"></i>
                         <i class="fab fa-instagram iconos"></i>
                         <i class="fab fa-youtube iconos"></i>

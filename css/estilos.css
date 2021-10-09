@@ -1047,12 +1047,17 @@ footer .footer {
     position: relative;
     z-index: 1;
     color: #f2f2f2;
+    width: 95%;
+    margin: 25px auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 .footer .footer_Box {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 33%;
 }
 
 .footer_content .footer_Box h3 {
@@ -1106,15 +1111,41 @@ footer .derechos .legales {
     justify-content: center;
 }
 
-footer .derechos .legales a {
+/* footer .derechos .legales a {
     
-}
+} */
+
 /* ! -------------------------------------------------------------------------------------------------- */
 /* ! PAGINA: MENU */
 /* ! -------------------------------------------------------------------------------------------------- */
 
 /* ? MENÚ - CATEGORIAS */
 /* ?___________________________________________________________________________________________________________________________________________ */
+
+.heroMenu {
+    display: flex;
+    align-items: center;
+    padding-top: 4.5rem; 
+    flex-wrap: wrap;    
+    height: 70rem;
+}
+
+.heroMenu_content {
+    position: absolute;
+    left: 15rem;
+    width: 65rem;
+}
+
+.heroMenu_content span {
+    color: #ff2a00;
+}
+
+.heroMenu_content p {
+    font-size: 2.5rem;
+    text-align: left;
+    color: var(--orange);
+    padding: 0;
+}
 
 .categorias {
     display: flex;
@@ -1171,12 +1202,21 @@ table thead th {
 /* * MEDIA QUERIES  */
 /* * -------------------------------------------------------------------------------------------------- */
 
-/* ! 1024 */
+/* ! 1024 (1007)*/
 @media screen and (max-width: 1024px) {
 
+    .heroMenu {
+        height: auto;
+    }
+
+    .heroMenu_content,
     .hero_content {
         left: 5rem;
         width: 55rem;
+    }
+
+    .historia {
+        height: auto;
     }
 
     .historia_imagen  {        
@@ -1211,8 +1251,20 @@ table thead th {
 
 }
 
-/* ! 768 */
+/* ! 768 (751)*/
 @media screen and (max-width: 768px) {
+
+    .heroMeu_content {
+        width: 35rem;
+    }
+
+    .heroMenu_content h1 {
+        font-size: 3.5rem
+    }
+
+    .heroMenu_content p {
+        font-size: 1.5rem
+    }
 
     .nav .menuSup {
         display: none;
@@ -1279,7 +1331,7 @@ table thead th {
 
 }
 
-/* ! 600 */
+/* ! 600 (583) */
 @media screen and (max-width: 600px) {
  
     .titulo {
@@ -1295,6 +1347,10 @@ table thead th {
     }
 
     .hero_content {
+        width: 30rem;
+    }
+
+    .heroMenu_content {
         width: 30rem;
     }
 
@@ -1318,9 +1374,26 @@ table thead th {
         width: 40%;
     }
 
+    .footer_content {
+        flex-direction: column;
+    }
+
+    .footer .footer_Box {
+        width: 90%;
+        text-align: center;
+        margin: 15px auto;
+    }
+
+    .footer .footer_Box .redesSociales {
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        width: 95%;
+    }
+
 }
 
-/* ! 480 */
+/* ! 480 (463)*/
 @media screen and (max-width: 480px) {
 
     html {
@@ -1372,4 +1445,32 @@ table thead th {
     .menu .box .box_content a {
         font-size: 1.1rem;
     }    
+}
+
+
+/* ! 375 (358) */
+@media screen and (max-width: 375px) {
+
+    .heroMeu_content {
+        width: 25rem;
+    }
+
+    .heroMenu_content h1 {
+        font-size: 2.5rem
+    }
+
+    .heroMenu_content p {
+        font-size: 1.2rem
+    }
+
+    .ofertas {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .ofertas_card {
+        width: 90%;
+    }
+
+
 }
