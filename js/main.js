@@ -3,6 +3,8 @@
 
     document.addEventListener('DOMContentLoaded', function(){
 
+        console.log(window.location.pathname);
+        
         // CÓDIGO PARA ACTIVAR LA LIBRERÍA VANILLATILT, ANIMACIONES EN LAS CARD DEL INDEX.HTML
         if (window.location.pathname == '/index.html') {
             VanillaTilt.init(document.querySelectorAll(".destacados_card"), {
