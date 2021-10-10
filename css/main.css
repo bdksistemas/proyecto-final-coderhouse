@@ -207,6 +207,191 @@
   text-align: center;
 }
 
+/* ? SECCIÓN HISTORIA */
+/* ?___________________________________________________________________________________________________________________________________________ */
+.historia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 50vh;
+  margin: 3.5rem;
+}
+
+.historia .historia_imagen {
+  width: 50%;
+  overflow: hidden;
+}
+
+.historia .historia_imagen img {
+  width: 100%;
+  max-height: 45vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem;
+}
+
+.historia .historia_content {
+  width: 45%;
+  text-align: justify;
+  padding: 1rem;
+  margin-right: 3rem;
+}
+
+.historia .historia_content p {
+  font-size: 1.5rem;
+}
+
+.historia .historia_content .historia_firma {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 3rem;
+}
+
+.historia .historia_content .historia_firma img {
+  width: 5rem;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.historia .historia_content .historia_firma .historia_cheff {
+  border-left: 2px solid var(--light-color);
+  padding-left: 2rem;
+}
+
+.historia .historia_content .historia_firma .historia_cheff h3 {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.historia .historia_content .historia_firma .historia_cheff span {
+  font-size: 1.4rem;
+  color: #ff2a00;
+}
+
+/* ? DESTACADOS */
+/* ?___________________________________________________________________________________________________________________________________________ */
+.destacados {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1200px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  z-index: 1;
+}
+
+.destacados .destacados_card {
+  position: relative;
+  width: 28%;
+  height: 250px;
+  margin: 1.5rem;
+  -webkit-box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: #fff;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+.destacados .destacados_card .content {
+  padding: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.destacados .destacados_card .content i {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  font-size: 9em;
+  color: #ffac00;
+  pointer-events: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.destacados .destacados_card .content h3 {
+  font-size: 2rem;
+  z-index: 1000;
+  margin-bottom: 1.5rem;
+}
+
+.destacados .destacados_card .content p {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #666;
+}
+
+.destacados .destacados_card:hover .content i {
+  color: #ff2a00;
+}
+
+/* ? GALERIA */
+/* ?___________________________________________________________________________________________________________________________________________ */
+.galeria {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.galeria .galeria_content {
+  width: 90%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1.5rem;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 2rem 0;
+}
+
+.galeria .galeria_content img {
+  width: 100%;
+}
+
 /* ! -------------------------------------------------------------------------------------------------- */
 /* ! PAGINA: BLOG */
 /* ! -------------------------------------------------------------------------------------------------- */
@@ -262,6 +447,162 @@
 }
 
 .secBlog .blogs .blogBox .blogBox_content p {
+  font-size: 1.5rem;
+}
+
+/* ? OFERTAS */
+/* ?___________________________________________________________________________________________________________________________________________ */
+.secOfertas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.secOfertas .ofertas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.secOfertas .ofertas .ofertas_card {
+  width: 31%;
+  height: 500px;
+  overflow: hidden;
+  padding: 1rem;
+  margin: 10px;
+  background-color: #f2f2f2;
+  border: 1px solid #d0d0d0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-radius: 15px;
+}
+
+.secOfertas .ofertas .ofertas_card a {
+  text-align: center;
+}
+
+.secOfertas .ofertas .ofertas_card .ofertas_content {
+  position: relative;
+  width: 100%;
+  height: 45%;
+}
+
+.secOfertas .ofertas .ofertas_card .ofertas_content .descuento {
+  position: absolute;
+  right: 1rem;
+  background: #ffac00;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.secOfertas .ofertas .ofertas_card .ofertas_content .descuento h4 {
+  font-size: 5rem;
+  font-weight: 800;
+  -webkit-animation: animDesc infinite  2s;
+          animation: animDesc infinite  2s;
+}
+
+.secOfertas .ofertas .ofertas_card .ofertas_content .descuento span {
+  color: #ff2a00;
+  font-size: 2rem;
+}
+
+.secOfertas .ofertas .ofertas_card .ofertas_content .nomOferta {
+  position: absolute;
+  top: 7rem;
+}
+
+.secOfertas .ofertas .ofertas_card .ofertas_content .nomOferta h3 {
+  font-size: 2.5rem;
+}
+
+.secOfertas .ofertas .ofertas_card .ofertas_content .nomOferta ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.secOfertas .ofertas .ofertas_card .ofertas_content .nomOferta ul li {
+  margin-left: 2.5rem;
+  font-size: 1.5rem;
+  color: #ff2a00;
+  font-style: italic;
+}
+
+.secOfertas .ofertas .ofertas_card .ofertas_imagen {
+  width: 100%;
+  height: 48%;
+  overflow: hidden;
+}
+
+.secOfertas .ofertas .ofertas_card .ofertas_imagen img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+
+@-webkit-keyframes animDesc {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animDesc {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ! -------------------------------------------------------------------------------------------------- */
+/* ! PAGINA: CONTACTO */
+/* ! -------------------------------------------------------------------------------------------------- */
+.formulario span,
+.formulario input,
+.formulario textarea,
+.formulario select,
+.formulario p {
   font-size: 1.5rem;
 }
 /*# sourceMappingURL=main.css.map */

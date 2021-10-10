@@ -1,0 +1,62 @@
+/* ? DESTACADOS */
+/* ?___________________________________________________________________________________________________________________________________________ */
+
+.destacados { 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+
+    .destacados_card {
+        position: relative;
+        width: 28%;
+        height: 250px;
+        margin: 1.5rem;
+        box-shadow: $box-shadow2;
+        border-radius: 15px;
+        background: $blanco;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(5px);
+    
+        .content {
+            padding: 20px;
+            transition: 0.5s;
+
+            i {
+                position: absolute;
+                top: 10px;
+                right: 30px;
+                font-size: 9em;
+                color: $yellow;
+                pointer-events: none;
+                transition: 0.5s;    
+                z-index: -1;
+            }
+            
+            h3 {
+                font-size: 2rem;
+                z-index: 1000;
+                margin-bottom: 1.5rem;
+            }
+
+            p {
+                font-size: 1.3rem;
+                font-style: italic;
+                color: $light-color;
+            }                        
+        }
+
+        &:hover .content i {
+            color: $red;
+        }                    
+    }    
+}
+

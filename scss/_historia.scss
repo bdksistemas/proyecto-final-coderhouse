@@ -1,0 +1,60 @@
+/* ? SECCIÓN HISTORIA */
+/* ?___________________________________________________________________________________________________________________________________________ */
+
+.historia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 50vh;
+    margin: 3.5rem;
+
+    .historia_imagen {
+        width: 50%;
+        overflow: hidden;    
+
+        img {
+            width: 100%;
+            max-height: 45vh;
+            object-fit: cover;
+            border-radius: 1rem;
+        }        
+    }    
+
+    .historia_content {
+        width: 45%;
+        text-align: justify;
+        padding: 1rem;
+        margin-right: 3rem;
+
+        p {
+            font-size: 1.5rem;
+        }
+                
+        .historia_firma {
+            display: flex;
+            margin-top: 3rem;
+
+            img {
+                width: 5rem;
+                border-radius: 50%;
+                margin-right: 2rem;
+            } 
+
+            .historia_cheff {
+                border-left: 2px solid var(--light-color);
+                padding-left: 2rem;
+
+                h3 {
+                    font-size: 2.5rem;
+                    font-weight: 800;
+                }
+        
+                span {
+                    font-size: 1.4rem;
+                    color: $red;
+                }        
+            }            
+        }                 
+    }    
+}
