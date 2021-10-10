@@ -68,26 +68,6 @@ a {
     color: #fff;
 }
 
-.botonFiltro {
-    margin-top: 1rem;
-    display: inline-block;
-    font-size: 1.7rem;
-    color: #fff;
-    border-radius: .5rem;
-    cursor: pointer;
-    padding: .8rem 3rem;
-    background-color: var(--red);
-}
-
-.botonFiltro:hover {
-    background-color: var(--orange);
-    letter-spacing: .1rem;
-}
-
-.catActvie {
-    background-color: var(--black);
-}
-
 
 .titulo {
     text-align: center;
@@ -641,117 +621,6 @@ a {
 }
 
 
-
-/* ? MENÚ */
-/* ?___________________________________________________________________________________________________________________________________________ */
-
-.secMenu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.menu .box {
-    background: #fff;
-    border-radius: .5rem;
-    border: .1rem solid rgba(0, 0, 0, .2);
-    box-shadow: var(--box-shadow);
-    width: 25%;
-    margin: 1rem;
-    padding: 1.5rem;    
-}
-
-.menu .box .box_image {
-    width: 100%;
-    height: 20rem;
-    overflow: hidden;
-    position: relative;
-}
-
-.menu .box .box_image img {
-    height: 100%;
-    width: 100%;
-    border-radius: .5rem;
-    object-fit: cover;
-}
-
-.menu .box .box_image .fa-heart{
-    position: absolute;
-    top: 1rem; right: 1rem;
-    background: #fff;
-    border-radius: 50%;
-    height: 5rem;
-    width: 5rem;
-    line-height: 5rem;
-    font-size: 2rem;
-    text-align: center;
-    color: var(--black);
-} 
-
-.menu .box .box_image .fa-heart:hover {
-    background: var(--red);
-    color: #fff;
-}
-
-.menu .box .box_content {
-    padding: .5rem;
-    padding-top: .5rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.menu .box .box_content .stars {
-    padding-bottom: 1rem;
-}
-
-.menu .box .box_content .stars i {
-    font-size: 1.2rem;
-    color: var(--orange);
-}
-
-.menu .box .box_content h3 {
-    font-size: 1.8rem;
-    font-weight: 800;
-}
-
-.menu .box .box_content p {
-    font-size: 1.4rem;
-    color: var(--light-color);
-    padding: .5rem 0;
-    line-height: 1.5;
-}
-
-.menu .box .box_content ul {
-    list-style-type: disc ; 
-    list-style-position: inside;
-    font-style: italic;
-    padding: .5rem 0;
-}
-
-.menu .box .box_content li {    
-    font-size: 1.2rem;
-}
-
-.menu .box .box_content span {
-    color: var(--red);
-    margin-left: 1rem;
-    font-size: 3rem;
-    font-weight: 800;
-    text-align: right;
-}
-
-.menu .box .box_content a {
-    text-align: center;
-}
-
 /* ? RESERVACIONES */
 /* ?___________________________________________________________________________________________________________________________________________ */
 
@@ -1115,56 +984,6 @@ footer .derechos .legales {
     
 } */
 
-/* ! -------------------------------------------------------------------------------------------------- */
-/* ! PAGINA: MENU */
-/* ! -------------------------------------------------------------------------------------------------- */
-
-/* ? MENÚ - CATEGORIAS */
-/* ?___________________________________________________________________________________________________________________________________________ */
-
-.heroMenu {
-    display: flex;
-    align-items: center;
-    padding-top: 4.5rem; 
-    flex-wrap: wrap;    
-    height: 70rem;
-}
-
-.heroMenu_content {
-    position: absolute;
-    left: 15rem;
-    width: 65rem;
-}
-
-.heroMenu_content span {
-    color: #ff2a00;
-}
-
-.heroMenu_content p {
-    font-size: 2.5rem;
-    text-align: left;
-    color: var(--orange);
-    padding: 0;
-}
-
-.categorias {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 5rem;
-}
-
-.categorias ul {
-    list-style-type: none ;     
-}
-
-.categorias ul li {
-    color: #fff;
-}
-
-table thead th {
-    background-color: black;
-    color: #fff;
-}
 
 
 /* ! -------------------------------------------------------------------------------------------------- */
@@ -1177,11 +996,6 @@ table thead th {
 /* ! PAGINA: GALERIA */
 /* ! -------------------------------------------------------------------------------------------------- */
 
-
-
-/* ! -------------------------------------------------------------------------------------------------- */
-/* ! PAGINA: BLOG */
-/* ! -------------------------------------------------------------------------------------------------- */
 
 
 

@@ -1,0 +1,267 @@
+@charset "UTF-8";
+/* ! -------------------------------------------------------------------------------------------------- */
+/* ! PAGINA: MENU */
+/* ! -------------------------------------------------------------------------------------------------- */
+.heroMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 4.5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 70rem;
+}
+
+.heroMenu .heroMenu_content {
+  position: absolute;
+  left: 15rem;
+  width: 65rem;
+}
+
+.heroMenu .heroMenu_content span {
+  color: #ff2a00;
+}
+
+.heroMenu .heroMenu_content p {
+  font-size: 2.5rem;
+  text-align: left;
+  color: #ff8a00;
+  padding: 0;
+}
+
+.categorias {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.categorias ul {
+  list-style-type: none;
+}
+
+.categorias ul li {
+  color: #fff;
+}
+
+.botonFiltro {
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 1.7rem;
+  color: #fff;
+  border-radius: .5rem;
+  cursor: pointer;
+  padding: .8rem 3rem;
+  background-color: #ff2a00;
+}
+
+.botonFiltro:hover {
+  background-color: #000;
+  letter-spacing: .1rem;
+}
+
+.botonFiltro--actvie {
+  background-color: var(--black);
+}
+
+/* ? MENÚ */
+/* ?___________________________________________________________________________________________________________________________________________ */
+.secMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.secMenu .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.secMenu .menu .box {
+  background: #fff;
+  border-radius: .5rem;
+  border: 1px solid #d0d0d0;
+  -webkit-box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  width: 25%;
+  margin: 1rem;
+  padding: 1.5rem;
+}
+
+.secMenu .menu .box .box_image {
+  width: 100%;
+  height: 20rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.secMenu .menu .box .box_image img {
+  height: 100%;
+  width: 100%;
+  border-radius: .5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.secMenu .menu .box .box_image .fa-heart {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #fff;
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #000;
+}
+
+.secMenu .menu .box .box_image .fa-heart:hover {
+  background: #ff2a00;
+  color: #fff;
+}
+
+.secMenu .menu .box .box_content {
+  padding: .5rem;
+  padding-top: .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.secMenu .menu .box .box_content .stars {
+  padding-bottom: 1rem;
+}
+
+.secMenu .menu .box .box_content .stars i {
+  font-size: 1.2rem;
+  color: #ff8a00;
+}
+
+.secMenu .menu .box .box_content h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  height: 30px;
+}
+
+.secMenu .menu .box .box_content p {
+  font-size: 1.4rem;
+  color: #666;
+  padding: .5rem 0;
+  line-height: 1.5;
+  height: 60px;
+  margin-top: 5px;
+}
+
+.secMenu .menu .box .box_content ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  font-style: italic;
+  padding: .5rem 0;
+  height: 60px;
+}
+
+.secMenu .menu .box .box_content ul li {
+  font-size: 1.2rem;
+}
+
+.secMenu .menu .box .box_content span {
+  color: var(--red);
+  margin-left: 1rem;
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: right;
+}
+
+.secMenu .menu .box .box_content a {
+  text-align: center;
+}
+
+/* ! -------------------------------------------------------------------------------------------------- */
+/* ! PAGINA: BLOG */
+/* ! -------------------------------------------------------------------------------------------------- */
+.secBlog {
+  width: 85%;
+  margin: 25px auto;
+}
+
+.secBlog .blogs {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 35px;
+}
+
+.secBlog .blogs .blogBox {
+  width: 45%;
+  border: 1px solid #d0d0d0;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+  background-color: #fff;
+}
+
+.secBlog .blogs .blogBox iframe {
+  width: 100%;
+  height: 350px;
+  border-radius: 10px;
+}
+
+.secBlog .blogs .blogBox .blogBox_content {
+  width: 100%;
+  height: 260px;
+  padding: 20px;
+}
+
+.secBlog .blogs .blogBox .blogBox_content h3 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+
+.secBlog .blogs .blogBox .blogBox_content span {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-right: 1rem;
+}
+
+.secBlog .blogs .blogBox .blogBox_content p {
+  font-size: 1.5rem;
+}
+/*# sourceMappingURL=main.css.map */

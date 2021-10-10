@@ -1,0 +1,53 @@
+/* ! -------------------------------------------------------------------------------------------------- */
+/* ! PAGINA: BLOG */
+/* ! -------------------------------------------------------------------------------------------------- */
+
+.secBlog {
+    width: 85%;
+    margin: 25px auto;
+
+    .blogs {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 35px;
+
+        .blogBox {
+            width: 45%;
+            border: $borde;
+            border-radius: 10px;
+            box-shadow: $box-shadow;
+            margin-bottom: 25px;
+            background-color: $blanco;
+
+            iframe {
+                width: 100%;
+                height: 350px;
+                border-radius: 10px;                
+            }
+
+            .blogBox_content {
+                width: 100%;
+                height: 260px;
+                padding: 20px;
+
+                h3 {
+                    text-transform: uppercase;
+                    font-size: 2.5rem;
+                }
+                
+                span {
+                    font-size: 1.2rem;
+                    font-style: italic;
+                    margin-right: 1rem;
+                }
+
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+        }        
+    }
+}
+
