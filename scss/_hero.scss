@@ -1,0 +1,52 @@
+// Clase HERO
+
+.hero {
+    display: flex;
+    align-items: center;
+    padding-top: 4.5rem; 
+    flex-wrap: wrap;    
+    height: 70rem;
+
+    .hero_fondo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }        
+
+    .hero_content {
+        position: absolute;
+        left: 15rem;
+        width: 65rem;
+
+        img {
+            width: 90%;
+            max-width: 90%;
+        }
+        
+        span {
+            color: #ff2a00;
+        }
+
+        p {
+            font-size: 2.5rem;
+            text-align: left;
+            color: $orange;
+            padding: 0;
+        }                        
+    }
+
+    .hero_content_modify {
+        @extend .hero_content;
+
+        h1 {
+            color: #fff;
+        }
+    }    
+}

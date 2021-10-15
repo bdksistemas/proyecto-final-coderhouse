@@ -1,0 +1,25 @@
+
+// Degradado que utilizo en los botones y el hover 
+// Si $tipDeg = 1 es un degradado que comienza con el color narnga
+// Si es 2, el degradado comienza con el colo amarillo
+@mixin degradado ($tipDeg) {
+
+    @if $tipDeg == 1 {
+
+        color: #fff; 
+        background: #ff2a00; /* Old browsers */
+        background: -moz-linear-gradient(45deg,  #ff2a00 40%, #ff8a00 68%, #ff8a00 68%, #ffac00 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(45deg,  #ff2a00 40%,#ff8a00 68%,#ff8a00 68%,#ffac00 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(45deg,  #ff2a00 40%,#ff8a00 68%,#ff8a00 68%,#ffac00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2a00', endColorstr='#ffac00',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */                
+
+    } @else {
+
+        background: #ffac00; /* Old browsers */
+        background: -moz-linear-gradient(-45deg,  #ffac00 40%, #ff8a00 68%, #ff8a00 68%, #ff2a00 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg,  #ffac00 40%,#ff8a00 68%,#ff8a00 68%,#ff2a00 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg,  #ffac00 40%,#ff8a00 68%,#ff8a00 68%,#ff2a00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffac00', endColorstr='#ff2a00',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+            
+    }
+}

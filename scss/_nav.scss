@@ -1,0 +1,75 @@
+
+/* ? BARRA DE NAVEGACIÓN */
+/* ?___________________________________________________________________________________________________________________________________________ */
+
+.nav {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: #000;
+    color: #fff;
+    z-index: 10000;
+    top: 0;
+
+    .contenedor_nav {
+        display: flex;
+        height: inherit;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo_sup {
+            height: 100%;
+        }
+
+        .menuSup {
+        
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0;        
+                list-style-type: none ; 
+                background-color: var(--black);        
+
+                li {
+                    border-radius: .5rem;
+
+                    a {
+                        display: block;
+                        font-size: 1.7rem;
+                        color: #fff;
+                        padding: .5rem 1.5rem;
+                    }        
+                    
+                    &:hover > ul {
+                        display: block;
+                    }       
+                    
+                    &.active {
+                        @include degradado(1);
+                    }                                    
+
+                    &:hover {
+                        @include degradado(1);
+                    }
+                }            
+            }
+        }        
+    }    
+}
+
+
+// .subMenu {
+//     display: none;
+//     position: absolute;
+//     border-bottom-left-radius: 1rem;
+//     border-bottom-right-radius: 1rem;
+// }
+
+// .subMenu li {
+//     display: block;
+//     margin: 1rem;
+//     width: 13rem;
+// }
+

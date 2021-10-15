@@ -1,0 +1,33 @@
+// CLASE QUE DA ESTILO REDONDO A LOS ICONOS
+.iconos {
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: #fff;
+    border-radius: 50%;
+
+    @include degradado(1);
+    
+    &:hover {
+        transform: rotate(360deg);
+        @include degradado(2);    
+    }    
+}
+
+// Filtro negro transparente para que las letras puedan resaltar sobre las imagenes de fondo obscuras
+.heroFiltro {
+    -webkit-filter: brightness(.5);
+    filter: brightness(.6);
+}
+
+// Clase del botón que moverse al inicio de la pantalla
+.botInicio {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 10000;
+}
