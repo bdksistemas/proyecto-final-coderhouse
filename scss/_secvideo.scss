@@ -1,0 +1,90 @@
+/* ? SECCIÓN VÍDEO */
+/* ?___________________________________________________________________________________________________________________________________________ */
+
+.secVideo {
+    position: relative;
+    width: 100%;
+    min-height: 50vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;   
+
+    .videoContent {
+        position: relative;
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .play {
+            cursor: pointer;
+            width: 80px;
+            height: 80px;
+            display: block;
+            transition: .5s;
+            border-radius: 50%;
+            margin-top: 15px;
+        
+            -webkit-animation: ripple 2.5s linear 1s infinite;
+            animation: ripple 2.5s linear 1s infinite;
+        
+            img {
+                width: 80px;
+                transition: width 0.5s;
+            }
+            
+            &:hover {
+                background: var(--red);
+            }            
+        }        
+    }
+
+    .videoPopup {
+        position: fixed;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10000;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(25px);
+        visibility: hidden;
+        opacity: 0;
+
+        &.active {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        video {
+            max-width: 1200px;
+            outline: none;
+        }        
+
+        .close {
+            position: absolute;
+            top: 30px;  right: 30px;
+            cursor: pointer;
+            filter: invert(1);
+            max-width: 32px;
+        }        
+    }        
+}
+
+@keyframes ripple {
+    0% {
+      box-shadow: 0 0 0 .7rem rgba(255,255,255, 0.2),
+                  0 0 0 1.5rem rgba(255,255,255, 0.2),
+                  0 0 0 5rem rgba(255,255,255, 0.2);
+    }
+    100% {
+      box-shadow: 0 0 0 1.5rem rgba(255,255,255, 0.2),
+                  0 0 0 4rem rgba(255,255,255, 0.2),
+                  0 0 0 8rem rgba(255,255,255, 0);
+    }
+}

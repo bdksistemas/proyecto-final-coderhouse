@@ -23,3 +23,30 @@
             
     }
 }
+
+
+// MIXIN para agregar FLEXBOX a las cajas
+// Si el parámetrio es igual a 0 no aplica el código
+// PARAMETROS:
+//      $fxDs = Display
+//      $fxJt = Justify-content
+//      $fxAi = Align-items
+//      $fxWr = Flex-wrap
+//      $fxFd = Flex-direction
+@mixin mixFlex ($fxDs, $fxJt, $fxAi, $fxWr, $fxFd) {
+    @if $fxDs != 0 {
+        display: $fxDs;
+    }
+    @if $fxJt != 0 {
+        justify-content: $fxJt;
+    }
+    @if $fxAi != 0 {
+        align-items: $fxAi;
+    }
+    @if $fxWr != 0 {
+        flex-wrap: $fxWr;
+    }
+    @if $fxFd != 0 {
+        flex-direction: $fxFd;
+    }
+}

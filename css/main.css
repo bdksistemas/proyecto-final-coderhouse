@@ -45,6 +45,94 @@
   z-index: 10000;
 }
 
+.boton {
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 1.6rem;
+  color: #fff;
+  border-radius: .5rem;
+  cursor: pointer;
+  padding: .8rem 3rem;
+  color: #fff;
+  background: #ff2a00;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #ff2a00 40%, #ff8a00 68%, #ff8a00 68%, #ffac00 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2a00', endColorstr='#ffac00',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+.boton:hover {
+  background: #ffac00;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #ffac00 40%, #ff8a00 68%, #ff8a00 68%, #ff2a00 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffac00', endColorstr='#ff2a00',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  letter-spacing: .1rem;
+  color: #fff;
+}
+
+.titulo, .tituloLeft, .tituloWhite {
+  text-align: center;
+  color: #000;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.tituloLeft {
+  text-align: left;
+}
+
+.tituloWhite {
+  color: #fff;
+}
+
+.preTitulo, .preTituloLeft, .preTituloWhite {
+  text-align: center;
+  color: #ff2a00;
+  font-size: 2rem;
+  padding-top: 1rem;
+}
+
+.preTituloLeft {
+  text-align: left;
+}
+
+.preTituloWhite {
+  color: #fff;
+}
+
+.txtWhite {
+  color: white;
+}
+
+.bkgwhite {
+  background-color: #fff;
+}
+
+.contenedor {
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.fondoSecciones {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 /* ? BARRA DE NAVEGACIÓN */
 /* ?___________________________________________________________________________________________________________________________________________ */
 .nav {
@@ -510,6 +598,379 @@
 
 .destacados .destacados_card:hover .content i {
   color: #ff2a00;
+}
+
+/* ? SECCIÓN VÍDEO */
+/* ?___________________________________________________________________________________________________________________________________________ */
+.secVideo {
+  position: relative;
+  width: 100%;
+  min-height: 50vh;
+  padding: 0 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.secVideo .videoContent {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.secVideo .videoContent .play {
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  display: block;
+  -webkit-transition: .5s;
+  transition: .5s;
+  border-radius: 50%;
+  margin-top: 15px;
+  -webkit-animation: ripple 2.5s linear 1s infinite;
+  animation: ripple 2.5s linear 1s infinite;
+}
+
+.secVideo .videoContent .play img {
+  width: 80px;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}
+
+.secVideo .videoContent .play:hover {
+  background: var(--red);
+}
+
+.secVideo .videoPopup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.secVideo .videoPopup.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.secVideo .videoPopup video {
+  max-width: 1200px;
+  outline: none;
+}
+
+.secVideo .videoPopup .close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  max-width: 32px;
+}
+
+@-webkit-keyframes ripple {
+  0% {
+    -webkit-box-shadow: 0 0 0 0.7rem rgba(255, 255, 255, 0.2), 0 0 0 1.5rem rgba(255, 255, 255, 0.2), 0 0 0 5rem rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 0 0.7rem rgba(255, 255, 255, 0.2), 0 0 0 1.5rem rgba(255, 255, 255, 0.2), 0 0 0 5rem rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 1.5rem rgba(255, 255, 255, 0.2), 0 0 0 4rem rgba(255, 255, 255, 0.2), 0 0 0 8rem rgba(255, 255, 255, 0);
+            box-shadow: 0 0 0 1.5rem rgba(255, 255, 255, 0.2), 0 0 0 4rem rgba(255, 255, 255, 0.2), 0 0 0 8rem rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    -webkit-box-shadow: 0 0 0 0.7rem rgba(255, 255, 255, 0.2), 0 0 0 1.5rem rgba(255, 255, 255, 0.2), 0 0 0 5rem rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 0 0.7rem rgba(255, 255, 255, 0.2), 0 0 0 1.5rem rgba(255, 255, 255, 0.2), 0 0 0 5rem rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 1.5rem rgba(255, 255, 255, 0.2), 0 0 0 4rem rgba(255, 255, 255, 0.2), 0 0 0 8rem rgba(255, 255, 255, 0);
+            box-shadow: 0 0 0 1.5rem rgba(255, 255, 255, 0.2), 0 0 0 4rem rgba(255, 255, 255, 0.2), 0 0 0 8rem rgba(255, 255, 255, 0);
+  }
+}
+
+/* ? RESERVACIONES */
+/* ?___________________________________________________________________________________________________________________________________________ */
+.reservaciones::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-filter: brightness(0.5);
+  filter: brightness(0.5);
+}
+
+.reservaciones .reservaciones_content {
+  position: relative;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.parallax {
+  position: relative;
+  height: 45rem;
+}
+
+.parallax::before {
+  background-image: url(../img/reservaciones.jpg);
+  content: '';
+}
+
+/* ? CALIDAD */
+/* ?___________________________________________________________________________________________________________________________________________ */
+.secCalidad {
+  padding-bottom: 0;
+}
+
+.secCalidad .calidad {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.secCalidad .calidad .calidad_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 40px 10px;
+}
+
+.secCalidad .calidad .calidad_content .calidad_der {
+  text-align: right;
+  width: 250px;
+}
+
+.secCalidad .calidad .calidad_content .calidad_izq {
+  width: 250px;
+}
+
+.secCalidad .calidad .calidad_content .calidad_content h3 {
+  font-size: 1.8rem;
+}
+
+.secCalidad .calidad .calidad_content p {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #666;
+}
+
+.secCalidad .calidad .calidad_content .calidad_iconos {
+  margin: 0 15px;
+}
+
+.secCalidad .calidad .calidad_content .calidad_iconos i {
+  height: 6.5rem;
+  line-height: 6.5rem;
+  width: 6.5rem;
+  text-align: center;
+  font-size: 3rem;
+  color: #fff;
+  border-radius: 50%;
+  color: #fff;
+  background: #ff2a00;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #ff2a00 40%, #ff8a00 68%, #ff8a00 68%, #ffac00 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2a00', endColorstr='#ffac00',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  -webkit-transition: -webkit-filter 0.5s;
+  transition: -webkit-filter 0.5s;
+  transition: filter 0.5s;
+  transition: filter 0.5s, -webkit-filter 0.5s;
+}
+
+.secCalidad .calidad .calidad_content:hover .calidad_iconos {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+.secCalidad .calidad .calidad_content:hover .calidad_iconos i {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.secCalidad .calidad .calidad_imagen {
+  height: 550px;
+}
+
+.secCalidad .calidad .calidad_imagen img {
+  height: 100%;
+}
+
+/* ? CHEFS */
+/* ?___________________________________________________________________________________________________________________________________________ */
+.chefs {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.chefs .chef_card {
+  padding: 10px;
+  width: 30%;
+  margin: 0 10px;
+}
+
+.chefs .chef_card .chef_img {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  color: #fff;
+  background: #ff2a00;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #ff2a00 40%, #ff8a00 68%, #ff8a00 68%, #ffac00 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2a00', endColorstr='#ffac00',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  -webkit-transition: -webkit-filter 1s;
+  transition: -webkit-filter 1s;
+  transition: filter 1s;
+  transition: filter 1s, -webkit-filter 1s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.chefs .chef_card .chef_img img {
+  position: absolute;
+  bottom: 0;
+  height: 95%;
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
+  left: -40px;
+}
+
+.chefs .chef_card:nth-child(2) .chef_img {
+  background: #ffac00;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #ffac00 40%, #ff8a00 68%, #ff8a00 68%, #ff2a00 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffac00', endColorstr='#ff2a00',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+.chefs .chef_card:hover .chef_img img {
+  height: 120%;
+}
+
+.chefs .chef_card:hover .chef_img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.chefs .chef_card .chef_content {
+  padding: 0 10px;
+}
+
+.chefs .chef_card .chef_content h3 {
+  font-size: 1.8rem;
+}
+
+.chefs .chef_card .chef_content p {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--light-color);
+}
+
+.chefs .chef_card .chef_content .chef_social {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
 }
 
 /* ? GALERIA */
