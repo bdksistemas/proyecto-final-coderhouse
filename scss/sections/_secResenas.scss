@@ -1,0 +1,50 @@
+ /* ? RESEÑAS */
+/* ?___________________________________________________________________________________________________________________________________________ */
+
+.reseñas {
+
+    .slide {
+        padding: 2rem;
+        box-shadow: $box-shadow;
+        border: .1rem solid rgba(0, 0, 0, .1);
+        border-radius: 1rem;
+        position: relative;
+
+        .fa-quote-right {
+            position: absolute;
+            top: 2rem; right: 2rem;
+            font-size: 6rem;
+            color: #ccc;
+        }
+
+        .cliente {
+            @include mixFlex(flex,0,center,0,0);
+            gap: 1.5rem;
+            padding-bottom: 1.5rem;
+
+            img {
+                height: 7rem;
+                width: 7rem;
+                border-radius: 50%; 
+                object-fit: cover;
+                margin-right: 1rem;
+            }
+            
+            h3 {
+                font-size: 2rem;
+                padding-bottom: .5rem;
+            }
+
+            i {
+                font-size: 1.3rem;
+                color: $orange;
+            }
+        }    
+
+        p {
+            font-size: 1.5rem;
+            line-height: 1.8;
+            color: $light-color;
+        }    
+    }
+}

@@ -22,4 +22,14 @@
         *   El mixin mixFlex por el momento solo lo he aplicado en los archivos [ _secCalidad.scss y _secReservaciones.scss ] con éxito.
 
 
+## TERCERA ENTREGA : RAMA [ des-c12-com : Aplicando SASS Operaciones ] 
+
+    * Se agrega la sección de las reseñas a SASS
+    * Se crea un nuevo MIXIN : mixFiltro() para aplicar filtros a los background con diferentes valores, se puede ver aplicado en el archivo [ _generales.scss ]
+    * Se agrega el FOOTER a SASS
+    * Se agrega un nuevo MIXIN : mixMQ, especial para agregar todos los MediaQueries necesarios, con 1 solo mixin puedo poner un media querie para cualquier tamaño.
+    * Se reestructura la carpeta SCSS y se divide en carpetas, para poder separar los diferentes archivos de SASS en su respectiva categoría
+    * Se comienza a aplicar los media queries por medio del nuevo mixin, pero aun no queda completo.
+    * Prácticamente ya se convirtió todo el CSS a SASS, aún queda un poco de código pero son media queries.
+
 

@@ -1,0 +1,89 @@
+// Clase HERO
+
+.hero {
+    @include mixFlex(flex,0,center,wrap,0);
+    padding-top: 4.5rem; 
+    height: 70rem;
+
+    .hero_fondo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }        
+
+    .hero_content {
+        position: absolute;
+        left: 15rem;
+        width: 65rem;
+
+        img {
+            width: 90%;
+            max-width: 90%;
+        }
+
+        h1 {
+            @include mixMQ($tablet) {
+                font-size: 3.5rem;
+            };
+            @include mixMQ($movilSM) {
+                font-size: 2.5rem;
+            };
+        }
+        
+        span {
+            color: #ff2a00;
+        }
+
+        p {
+            font-size: 2.5rem;
+            text-align: left;
+            color: $orange;
+            padding: 0;
+            @include mixMQ($tablet) {
+                font-size: 1.8rem;
+            };
+            @include mixMQ($movilSM) {
+                font-size: 1.2rem;
+            };
+        }
+
+        @include mixMQ($deskXL) {
+            left: 5rem;
+            width: 55rem;                
+        }
+        @include mixMQ($tablet) {
+            width: 35rem;
+        };
+        @include mixMQ($movilSM) {
+            width: 25rem;
+        };
+    }
+
+    @include mixMQ($movil) {
+        height: 45rem;
+    };
+
+    .hero_content_modify {
+        @extend .hero_content;
+
+        h1 {
+            color: #fff;
+        }
+    }    
+
+}
+
+.heroMod {
+    @extend .hero;
+
+    @include mixMQ($deskXL) {
+        height: auto;
+    };
+}

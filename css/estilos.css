@@ -1,215 +1,13 @@
-:root {
-    --red: #ff2a00;
-    --black: #000;
-    --orange: #ff8a00;
-    --yellow: #ffac00; 
-    --light-color: #666;
-    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
-}
-
-* {
-    font-family: 'Nunito', sans-serif;
-    margin: 0; padding: 0; 
-    box-sizing: border-box;
-    text-decoration: none;
-    outline: none;
-    border: none;
-    text-transform: initial;
-    transition: all .2s linear;    
-} 
-
-html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-}
-
-section {
-    padding: 5rem;
-} 
-
-body {
-    background-color: #f2f2f2;
-}
-
-h1 {
-    font-size: 5.6rem;
-}
-
-a {
-    text-decoration: none;
-}
-
-
-/* ? RESEÑAS */
-/* ?___________________________________________________________________________________________________________________________________________ */
-
-.reseñas .slide {
-    padding: 2rem;
-    box-shadow: var(--box-shadow);
-    border: .1rem solid rgba(0, 0, 0, .1);
-    border-radius: 1rem;
-    position: relative;
-}
-
-.reseñas .slide .fa-quote-right {
-    position: absolute;
-    top: 2rem; right: 2rem;
-    font-size: 6rem;
-    color: #ccc;
-}
-
-.reseñas .slide .cliente {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-    padding-bottom: 1.5rem;
-}
-
-.reseñas .slide .cliente img {
-    height: 7rem;
-    width: 7rem;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 1rem;
-}
-
-.reseñas .slide .cliente h3 {
-    font-size: 2rem;
-    padding-bottom: .5rem;
-}
-
-.reseñas .slide .cliente i {
-    font-size: 1.3rem;
-    color: var(--orange);
-}
-
-.reseñas .slide p {
-    font-size: 1.5rem;
-    line-height: 1.8;
-    color: var(--light-color);
-}
-
-
-/* ? FOOTER */
-/* ?___________________________________________________________________________________________________________________________________________ */
-
-footer {
-    display: flex;
-    flex-direction: column;
-}
-
-footer .footer {
-    position: relative;
-    width: 100%;
-    min-height: 30vh;
-    padding: 0;
-    display: flex;
-}
-
-.bkgFiltro {
-    -webkit-filter: brightness(.3);
-    filter: brightness(.3);
-}
-
-.footer .footer_content {
-    position: relative;
-    z-index: 1;
-    color: #f2f2f2;
-    width: 95%;
-    margin: 25px auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer .footer_Box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 33%;
-}
-
-.footer_content .footer_Box h3 {
-    padding: .5rem 0;
-    font-size: 2.5rem;
-    color: var(--red);
-}
-
-.footer_content .footer_Box p {
-    font-size: 1.5rem;
-    padding: .5rem 0;
-    margin-bottom: 0;
-}
-
-.footer_content .footer_Box .fas {
-    color: var(--orange);
-    font-size: 1.8rem;
-}
-
-.footer_content .footer_Box a {
-    display: block;
-    padding: .5rem 0;
-    font-size: 1.5rem;
-    color: #fff;
-}
-
-.footer_content .footer_Box a:hover {
-    color: var(--yellow);
-    text-decoration: underline;
-}
-
-footer .derechos {
-    text-align: center;
-    font-size: 1.5rem;
-    background-color: var(--black);
-    color: #fff;
-    padding: .5rem;
-}
-
-footer .derechos a {
-    display: inline;
-    color: var(--orange);
-}
-
-footer .derechos span {
-    color: var(--red);
-}
-
-footer .derechos .legales {
-    display: flex;
-    justify-content: center;
-}
-
 
 /* * -------------------------------------------------------------------------------------------------- */
 /* * MEDIA QUERIES  */
 /* * -------------------------------------------------------------------------------------------------- */
 
-/* ! 1024 (1007)*/
-@media screen and (max-width: 1024px) {
+/* !1200 (1183) */
 
-    .heroMenu {
-        height: auto;
-    }
+/* ! 992 (975)*/
+@media screen and (max-width: 992px) {
 
-    .heroMenu_content,
-    .hero_content {
-        left: 5rem;
-        width: 55rem;
-    }
-
-    .historia {
-        height: auto;
-    }
-
-    .historia_imagen  {        
-        width: 100%;
-        margin: 0 ;
-    }
-
-    .historia_content  {        
-        width: 100%;
-        margin: 15px 0 0 0;
-    }
 
     .secOfertas {
         padding: 20px 0 30px 0;
@@ -219,38 +17,13 @@ footer .derechos .legales {
         max-width: 90%;        
     }
 
-    .secMenu {
-        padding: 20px 0 30px 0;
-    }
-
-    .menu {
-        justify-content: space-between;
-    }
-
-    .menu .box {
-        width: 30%;
-    }
 
 }
 
 /* ! 768 (751)*/
 @media screen and (max-width: 768px) {
 
-    .heroMeu_content {
-        width: 35rem;
-    }
 
-    .heroMenu_content h1 {
-        font-size: 3.5rem
-    }
-
-    .heroMenu_content p {
-        font-size: 1.5rem
-    }
-
-    .nav .menuSup {
-        display: none;
-    }
 
     .ofertas {
         padding: 0;
@@ -279,25 +52,7 @@ footer .derechos .legales {
         font-size: 1.4rem;
     }
     
-    .secDestacados {
-        padding: 20px 0 30px 0;        
-    }
 
-    .destacados_card .content i {
-        font-size: 7rem;
-    }
-
-    .destacados_card .content h3 {
-        font-size: 1.8rem;
-    }
-
-    .destacados p {
-        font-size: 1.2rem;
-    }
-
-    .menu .box {
-        width: 45%;
-    }
 
     .chef_card {
         width: 45%;
@@ -313,74 +68,10 @@ footer .derechos .legales {
 
 }
 
-/* ! 600 (583) */
-@media screen and (max-width: 600px) {
- 
-    .titulo {
-        font-size: 2rem;
-    }
-
-    .preTitulo {
-        font-size: 1.5rem;
-    }
-
-    .hero {
-        height: 50rem;
-    }
-
-    .hero_content {
-        width: 30rem;
-    }
-
-    .heroMenu_content {
-        width: 30rem;
-    }
-
-    .hero_content h1 {
-        font-size: 3.5rem
-    }
-
-    .hero_content p {
-        font-size: 1.5rem
-    }
-
-    .historia {
-        padding: 2rem ;
-    }
-
-    .ofertas_card {
-        width: 45%;
-    }
-
-    .destacados .destacados_card {
-        width: 40%;
-    }
-
-    .footer_content {
-        flex-direction: column;
-    }
-
-    .footer .footer_Box {
-        width: 90%;
-        text-align: center;
-        margin: 15px auto;
-    }
-
-    .footer .footer_Box .redesSociales {
-        margin-top: 15px;
-        display: flex;
-        justify-content: space-between;
-        width: 95%;
-    }
-
-}
 
 /* ! 480 (463)*/
 @media screen and (max-width: 480px) {
 
-    html {
-        font-size: 50%;
-    }
 
     .titulo {
         font-size: 1.8rem;
@@ -388,10 +79,6 @@ footer .derechos .legales {
 
     .preTitulo {
         font-size: 1.3rem;
-    }
-
-    .hero {
-        height: 45rem;
     }
 
     .ofertas_content .descuento {
@@ -411,39 +98,12 @@ footer .derechos .legales {
         font-size: 1.2rem;
     }
    
-    .menu .box {
-        width: 48%;
-        margin: 2px;
-    }
-
-    .menu .box .box_content p {
-        font-size: 1.2rem;
-    }
-
-    .menu .box .box_content ul {
-        display: none;
-    }
-
-    .menu .box .box_content a {
-        font-size: 1.1rem;
-    }    
 }
 
 
 /* ! 375 (358) */
 @media screen and (max-width: 375px) {
 
-    .heroMeu_content {
-        width: 25rem;
-    }
-
-    .heroMenu_content h1 {
-        font-size: 2.5rem
-    }
-
-    .heroMenu_content p {
-        font-size: 1.2rem
-    }
 
     .ofertas {
         flex-direction: column;

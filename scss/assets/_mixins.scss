@@ -1,3 +1,4 @@
+// @use 'variables' as v;
 
 // Degradado que utilizo en los botones y el hover 
 // Si $tipDeg = 1 es un degradado que comienza con el color narnga
@@ -48,5 +49,21 @@
     }
     @if $fxFd != 0 {
         flex-direction: $fxFd;
+    }
+} 
+
+
+// MIXIN para determinar el valor del filtro que se va a aplicar a algunuos background
+// ya que se usan diferentes valores en varias partes
+@mixin mixFiltro ($mxFiltro) {
+    -webkit-filter: brightness($mxFiltro);
+    filter: brightness($mxFiltro);
+}
+
+
+// MIXIN para los MediaQueries
+@mixin mixMQ($mxMedida) {
+    @media screen and (max-width: $mxMedida) {    
+        @content;
     }
 }
