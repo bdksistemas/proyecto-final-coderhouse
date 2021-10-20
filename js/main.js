@@ -33,7 +33,7 @@
             }
 
             // LINK A PAGINA DE INICIO
-            if ( e.target.matches('#msInicio') || e.target.matches('#miInicio')) {
+            if ( e.target.matches('#msInicio') || e.target.matches('#miInicio') || e.target.matches('#bot404')) {
                 $(location).attr('href','index.html');    
             }            
 

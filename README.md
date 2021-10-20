@@ -41,3 +41,6 @@
     * Se agrega código para que al compartir el link aparezca formateado con titulo, imagen y descripción, algo así como cuando compartes un link de Facebook
     * Se PROCESAN todas las imagenes en la página TINYPNG para bajar su tamaño
 
+## DESAFÍO CLASE 13 COMPLEMENTARIO - SEO : RAMA [ des-c13-com : Aplicando SEO ]
+
+    * Se crea la página de error 404.html
