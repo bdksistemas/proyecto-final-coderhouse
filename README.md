@@ -44,3 +44,12 @@
 ## DESAFÍO CLASE 13 COMPLEMENTARIO - SEO : RAMA [ des-c13-com : Aplicando SEO ]
 
     * Se crea la página de error 404.html
+
+
+## DESAFÍO CLASE 14 - GIT : RAMA [ des-c14 : Aplicando GIT ]
+
+    * El repositorio de git ya lo tenía creado desde hace tiempo
+    * Se termina de convertir por completo el código del archivo ESTILOS.CSS a SASS y se elimina el archivo
+    * Se sigue quitando los estilos en donde se aplica FLEX para cambiarlo por el mixin mixFLEX()
+    * Se continua haciendo el sitio RESPONSIVE aplicando el mixin mixMQ()
+    * Aún no está terminado por completo, aún faltan detalles.

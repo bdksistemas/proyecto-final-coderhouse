@@ -9,59 +9,11 @@
 @media screen and (max-width: 992px) {
 
 
-    .secOfertas {
-        padding: 20px 0 30px 0;
-    }
-
-    .videoPopup video {
-        max-width: 90%;        
-    }
-
-
 }
 
 /* ! 768 (751)*/
 @media screen and (max-width: 768px) {
-
-
-
-    .ofertas {
-        padding: 0;
-    }
-
-    .ofertas_card {
-        width: 30%;
-        height: 460px;
-    }
-
-    .ofertas_content .descuento {
-        right: 0.5rem;
-        height: 75px;
-        width: 75px;    
-    }
-
-    .ofertas_content .descuento h4 {
-        font-size: 3.5rem;
-    }
     
-    .ofertas_content .nomOferta h3 {
-        font-size: 1.8rem;
-    }
-    
-    .ofertas_content .nomOferta li {    
-        font-size: 1.4rem;
-    }
-    
-
-
-    .chef_card {
-        width: 45%;
-    }
-
-    .secChefs {
-        padding: 20px 0 30px 0;
-    }
-
     .galeria {
         padding: 20px 0 30px 0;
     }
@@ -73,46 +25,12 @@
 @media screen and (max-width: 480px) {
 
 
-    .titulo {
-        font-size: 1.8rem;
-    }
-
-    .preTitulo {
-        font-size: 1.3rem;
-    }
-
-    .ofertas_content .descuento {
-        height: 65px;
-        width: 65px;    
-    }
-
-    .ofertas_content .descuento h4 {
-        font-size: 3rem;
-    }
-    
-    .ofertas_content .nomOferta h3 {
-        font-size: 1.5rem;
-    }
-    
-    .ofertas_content .nomOferta li {    
-        font-size: 1.2rem;
-    }
    
 }
 
+/* ! 375 (358)*/
+@media screen and (max-width: 480px) {
 
-/* ! 375 (358) */
-@media screen and (max-width: 375px) {
-
-
-    .ofertas {
-        flex-direction: column;
-        padding: 0;
-    }
-
-    .ofertas_card {
-        width: 90%;
-    }
-
-
+   
 }
+

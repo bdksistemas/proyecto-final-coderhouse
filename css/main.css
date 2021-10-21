@@ -125,6 +125,12 @@ a {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 480px) {
+  .titulo, .tituloLeft, .tituloWhite {
+    font-size: 2rem;
+  }
+}
+
 .tituloLeft {
   text-align: left;
 }
@@ -138,6 +144,12 @@ a {
   color: #ff2a00;
   font-size: 2rem;
   padding-top: 1rem;
+}
+
+@media screen and (max-width: 480px) {
+  .preTitulo, .preTituloLeft, .preTituloWhite {
+    font-size: 1.6rem;
+  }
 }
 
 .preTituloLeft {
@@ -870,16 +882,16 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .secVideo .videoContent .play {
@@ -902,7 +914,7 @@ a {
 }
 
 .secVideo .videoContent .play:hover {
-  background: var(--red);
+  background: #ff2a00;
 }
 
 .secVideo .videoPopup {
@@ -937,6 +949,12 @@ a {
 .secVideo .videoPopup video {
   max-width: 1200px;
   outline: none;
+}
+
+@media screen and (max-width: 992px) {
+  .secVideo .videoPopup video {
+    max-width: 90%;
+  }
 }
 
 .secVideo .videoPopup .close {
@@ -1114,25 +1132,30 @@ a {
 
 /* ? CHEFS */
 /* ?___________________________________________________________________________________________________________________________________________ */
-.chefs {
+.secChefs {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.secChefs .chefs {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.chefs .chef_card {
+.secChefs .chefs .chef_card {
   padding: 10px;
   width: 30%;
   margin: 0 10px;
 }
 
-.chefs .chef_card .chef_img {
+.secChefs .chefs .chef_card .chef_img {
   position: relative;
   width: 100%;
   height: 350px;
@@ -1165,7 +1188,7 @@ a {
           flex-direction: column;
 }
 
-.chefs .chef_card .chef_img img {
+.secChefs .chefs .chef_card .chef_img img {
   position: absolute;
   bottom: 0;
   height: 95%;
@@ -1174,7 +1197,7 @@ a {
   left: -40px;
 }
 
-.chefs .chef_card:nth-child(2) .chef_img {
+.secChefs .chefs .chef_card:nth-child(2) .chef_img {
   background: #ffac00;
   /* Old browsers */
   /* FF3.6-15 */
@@ -1185,30 +1208,30 @@ a {
   /* IE6-9 fallback on horizontal gradient */
 }
 
-.chefs .chef_card:hover .chef_img img {
+.secChefs .chefs .chef_card:hover .chef_img img {
   height: 120%;
 }
 
-.chefs .chef_card:hover .chef_img {
+.secChefs .chefs .chef_card:hover .chef_img {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
 }
 
-.chefs .chef_card .chef_content {
+.secChefs .chefs .chef_card .chef_content {
   padding: 0 10px;
 }
 
-.chefs .chef_card .chef_content h3 {
+.secChefs .chefs .chef_card .chef_content h3 {
   font-size: 1.8rem;
 }
 
-.chefs .chef_card .chef_content p {
+.secChefs .chefs .chef_card .chef_content p {
   font-size: 1.3rem;
   font-style: italic;
-  color: var(--light-color);
+  color: #666;
 }
 
-.chefs .chef_card .chef_content .chef_social {
+.secChefs .chefs .chef_card .chef_content .chef_social {
   margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1216,6 +1239,25 @@ a {
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
+}
+
+@media screen and (max-width: 768px) {
+  .secChefs .chefs .chef_card {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .secChefs .chefs .chef_card {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .secChefs {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 /* ? RESEÑAS */
@@ -1310,6 +1352,19 @@ a {
   width: 100%;
 }
 
+@media screen and (max-width: 480px) {
+  .galeria .galeria_content {
+    -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .galeria {
+    padding: 20px 0 30px 0;
+  }
+}
+
 /* ! -------------------------------------------------------------------------------------------------- */
 /* ! PAGINA: BLOG */
 /* ! -------------------------------------------------------------------------------------------------- */
@@ -1374,16 +1429,17 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  /* SecOfertas  */
 }
 
 .secOfertas .ofertas {
@@ -1398,9 +1454,19 @@ a {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  /* .Ofertas  */
 }
 
 .secOfertas .ofertas .ofertas_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 31%;
   height: 500px;
   overflow: hidden;
@@ -1408,16 +1474,8 @@ a {
   margin: 10px;
   background-color: #f2f2f2;
   border: 1px solid #d0d0d0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   border-radius: 15px;
+  /* .ofertasCard  */
 }
 
 .secOfertas .ofertas .ofertas_card a {
@@ -1446,6 +1504,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  /* .descuento */
 }
 
 .secOfertas .ofertas .ofertas_card .ofertas_content .descuento h4 {
@@ -1455,9 +1514,36 @@ a {
           animation: animDesc infinite  2s;
 }
 
+@media screen and (max-width: 768px) {
+  .secOfertas .ofertas .ofertas_card .ofertas_content .descuento h4 {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .secOfertas .ofertas .ofertas_card .ofertas_content .descuento h4 {
+    font-size: 5rem;
+  }
+}
+
 .secOfertas .ofertas .ofertas_card .ofertas_content .descuento span {
   color: #ff2a00;
   font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .secOfertas .ofertas .ofertas_card .ofertas_content .descuento {
+    right: 0.5rem;
+    height: 75px;
+    width: 75px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .secOfertas .ofertas .ofertas_card .ofertas_content .descuento {
+    top: 3rem;
+    right: 2rem;
+  }
 }
 
 .secOfertas .ofertas .ofertas_card .ofertas_content .nomOferta {
@@ -1469,16 +1555,52 @@ a {
   font-size: 2.5rem;
 }
 
+@media screen and (max-width: 768px) {
+  .secOfertas .ofertas .ofertas_card .ofertas_content .nomOferta h3 {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .secOfertas .ofertas .ofertas_card .ofertas_content .nomOferta h3 {
+    font-size: 3rem;
+  }
+}
+
 .secOfertas .ofertas .ofertas_card .ofertas_content .nomOferta ul {
   list-style-type: disc;
   list-style-position: inside;
 }
 
 .secOfertas .ofertas .ofertas_card .ofertas_content .nomOferta ul li {
-  margin-left: 2.5rem;
   font-size: 1.5rem;
   color: #ff2a00;
   font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+  .secOfertas .ofertas .ofertas_card .ofertas_content .nomOferta ul li {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .secOfertas .ofertas .ofertas_card .ofertas_content .nomOferta ul li {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .secOfertas .ofertas .ofertas_card .ofertas_content .nomOferta {
+    top: 1rem;
+    left: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .secOfertas .ofertas .ofertas_card .ofertas_content {
+    height: 130px;
+  }
 }
 
 .secOfertas .ofertas .ofertas_card .ofertas_imagen {
@@ -1493,6 +1615,41 @@ a {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .secOfertas .ofertas .ofertas_card {
+    width: 30%;
+    height: 460px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .secOfertas .ofertas .ofertas_card {
+    width: 90%;
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .secOfertas .ofertas {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .secOfertas .ofertas {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .secOfertas {
+    padding: 20px 0 30px 0;
+  }
 }
 
 @-webkit-keyframes animDesc {

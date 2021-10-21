@@ -64,6 +64,10 @@
     font-size: 3rem;
     padding-bottom: 2rem;
     text-transform: uppercase;
+
+    @include mixMQ($movil) {
+        font-size: 2rem;
+    };
 }
 
 .tituloLeft {
@@ -81,6 +85,10 @@
     color: $red; 
     font-size: 2rem;
     padding-top: 1rem;
+
+    @include mixMQ($movil) {
+        font-size: 1.6rem;
+    };
 }
 
 .preTituloLeft {

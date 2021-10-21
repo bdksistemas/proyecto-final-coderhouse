@@ -48,7 +48,7 @@
         flex-wrap: $fxWr;
     }
     @if $fxFd != 0 {
-        flex-direction: $fxFd;
+        flex-direction: $fxFd; 
     }
 } 
 

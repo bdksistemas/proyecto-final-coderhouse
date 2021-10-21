@@ -2,18 +2,17 @@
 /* ?___________________________________________________________________________________________________________________________________________ */
 
 .secOfertas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
+    @include mixFlex(flex,center,center,0,column);
 
     .ofertas {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
+
+        @include mixFlex(flex,center,center,wrap,0);
 
         .ofertas_card {
+
+            @include mixFlex(flex,space-around,0,0,column);
+
             width: 31%;
             height: 500px;
             overflow: hidden;
@@ -21,9 +20,6 @@
             margin: 10px;
             background-color: $light;
             border: $borde;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
             border-radius: 15px;
 
             a {
@@ -42,20 +38,37 @@
                     height: 100px;
                     width: 100px;
                     border-radius: 50%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    @include mixFlex(flex,center,center,0,0);
 
                     h4 {
                         font-size: 5rem;
                         font-weight: 800;
                         animation: animDesc infinite  2s;
+
+                        @include mixMQ($tablet) {
+                            font-size: 3.5rem;
+                        }
+                        @include mixMQ($movil) {
+                            font-size: 5rem;
+                        }
+
                     }
 
                     span {
                         color: $red;
                         font-size: 2rem;
-                    }                    
+                    }     
+                    
+                    /* .descuento */
+                    @include mixMQ($tablet) {
+                        right: 0.5rem;
+                        height: 75px;
+                        width: 75px;                    
+                    };
+                    @include mixMQ($movil) {
+                        top: 3rem;
+                        right: 2rem;
+                    };
                 } 
                 
                 .nomOferta {
@@ -64,6 +77,14 @@
 
                     h3 {
                         font-size: 2.5rem;
+
+                        @include mixMQ($tablet) {
+                            font-size: 1.8rem;
+                        }
+                        @include mixMQ($movil) {
+                            font-size: 3rem;
+                        }
+
                     }
 
                     ul {
@@ -71,13 +92,31 @@
                         list-style-position: inside;
 
                         li {    
-                            margin-left: 2.5rem;
                             font-size: 1.5rem;
                             color: $red;
                             font-style: italic;
+
+                            @include mixMQ($tablet) {
+                                font-size: 1.3rem;
+                            }    
+                            @include mixMQ($movil) {
+                                font-size: 1.6rem;
+                            }    
+
                         }                        
                     }
-                }                                
+
+                    // nomOferta
+                    @include mixMQ($movil) {
+                        top: 1rem;
+                        left: 2rem;
+                    };
+                }     
+                
+                // ofertas_content
+                @include mixMQ($movil) {
+                    height: 130px;
+                };                
             }  
             
             .ofertas_imagen {
@@ -93,9 +132,33 @@
                 } 
                 
             }
-                    
-        }                
+           
+            /* .ofertasCard  */    
+            @include mixMQ($tablet) {
+                width: 30%;
+                height: 460px
+            };
+            @include mixMQ($movil) {
+                width: 90%;
+                height: 350px;
+            };
+
+        }   
+        
+        /* .Ofertas  */    
+        @include mixMQ($tablet) {
+            padding: 0;
+        };
+        @include mixMQ($movil) {
+            flex-direction: column;
+        };
+        
     }    
+
+    /* SecOfertas  */    
+    @include mixMQ($desk) {
+        padding: 20px 0 30px 0;
+    };
 }
 
 @keyframes animDesc {
