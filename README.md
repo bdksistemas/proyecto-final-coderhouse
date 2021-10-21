@@ -53,3 +53,9 @@
     * Se sigue quitando los estilos en donde se aplica FLEX para cambiarlo por el mixin mixFLEX()
     * Se continua haciendo el sitio RESPONSIVE aplicando el mixin mixMQ()
     * Aún no está terminado por completo, aún faltan detalles.
+
+
+## DESAFÍO CLASE 15 : GITHUB - RAMA des-c15
+
+    * Se corrije un error que hacía que algunas librerías solo funcionaran localmente, ya funcionan en Github Pages
+    * Se corrije un error que hacía que el favicon solo se viera localmente.

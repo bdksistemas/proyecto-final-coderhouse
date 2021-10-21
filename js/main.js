@@ -3,10 +3,17 @@
 
     document.addEventListener('DOMContentLoaded', function(){
 
-        console.log(window.location.pathname);
+        // console.log(window.location.pathname);
+        // console.log(window.location.href);
+
+        // if (document.querySelector("#secDestacados")) {
+        //     console.log('Si encuentro el objeto de Vanilla');
+        // } else {
+        //     console.log('NO encuentro el objeto de Vanilla');            
+        // };
         
         // CÓDIGO PARA ACTIVAR LA LIBRERÍA VANILLATILT, ANIMACIONES EN LAS CARD DEL INDEX.HTML
-        if (window.location.pathname == '/index.html') {
+        if (document.querySelector("#secDestacados")) {
             VanillaTilt.init(document.querySelectorAll(".destacados_card"), {
                 max: 20,
                 speed: 400,
@@ -65,7 +72,7 @@
         });
 
         // CÓDIGO PARA ACTIVAR EL SLIDER DE LAS RESEÑAS
-        if (window.location.pathname == '/index.html') {
+        if (document.querySelector("#reseñas")) {            
             var swiper = new Swiper(".reseñas_slider", {
                 spaceBetween: 20,
                 centeredSlides: true,
