@@ -60,3 +60,4 @@
     * Se corrije un error que hacía que algunas librerías solo funcionaran localmente, ya funcionan en Github Pages
     * Se corrije un error que hacía que el favicon solo se viera localmente.
     * ESTE ES UN CAMBIO REALIZADO EN EL REPOSITORIO DE GITHUB
+    * PARA EL DESAFÍO COMPLEMENTARIO DE LA CLASE 15
