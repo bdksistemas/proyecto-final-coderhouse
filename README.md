@@ -73,4 +73,8 @@
     * Se argega la librería LIGHTBOX a la galería del INDEX.html y GALERIA.html
     * Se le agrega efecto al hover de las imagenes de la galería
     * SE TERMINAN DE HACER TODOS LOS HTML Y SECCIONES RESPONSIVE
-    
+
+    ### Se ejecuta COMMIT de respaldo
+
+    * Se corrije error que hacia que el icono del menú hamburguesa estuviera visible en formatos DESKTOP
+    * Se hace funcionar el menú hamburguesa en los tamaños móviles y con efecto visual    

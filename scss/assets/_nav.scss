@@ -21,7 +21,10 @@
         }
 
         .menuSup {
-        
+
+            transition: ease-in-out 0.5s;
+            z-index: 1000;
+
             ul {
                 @include mixFlex(flex,space-between,center,0,row);
                 margin: 0;        
@@ -48,33 +51,60 @@
                     &:hover {
                         @include degradado(1);
                     }
-                }            
+                }    
+                
+                @include mixMQ($tablet) {
+                    @include mixFlex(0,space-evenly,center,0,column);
+                    width: 100%;
+                };
             }
 
+            // ! .menuSup
             @include mixMQ($tablet) {
-                display: none;
+                position: fixed;
+                // display: block;
+        
+                // background-color: $black; 
+
+                background: #ff2a00;
+                background: -moz-linear-gradient(45deg,  #ff2a00 0%, #000000 5%, #000000 96%, #ff2a00 100%);
+                background: -webkit-linear-gradient(45deg,  #ff2a00 0%,#000000 5%,#000000 96%,#ff2a00 100%);
+                background: linear-gradient(45deg,  #ff2a00 0%,#000000 5%,#000000 96%,#ff2a00 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff2a00', endColorstr='#ff2a00',GradientType=1 );
+                                                                
+                top: 0px !important;
+                left:0px;
+                width: 100% !important;
+                height: 100vh;
+                display: flex;
+                clip-path: circle(0.0% at 100% 0);
+                overflow: hidden;            
+            
             };
         }
+
+        .menu2 {
+            -webkit-clip-path: circle(150% at 100% 0);
+            clip-path: circle(150% at 100% 0);
+        }        
         
         .iconosNav {
+
             .botMenu {
                 display: none;
+
+                @include mixMQ($tablet) {
+                    display: inline-block;
+                    position: fixed;
+                    z-index: 100000;
+
+                };
             }
         }
+
+        // ! .contenedor_nav
+        @include mixMQ($tablet) {
+            padding: 0 50px;
+        };
     }    
 }
-
-
-// .subMenu {
-//     display: none;
-//     position: absolute;
-//     border-bottom-left-radius: 1rem;
-//     border-bottom-right-radius: 1rem;
-// }
-
-// .subMenu li {
-//     display: block;
-//     margin: 1rem;
-//     width: 13rem;
-// }
-
