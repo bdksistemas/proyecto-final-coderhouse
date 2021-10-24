@@ -97,7 +97,35 @@
                 }
             });    
         };
-    
+
+        // CÓDIGO PARA ACTIVAR EL SLIDER DE LAS PROMOCIONES
+        if (document.querySelector("#secOfertas")) {            
+            var swiper = new Swiper(".ofertas", {
+                spaceBetween: 20,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 3500,
+                    disableOnInteraction: false,
+                },
+                loop: true,
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1,
+                    },
+                    640: {
+                        slidesPerView: 2,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                    },                
+                }
+            });    
+        };
+        
+
     });
 
     // FUNCIÓN PARA ACTIVAR EL VIDEO Y REPRODUCIRLO AL ESTAR LA PANTALLA ACTIVA

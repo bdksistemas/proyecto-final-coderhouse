@@ -54,7 +54,13 @@
             @include mixMQ($tablet) {
                 display: none;
             };
-        }        
+        }
+        
+        .iconosNav {
+            .botMenu {
+                display: none;
+            }
+        }
     }    
 }
 

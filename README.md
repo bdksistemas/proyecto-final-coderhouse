@@ -55,7 +55,22 @@
     * Aún no está terminado por completo, aún faltan detalles.
 
 
-## DESAFÍO CLASE 15 : GITHUB - RAMA des-c15
+## DESAFÍO CLASE 15 : GITHUB - RAMA main
 
     * Se corrije un error que hacía que algunas librerías solo funcionaran localmente, ya funcionan en Github Pages
     * Se corrije un error que hacía que el favicon solo se viera localmente.
+
+
+## SIGUIENTE DESAFÍO: RAMA des-c16
+
+    * Se cambia la imagen de fondo del HERO del INDEX.HTML
+    * En el INDEX se cambió el contenido de la sección de OFERTAS, en su lugar se puso un slider con imagenes más representativas de las OFERTAS
+    * Se cambió el contenido de la página PROMOS.HTML, en su lugar se puso un FLEX con imagenes que representan mejor lo que son las promociones. 
+    * Se agrega un efecto de GALERÍA en la página de OFERTAS
+    * La sección de CALIDAD se hace RESPONSIVE, es la única que faltaba del INDEX.
+    * Se corrije el FOOTER ya que no estaba responsive
+    * Se hacen unos ajustes en el responsive de la página MENU.HTML
+    * Se argega la librería LIGHTBOX a la galería del INDEX.html y GALERIA.html
+    * Se le agrega efecto al hover de las imagenes de la galería
+    * SE TERMINAN DE HACER TODOS LOS HTML Y SECCIONES RESPONSIVE
+    

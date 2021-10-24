@@ -26,14 +26,14 @@
 }
 
 
-// MIXIN para agregar FLEXBOX a las cajas
+// MIXIN para agregar FLEXBOX a las cajas 
 // Si el parámetrio es igual a 0 no aplica el código
 // PARAMETROS:
 //      $fxDs = Display
 //      $fxJt = Justify-content
 //      $fxAi = Align-items
 //      $fxWr = Flex-wrap
-//      $fxFd = Flex-direction
+//      $fxFd = Flex-direction 
 @mixin mixFlex ($fxDs, $fxJt, $fxAi, $fxWr, $fxFd) {
     @if $fxDs != 0 {
         display: $fxDs;

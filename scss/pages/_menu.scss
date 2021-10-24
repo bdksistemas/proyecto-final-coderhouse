@@ -2,19 +2,6 @@
 /* ! PAGINA: MENU */
 /* ! -------------------------------------------------------------------------------------------------- */
 
-.categorias {
-    @include mixFlex(flex,center,0,0,0);
-    margin-bottom: 5rem;
-
-    ul {
-        list-style-type: none ;     
-
-        li {
-            color: $blanco;
-        }        
-    }    
-}
-
 
 .botonFiltro {
     margin-top: 1rem;
@@ -43,6 +30,33 @@
 .secMenu {
     @include mixFlex(flex,center,center,0,column);
 
+
+    .categorias {
+        @include mixFlex(flex,center,0,0,0);
+        margin-bottom: 2rem;
+    
+        ul {
+            list-style-type: none ;     
+    
+            li {
+                color: $blanco;
+
+                @include mixMQ($tablet) {
+                    width: 32%;
+                    text-align: center;
+                };
+                @include mixMQ($movil) {
+                    font-size: 1.3rem;
+                };
+            } 
+
+            @include mixMQ($tablet) {
+                width: 100%;
+                margin: 5px 10px;
+            };
+        }    
+    }
+    
     .menu {
         @include mixFlex(flex,center,center,wrap,0);
         margin: 15px 0;
@@ -178,7 +192,7 @@
         
         // .menu
         @include mixMQ($deskXL) {
-            justify-content: space-between
+            justify-content: space-evenly
         };
     } 
 

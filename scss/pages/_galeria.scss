@@ -13,8 +13,21 @@
         object-fit: cover;
         margin: 2rem 0;    
 
-        img {
-            width: 100%;    
+        a {
+
+            overflow: hidden;
+            border-radius: 10px;
+
+            img {
+                width: 100%;    
+                border-radius: 10px;
+            }
+
+            &:hover img {
+                // -webkit-filter: grayscale(0);
+                -webkit-transform: scale(1.05);
+            }
+    
         }
         
         @include mixMQ($movil) {

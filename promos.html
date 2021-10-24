@@ -21,6 +21,8 @@
     <!-- ? FONTAWESOM -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
+    <!-- ! LIGHTBOX: Galería -->
+    <link rel="stylesheet" href="css/lightbox.css">
     <link rel="stylesheet" href="css/main.css"> 
 
     <!-- METAS -->
@@ -63,7 +65,7 @@
                 </nav>
                 <div class="iconosNav">
                     <i class="fas fa-shopping-cart iconos"></i>
-                    <i class="fas fa-bars iconos"></i>
+                    <i class="fas fa-bars iconos botMenu" id="botMenu"></i>
                 </div>
             </div>
         </div>
@@ -73,8 +75,10 @@
                 <img src="img/Fondo_Promos.jpg" alt="">
             </div>     
             <div class="hero_content_modify">
-                <h1>Porque queremos verte <span>feliz</span></h1>
-                <p class="preTitulo">Tenemos las mejores promociones para ti</p>
+                <div>
+                    <h1>Porque queremos verte <span>feliz</span></h1>
+                    <p class="preTitulo">Tenemos las mejores promociones para ti</p>
+                </div>
             </div>
         </div>
 
@@ -88,87 +92,41 @@
     <main>
 
         <!-- OFERTAS DESTACADAS -->
-        <section class="bkgwhite secOfertas" >
+        <section class="bkgwhite secOfertas">
             <p class="preTitulo">Especial de la semana</p>
             <h2 class="titulo">Ofertas destacadas</h2>
 
-            <div class="contenedor ofertas">
-                
-                <!-- CARD DE UNA PROMOCIÓN -->
-                <div class="ofertas_card">
-                    <div class="ofertas_content">
-                        <div class="descuento">
-                            <h4>-30<span>%</span></h4>
-                        </div>
-                        <div class="nomOferta">
-                            <h3>Desayuno Buffet</h3>
-                            <ul class="incluye">
-                                <li>Variedad de platillos</li>
-                                <li>Café ilimitado</li>
-                                <li>Frutas</li>
-                                <li>Jugo de naranja</li> 
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Card con foto de la promoción -->
-                    <div class="ofertas_imagen">
-                        <img src="img/desayuno-buffet.jpeg" alt="Desayuno Buffet">
-                        <p>Gran variedad de complementos a escoger</p>
-                    </div>
-                    <a href="#" class="boton">Ordenar</a>                    
-                </div>
+            <div class="pagOfertas">
 
-                <!-- CARD DE UNA PROMOCIÓN -->
-                <div class="ofertas_card">
-                    <div class="ofertas_content">
-                        <div class="descuento">
-                            <h4>-25<span>%</span></h4>
-                        </div>
-                        <div class="nomOferta">
-                            <h3>Desayuno Americano</h3>
-                            <ul class="incluye">
-                                <li>Variedad de platillos</li>
-                                <li>Café ilimitado</li>
-                                <li>Frutas</li>
-                                <li>Jugo de naranja</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Card con foto de la promoción -->
-                    <div class="ofertas_imagen">
-                        <img src="img/desayuno-americano.jpg" alt="Desayuno Buffet">
-                        <p>Gran variedad de complementos a escoger</p>
-                    </div>
-                    <a href="#" class="boton">Ordenar</a>                    
-                </div>
-
-                <!-- CARD DE UNA PROMOCIÓN -->
-                <div class="ofertas_card">
-                    <div class="ofertas_content">
-                        <div class="descuento">
-                            <h4>-20<span>%</span></h4>
-                        </div>
-                        <div class="nomOferta">
-                            <h3>Desayuno Buffet</h3>
-                            <ul class="incluye">
-                                <li>Variedad de platillos</li>
-                                <li>Café ilimitado</li>
-                                <li>Frutas</li>
-                                <li>Jugo de naranja</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Card con foto de la promoción -->
-                    <div class="ofertas_imagen">
-                        <img src="img/desayuno-buffet.jpeg" alt="Desayuno Buffet">
-                        <p>Gran variedad de complementos a escoger</p>
-                    </div>
-                    <a href="#" class="boton">Ordenar</a>                    
-                </div>
-                
+                <a href="img/promo1.jpg" class="ofertas_promo" data-lightbox='pagOfertas' data-title="Click a la derecha para pasar a la siguiente imagen.">
+                    <img src="img/promo1.jpg" alt="Promoción 1">
+                </a>
+                <a href="img/promo2.jpg" class="ofertas_promo" data-lightbox='pagOfertas' data-title="Click a la izquierda o derecha para cambiar de imagen.">
+                    <img src="img/promo2.jpg" alt="Promoción 2">
+                </a>
+                <a href="img/promo3.jpg" class="ofertas_promo" data-lightbox='pagOfertas' data-title="Click a la izquierda o derecha para cambiar de imagen.">
+                    <img src="img/promo3.jpg" alt="Promoción 3">
+                </a>
+                <a href="img/promo4.jpg" class="ofertas_promo" data-lightbox='pagOfertas' data-title="Click a la izquierda o derecha para cambiar de imagen.">
+                    <img src="img/promo4.jpg" alt="Promoción 4">
+                </a>
+                <a href="img/promo5.jpg" class="ofertas_promo" data-lightbox='pagOfertas' data-title="Click a la izquierda o derecha para cambiar de imagen.">
+                    <img src="img/promo5.jpg" alt="Promoción 5">
+                </a>
+                <a href="img/promo6.jpg" class="ofertas_promo" data-lightbox='pagOfertas' data-title="Click a la izquierda o derecha para cambiar de imagen.">
+                    <img src="img/promo6.jpg" alt="Promoción 6">
+                </a>
+                <a href="img/promo7.jpg" class="ofertas_promo" data-lightbox='pagOfertas' data-title="Click a la izquierda o derecha para cambiar de imagen.">
+                    <img src="img/promo7.jpg" alt="Promoción 7">
+                </a>
+                <a href="img/promo8.jpg" class="ofertas_promo" data-lightbox='pagOfertas' data-title="Click a la izquierda o derecha para cambiar de imagen.">
+                    <img src="img/promo8.jpg" alt="Promoción 8">
+                </a>
+                <a href="img/promo9.jpg" class="ofertas_promo" data-lightbox='pagOfertas' data-title="Click a la izquierda regresar a la imagen anterior.">
+                    <img src="img/promo9.jpg" alt="Promoción 9">
+                </a>
             </div>
         </section>
-
     </main>
 
     <!-- FOOTER -->
@@ -220,12 +178,13 @@
         </div>
     </footer> 
     
-    <!-- ? JQUERY -->
-    <script src="js/jquery.js"></script>
-    
-    <!-- ? BOOTSTRAPT -->
+    <!-- ! JQUERY -->
+    <script src="js/jquery.js"></script>    
+    <!-- ! BOOTSTRAPT -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-
+    <!-- !LIGTHBOX PARA LA GALERÍA -->
+    <script src="js/lightbox.js"></script>
+    <!-- !JavaScript -->
     <script src="js/main.js"></script>
     
 </body>

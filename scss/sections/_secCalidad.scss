@@ -2,60 +2,97 @@
 /* ?___________________________________________________________________________________________________________________________________________ */
 
 .secCalidad {
-    padding-bottom: 0;
+    padding: 15px 0 0 0;
 
     .calidad {
 
         @include mixFlex(flex,center,center,0,0);
+        width: 100%;
 
-        .calidad_content {
+        .calidad_sec {
 
-            @include mixFlex(flex,center,center,0,0);
-            margin: 40px 10px;
+            width: 33%;
+            height: auto;
 
-            .calidad_der {
-                text-align: right;
-                width: 250px;
-            }           
-            .calidad_izq {
-                width: 250px;
-            }            
+            .calidad_content {
 
-            .calidad_content h3 {
-                font-size: 1.8rem;
-            }
-            
-            p {
-                font-size: 1.3rem;
-                font-style: italic;
-                color: $light-color;
-            }
-            
-            .calidad_iconos {
-                margin: 0 15px;
+                @include mixFlex(flex,center,center,0,0);
+                margin: 40px 10px;
 
-                i {
-                    height: 6.5rem;
-                    line-height: 6.5rem;
-                    width: 6.5rem;
-                    text-align: center;
-                    font-size: 3rem;
-                    color: #fff;
-                    border-radius: 50%;
-                    @include degradado(1);
+                .calidad_der {
+                    text-align: right;
+                    width: 250px;
+                }           
+                .calidad_izq {
+                    width: 250px;
+                }            
 
-                    filter: grayscale(1);
-                    transition: filter 0.5s;
+                h3 {
+                    font-size: 1.8rem;
                 }
-            }
+                
+                p {
+                    font-size: 1.3rem;
+                    font-style: italic;
+                    color: $light-color;
+                }
+                
+                .calidad_iconos {
+                    margin: 0 15px;
 
-            &:hover .calidad_iconos {
-                transform: scale(1.1, 1.1);
-            }
+                    i {
+                        height: 6.5rem;
+                        line-height: 6.5rem;
+                        width: 6.5rem;
+                        text-align: center;
+                        font-size: 3rem;
+                        color: #fff;
+                        border-radius: 50%;
+                        @include degradado(1);
+
+                        filter: grayscale(1);
+                        transition: filter 0.5s;
+
+                        @include mixMQ($tablet) {
+                            height: 4.5rem;
+                            line-height: 4.5rem;
+                            width: 4.5rem;
+                            font-size: 2.5rem;
+                        };
+                    }
+
+                    @include mixMQ($tablet) {
+                        margin: 0 10px;
+                    };
+                }
+
+                &:hover .calidad_iconos {
+                    transform: scale(1.1, 1.1);
+                }
+                
+                &:hover .calidad_iconos i {
+                    filter: grayscale(0);
+                }           
+              
+                // .calidad_content
+                @include mixMQ($tablet) {
+                    margin: 15px 10px;
+                };
+                @include mixMQ($movil) {
+                    border-top: $borde;
+                    padding-top: 10px;
+                    margin: 0;
+                };
+            } 
             
-            &:hover .calidad_iconos i {
-                filter: grayscale(0);
-            }                        
+            // .calidadSec
+            @include mixMQ($tablet) {
+                width: 32%;
+                margin: 5px 0;
+            };
+            @include mixMQ($movil) {
+                width: 90%;
+            };
         }
 
         .calidad_imagen {
@@ -63,7 +100,20 @@
 
             img {
                 height: 100%;
-            }            
-        }        
+            }
+
+            @include mixMQ($tablet) {
+                height: 350px;
+            };
+            @include mixMQ($movil) {
+                display: none;
+            };
+        }
+
+        // .Calidad
+        @include mixMQ($movil) {
+            flex-direction: column;
+            margin: 15px 0;
+        };
     }
 }

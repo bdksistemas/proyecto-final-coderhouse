@@ -51,8 +51,20 @@ footer {
                         color: $yellow;
                         text-decoration: underline;
                     }                    
-                }                
-            }            
+                }    
+                
+                // footer_Box
+                @include mixMQ($movil) {
+                    width: 90%;
+                    justify-content: center;
+                    text-align: center;
+                    margin: 10px 0;
+                };
+            }     
+            
+            @include mixMQ($movil) {
+                flex-direction: column;
+            };
         }        
     }
     

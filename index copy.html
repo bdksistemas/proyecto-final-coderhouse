@@ -23,8 +23,7 @@
     <!-- ? LIBRERÍA PARA EL SLIDER : SWIPER = Tiene también JS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
-    <!-- LIGHTBOX: Galería -->
-    <link rel="stylesheet" href="css/lightbox.css">
+    <!-- <link rel="stylesheet" href="css/estilos.css">  -->
     <link rel="stylesheet" href="css/main.css"> 
 
     <!-- METAS -->
@@ -67,7 +66,7 @@
                 </nav>
                 <div class="iconosNav">
                     <i class="fas fa-shopping-cart iconos"></i>
-                    <i class="fas fa-bars iconos botMenu"></i> 
+                    <i class="fas fa-bars iconos"></i> 
                 </div>
             </div>
         </div>
@@ -118,40 +117,78 @@
         </article>
 
         <!-- OFERTAS DESTACADAS -->
-        <section class="bkgwhite secOfertas" id="secOfertas">
+        <section class="bkgwhite secOfertas" >
             <p class="preTitulo">Especial de la semana</p>
             <h2 class="titulo">Ofertas destacadas</h2>
 
-            <div class="ofertas swiper-container">
+            <div class="contenedor ofertas">
                 
-                <div class="swiper-wrapper">
-                    <div class="ofertas_promo swiper-slide">
-                        <img src="img/promo1.jpg" alt="Promoción 1">
+                <!-- CARD DE UNA PROMOCIÓN -->
+                <div class="ofertas_card">
+                    <div class="ofertas_content">
+                        <div class="descuento">
+                            <h4>-30<span>%</span></h4>
+                        </div>
+                        <div class="nomOferta">
+                            <h3>Desayuno Buffet</h3>
+                            <ul class="incluye">
+                                <li>Variedad de platillos</li>
+                                <li>Café ilimitado</li>
+                                <li>Frutas</li>
+                                <li>Jugo de naranja</li> 
+                            </ul>
+                        </div>
                     </div>
-                    <div class="ofertas_promo swiper-slide">
-                        <img src="img/promo2.jpg" alt="Promoción 2">
+                    <!-- Card con foto de la promoción -->
+                    <div class="ofertas_imagen">
+                        <img src="img/desayuno-buffet.jpeg" alt="Desayuno Buffet">
                     </div>
-                    <div class="ofertas_promo swiper-slide">
-                        <img src="img/promo3.jpg" alt="Promoción 3">
+                    <a href="#" class="boton">Ordenar</a>                    
+                </div>
+
+                <!-- CARD DE UNA PROMOCIÓN -->
+                <div class="ofertas_card">
+                    <div class="ofertas_content">
+                        <div class="descuento">
+                            <h4>-25<span>%</span></h4>
+                        </div>
+                        <div class="nomOferta">
+                            <h3>Desayuno Americano</h3>
+                            <ul class="incluye">
+                                <li>Huevos a tu gusto</li>
+                                <li>Café ilimitado</li>
+                                <li>Hot Cakes</li>
+                                <li>Jugo de naranja</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="ofertas_promo swiper-slide">
-                        <img src="img/promo4.jpg" alt="Promoción 4">
+                    <!-- Card con foto de la promoción -->
+                    <div class="ofertas_imagen">
+                        <img src="img/desayuno-americano.jpg" alt="Desayuno Buffet">                        
                     </div>
-                    <div class="ofertas_promo swiper-slide">
-                        <img src="img/promo5.jpg" alt="Promoción 5">
+                    <a href="#" class="boton">Ordenar</a>                    
+                </div>
+
+                <!-- CARD DE UNA PROMOCIÓN -->
+                <div class="ofertas_card">
+                    <div class="ofertas_content">
+                        <div class="descuento">
+                            <h4>-20<span>%</span></h4>
+                        </div>
+                        <div class="nomOferta">
+                            <h3>Desayuno Buffet</h3>
+                            <ul class="incluye">
+                                <li>Hot Cakes ilimitados</li>
+                                <li>Café ilimitado</li>
+                                <li>Frutas</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="ofertas_promo swiper-slide">
-                        <img src="img/promo6.jpg" alt="Promoción 6">
+                    <!-- Card con foto de la promoción -->
+                    <div class="ofertas_imagen">
+                        <img src="img/desayuno-buffet.jpeg" alt="Desayuno Buffet">                        
                     </div>
-                    <div class="ofertas_promo swiper-slide">
-                        <img src="img/promo7.jpg" alt="Promoción 7">
-                    </div>
-                    <div class="ofertas_promo swiper-slide">
-                        <img src="img/promo8.jpg" alt="Promoción 8">
-                    </div>
-                    <div class="ofertas_promo swiper-slide">
-                        <img src="img/promo9.jpg" alt="Promoción 9">
-                    </div>
+                    <a href="#" class="boton">Ordenar</a>                    
                 </div>
                 
             </div>
@@ -468,42 +505,18 @@
             <p class="preTitulo">Una mirada vale más que 1000 palabras</p>
             <h2 class="titulo">Galería de fotos</h2>
             <div class="galeria_content">
-                <a href="img/Galeria1.jpg" data-lightbox='galeria_content' data-title="Click a la derecha para pasar a la siguiente imagen.">
-                    <img src="img/Galeria1.jpg" alt="Fotos de la galería">
-                </a>
-                <a href="img/Galeria2.jpg" data-lightbox='galeria_content' data-title="Click a la izquierda o derecha para cambiar de imagen.">
-                    <img src="img/Galeria2.jpg" alt="Fotos de la galería">
-                </a>
-                <a href="img/Galeria3.jpg" data-lightbox='galeria_content' data-title="Click a la izquierda o derecha para cambiar de imagen.">
-                    <img src="img/Galeria3.jpg" alt="Fotos de la galería">
-                </a>
-                <a href="img/Galeria4.jpg" data-lightbox='galeria_content' data-title="Click a la izquierda o derecha para cambiar de imagen.">
-                    <img src="img/Galeria4.jpg" alt="Fotos de la galería">
-                </a>
-                <a href="img/Galeria5.jpg" data-lightbox='galeria_content' data-title="Click a la izquierda o derecha para cambiar de imagen.">
-                    <img src="img/Galeria5.jpg" alt="Fotos de la galería">
-                </a>
-                <a href="img/Galeria6.jpg" data-lightbox='galeria_content' data-title="Click a la izquierda o derecha para cambiar de imagen.">
-                    <img src="img/Galeria6.jpg" alt="Fotos de la galería">
-                </a>
-                <a href="img/Galeria7.jpg" data-lightbox='galeria_content' data-title="Click a la izquierda o derecha para cambiar de imagen.">
-                    <img src="img/Galeria7.jpg" alt="Fotos de la galería">
-                </a>
-                <a href="img/Galeria8.jpg" data-lightbox='galeria_content' data-title="Click a la izquierda o derecha para cambiar de imagen.">
-                    <img src="img/Galeria8.jpg" alt="Fotos de la galería">
-                </a>
-                <a href="img/Galeria9.jpg" data-lightbox='galeria_content' data-title="Click a la izquierda o derecha para cambiar de imagen.">
-                    <img src="img/Galeria9.jpg" alt="Fotos de la galería">
-                </a>
-                <a href="img/Galeria10.jpg" data-lightbox='galeria_content' data-title="Click a la izquierda o derecha para cambiar de imagen.">
-                    <img src="img/Galeria10.jpg" alt="Fotos de la galería">
-                </a>
-                <a href="img/Galeria11.jpg" data-lightbox='galeria_content' data-title="Click a la izquierda o derecha para cambiar de imagen.">
-                    <img src="img/Galeria11.jpg" alt="Fotos de la galería">
-                </a>
-                <a href="img/Galeria12.jpg" data-lightbox='galeria_content' data-title="Click a la izquierda regresar a la imagen anterior.">
-                    <img src="img/Galeria12.jpg" alt="Fotos de la galería">
-                </a>
+                <img src="img/Galeria1.jpg" alt="Fotos de la galería">
+                <img src="img/Galeria2.jpg" alt="Fotos de la galería">
+                <img src="img/Galeria3.jpg" alt="Fotos de la galería">
+                <img src="img/Galeria4.jpg" alt="Fotos de la galería">
+                <img src="img/Galeria5.jpg" alt="Fotos de la galería">
+                <img src="img/Galeria6.jpg" alt="Fotos de la galería">
+                <img src="img/Galeria3.jpg" alt="Fotos de la galería">
+                <img src="img/Galeria4.jpg" alt="Fotos de la galería">
+                <img src="img/Galeria1.jpg" alt="Fotos de la galería">
+                <img src="img/Galeria6.jpg" alt="Fotos de la galería">
+                <img src="img/Galeria2.jpg" alt="Fotos de la galería">
+                <img src="img/Galeria5.jpg" alt="Fotos de la galería">
             </div>
             <a href="galeria.html" class="boton" id="botSecGaleria">Ver más fotos</a>
         </section>
@@ -513,8 +526,8 @@
             <p class="preTitulo">Productos de calidad</p>
             <h2 class="titulo">Seleccionamos lo mejor para ti</h2>
             
-            <div class="calidad">
-                <div class="calidad_sec">
+            <div class="contenedor calidad">
+                <div>
                     <div class="calidad_content">
                         <div class="calidad_der">
                             <h3>Carne fresca</h3>                    
@@ -546,7 +559,7 @@
                 <div class="calidad_imagen">
                     <img src="img/chef.png" alt="Chef presentando productos frescos">
                 </div>
-                <div class="calidad_sec">
+                <div>
                     <div class="calidad_content">
                         <div class="calidad_iconos">
                             <i class="fas fa-apple-alt"></i>
@@ -729,9 +742,6 @@
 
     <!-- ?ANIMACIONES CON VANILLA-TILT -->
     <script src="js/vanilla-tilt.min.js"></script>
-
-    <!-- !LIGTHBOX PARA LA GALERÍA -->
-    <script src="js/lightbox.js"></script>
 
     <script src="js/main.js"></script>
 

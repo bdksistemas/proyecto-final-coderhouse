@@ -8,13 +8,12 @@
 
     .blogs {
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        @include mixFlex(flex,space-evenly,0,wrap,0);
         margin-top: 35px;
 
         .blogBox {
-            width: 45%;
+
+            width: 48%;
             border: $borde;
             border-radius: 10px;
             box-shadow: $box-shadow;
@@ -24,17 +23,37 @@
             iframe { 
                 width: 100%;
                 height: 350px;
-                border-radius: 10px;                
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+
+                @include mixMQ($deskXL) {
+                    height: 250px;
+                };
+                @include mixMQ($desk) {
+                    height: 200px;
+                };
+                @include mixMQ($tablet) {
+                    height: 172px;
+                };
             }
 
             .blogBox_content {
                 width: 100%;
-                height: 260px;
-                padding: 20px;
+                height: 150px;
+                padding: 10px 15px 0 15px;
+                overflow: hidden;
 
                 h3 {
                     text-transform: uppercase;
                     font-size: 2.5rem;
+
+                    @include mixMQ($deskXL) {
+                        font-size: 2rem;
+                    };
+                    @include mixMQ($tablet) {
+                        font-size: 1.7rem;
+                    };    
+
                 }
                 
                 span {
@@ -44,10 +63,45 @@
                 }
 
                 p {
-                    font-size: 1.5rem;
+                    font-size: 1.3rem;
                 }
+
+                // ! .blogBox_content
+                @include mixMQ($desk) {
+                    height: 200px;
+                };
+                @include mixMQ($tablet) {
+                    overflow-y: scroll;
+                };
+                @include mixMQ($movil) {
+                    overflow: auto;
+                    height: 120px;
+                };
             }
-        }        
+
+            .blogFoot {
+                position: relative;
+                height: 60px;
+                
+                a {
+                    position: absolute;
+                    right: 1rem;
+                    bottom: 1rem;
+                }
+                // margin-left: 250px;
+                // margin-bottom: 15px;
+            }
+
+            // ! .blogBpx
+            @include mixMQ($movil) {
+                width: 100%;
+            };
+        }  
+        
+        // .blogs
+        @include mixMQ($tablet) {
+            justify-content: space-between;
+        };
     }
 }
 

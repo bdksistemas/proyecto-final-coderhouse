@@ -2,10 +2,11 @@
 
 .hero {
     @include mixFlex(flex,0,center,wrap,0);
-    padding-top: 4.5rem; 
+    padding-top: 6rem; 
     height: 70rem;
 
     .hero_fondo {
+        // @include mixFiltro(.6);
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -22,10 +23,10 @@
         position: absolute;
         left: 15rem;
         width: 65rem;
+        @include mixFlex(flex,0,0,0,column);    
 
         img {
-            width: 90%;
-            max-width: 90%;
+            width: 65%;
         }
 
         h1 {
@@ -59,10 +60,11 @@
             width: 55rem;                
         }
         @include mixMQ($tablet) {
-            width: 35rem;
+            align-items: flex-start;
         };
-        @include mixMQ($movilSM) {
-            width: 25rem;
+        @include mixMQ($movil) {
+            left: 5rem;
+            width: 35rem;
         };
     }
 
