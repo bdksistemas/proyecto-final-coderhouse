@@ -20,16 +20,14 @@
 
     &--actvie {
         background-color: $black;
-    }
-    
+    }    
 }
 
 /* ? MENÚ */
 /* ?___________________________________________________________________________________________________________________________________________ */
 
 .secMenu {
-    @include mixFlex(flex,center,center,0,column);
-
+    @include mixFlex(flex,0,center,0,column);
 
     .categorias {
         @include mixFlex(flex,center,0,0,0);
@@ -60,140 +58,180 @@
     .menu {
         @include mixFlex(flex,center,center,wrap,0);
         margin: 15px 0;
+        max-width: 1200px;
 
-        .box {
-            background: $blanco;
-            border-radius: .5rem;
-            border: $borde;
-            box-shadow: $box-shadow;
-            width: 25%;
-            margin: 1rem;
-            padding: 1.5rem;    
+        > h3 {
+            font-size: 2rem;
+            border-bottom: $borde;
+            width: 100%;
+            margin: 10px;
+            text-transform: uppercase;
+        }
 
-            .box_image {
-                width: 100%;
-                height: 20rem;
-                overflow: hidden;
-                position: relative;
+        .box_categoria {
+            
+            @include mixFlex(flex,center,0,wrap,0);
+            width: 100%;
 
-                img {
-                    height: 100%;
-                    width: 100%;
-                    border-radius: .5rem;
-                    object-fit: cover;
-                }
-
-                .fa-heart{
-                    position: absolute;
-                    top: 1rem; right: 1rem;
-                    background: $blanco;
-                    border-radius: 50%;
-                    height: 5rem;
-                    width: 5rem;
-                    line-height: 5rem;
-                    font-size: 2rem;
-                    text-align: center;
-                    color: $black;
-
-                    &:hover {
-                        background: $red;
-                        color: $blanco;
-                    }                    
-                }                                 
-            }            
-
-            .box_content {
-                padding: .5rem;
-                padding-top: .5rem;
+            .box {
                 @include mixFlex(flex,0,0,0,column);
+                background: $blanco;
+                border-radius: 1rem;
+                // border: $borde;
+                box-shadow: $box-shadow;
+                width: 220px;
+                height: 370px;
+                margin: 1rem;
+                // padding: 1.5rem;    
 
-                .stars {
-                    padding-bottom: 1rem;
+                .box_image {
+                    width: 100%;
+                    height: 220px;
+                    overflow: hidden;
+                    position: relative;
+                    border-top-left-radius: 1rem;
+                    border-top-right-radius: 1rem;
 
-                    i {
-                        font-size: 1.2rem;
-                        color: $orange;
-                    }                    
-                }
-
-                .box_texto {
-                    height: 165px;
-
-                    h3 {
-                        font-size: 1.8rem;
-                        font-weight: 800;
-
-                        @include mixMQ($movilSM) {
-                            font-size: 1.5rem;
-                        };
-                    }
-
-                    p {
-                        font-size: 1.4rem;
-                        color: $light-color;
-                        line-height: 1.3;
-
-                        @include mixMQ($movilSM) {
-                            font-size: 1.3rem;
-                        };                    
-                    }
-
-                    ul {
-                        list-style-type: disc ; 
-                        list-style-position: inside;
-                        font-style: italic;
-
-                        li {    
-                            font-size: 1.2rem;
-                        }
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        border-top-left-radius: 1rem;
+                        border-top-right-radius: 1rem;
 
                         @include mixMQ($movil) {
-                            display: none;
+                            border-top-right-radius: 0;
                         };
                     }
 
-                    @include mixMQ($movil) {
-                        height: 85px;
+                    .fa-heart{
+                        position: absolute;
+                        top: 1rem; right: 1rem;
+                        background: $blanco;
+                        border-radius: 50%;
+                        height: 5rem;
+                        width: 5rem;
+                        line-height: 5rem;
+                        font-size: 2rem;
+                        text-align: center;
+                        color: $black;
+
+                        &:hover {
+                            background: $red;
+                            color: $blanco;
+                        } 
+                        
+                        @include mixMQ($movil) {
+                            left: 1rem;
+                        };
+                    }          
+                    
+                    @include mixMQ($deskXL) {
+                        height: 200px;
                     };
+                    @include mixMQ($movil) {
+                        height: 100%;
+                        width: 35%;
+                        border-top-left-radius: 1rem;
+                        border-bottom-left-radius: 1rem;
+                        border-top-right-radius: 0;
+                    };
+                }            
+
+                .box_content {
+                    padding: 1.5rem;
+                    @include mixFlex(flex,0,0,0,column);
+
+                    .box_texto {
+                        height: 95px;
+                        overflow-y: hidden;
+
+                        h3 {
+                            font-size: 1.5rem;
+                            font-weight: 800;
+
+                            // @include mixMQ($movilSM) {
+                            //     font-size: 1.5rem;
+                            // };
+                        }
+
+                        p {
+                            font-size: 1.3rem;
+                            color: $light-color;
+                            // line-height: 1.3rem;
+
+                            // @include mixMQ($movilSM) {
+                            //     font-size: 1.3rem;
+                            // };                    
+                        }
+
+                        //@include mixMQ($movil) {
+                        //    height: 150px;
+                        //};
+                    }
+                    
+                    span {
+                        display: inline-block;
+                        width: 100%;
+                        color: $red;
+                        // margin-left: 1rem;
+                        font-size: 2.5rem;
+                        font-weight: 800;
+                        text-align: right;
+                        border-top: $borde;
+                        padding-top: 3px;
+                    }
+
+                    a {
+                        text-align: center;
+
+                        // @include mixMQ($movil) {
+                        //     font-size: 1.4rem;
+                        // };
+                        // @include mixMQ($movilSM) {
+                        //     font-size: 1rem;
+                        // };
+                    }   
+                    
+                    @include mixMQ($movil) {
+                        width: 65%;
+                    };
+                }   
+
+    
+                &:hover .box_image img {
+                    // -webkit-filter: grayscale(0);
+                    -webkit-transform: scale(1.05);
                 }
+    
                 
-                span {
-                    color: $red;
-                    margin-left: 1rem;
-                    font-size: 3rem;
-                    font-weight: 800;
-                    text-align: right;
-                }
-
-                a {
-                    text-align: center;
-
-                    @include mixMQ($movil) {
-                        font-size: 1.4rem;
-                    };
-                    @include mixMQ($movilSM) {
-                        font-size: 1rem;
-                    };
-                }                
-            }   
-            
-            // .box
-            @include mixMQ($deskXL) {
-                width: 30%
-            };
-            @include mixMQ($tablet) {
-                width: 45%;
-            };
-            @include mixMQ($movil) {
-                width: 48%;
-                margin: 2px;        
-            };
-        }   
+                // .box
+                @include mixMQ($deskXL) {
+                    width: 18%;
+                    height: 350px;    
+                };
+                @include mixMQ($desk) {
+                    width: 17%;
+                    height: 350px;    
+                };
+                @include mixMQ($tablet) {
+                    width: 30%;
+                };
+                @include mixMQ($movil) {
+                    width: 100%;
+                    height: 150px;
+                    flex-direction: row;
+                };
+            }             
+        }
         
-        // .menu
+        //.menu
         @include mixMQ($deskXL) {
+            width: 95%;
             justify-content: space-evenly
         };
+
+
     } 
 
     // .secMenu

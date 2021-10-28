@@ -78,3 +78,9 @@
 
     * Se corrije error que hacia que el icono del menú hamburguesa estuviera visible en formatos DESKTOP
     * Se hace funcionar el menú hamburguesa en los tamaños móviles y con efecto visual    
+
+## CONTINUACIÓN : RAMA des-c16_p2
+
+    * Se modifica la sección del Menú, se le agregan productos y se cambia el estilo
+    * Se agrega animación al hero 
+    
