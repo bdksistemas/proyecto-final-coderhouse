@@ -83,4 +83,15 @@
 
     * Se modifica la sección del Menú, se le agregan productos y se cambia el estilo
     * Se agrega animación al hero 
+    -- COMMIT
+    * La página y la sección del MENÚ le agregué la librería COLLAPSE de Bootstrapt en la parte de las categorías haciendo que el usuario solo vea los platillso de la categoría que tenga seleccionada    
+    * Esta nueva modificación se hace RESPONSIVE para todos los dispositivos 
+    * Se agregan animaciones a algunas CARDS
+    * Se agrega MIXIN para crear iconos redondos de diferentes tamaños
+    * Se agrega icono fijo de enlace a WhatsApp funcional
+    * Se agrega botón + para agregar al carrito en los productos
+    * Se agrega popover de PRÓXIMAMENTE a los productos
+    
+    UNO LAS RAMAS AL MAIN PARA PREPARAR LA 4 ENTREGA
+
     

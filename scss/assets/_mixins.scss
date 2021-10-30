@@ -67,3 +67,16 @@
         @content;
     }
 }
+
+
+// MIXIN PARA DARLE FORMATO REDONDO A LOS ICONOS 
+@mixin  mixIcono($icoArea, $icoFont) {
+    cursor: pointer;
+    margin-left: .5rem;
+    height: $icoArea;
+    line-height: $icoArea;
+    width: $icoArea;
+    text-align: center;
+    font-size: $icoFont;    
+    border-radius: 50%;
+}

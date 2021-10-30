@@ -100,13 +100,12 @@
                 <div>
                     <h1>Cielo, Mar y <span>Tierra</span></h1>
                     <p class="preTitulo">Conoce nuestro menú especialmente diseñado para satisfacer todos tus gustos.</p>
-                </di>
+                </div>
             </div>
         </div>
 
-        <div class="botInicio">
-            <a href="#"><i class="fas fa-arrow-up iconos" id="botInicio"></i></a>
-        </div>
+        <!-- Se agrega el icono para enviar WP y subir al inicio -->
+        <div data-include="assets/widgets.html"></div>
 
     </header> 
 
@@ -114,301 +113,314 @@
     <main>
 
         <!-- PLATILLOS ESTRELLA -->
-        <section class="secMenu">
+        <section class="secMenu bkgwhite">
             <p class="preTitulo">Delicios platillos a escoger</p>
             <h2 class="titulo">Nuestros platillos estrella</h2>
-
-            <div class="categorias">
-                <ul>
-                    <li class="botonFiltro">Berr Snack</li>
-                    <li class="botonFiltro">Platillos Fuertes</li>
-                    <li class="botonFiltro">Mariscos</li>
-                    <li class="botonFiltro">Aves</li>
-                    <li class="botonFiltro">Burgers</li>
-                    <li class="botonFiltro">Bebidas</li>
-                </ul>
-            </div>
     
             <div class="menu">
-
-                <h3>Beer Snack</h3>
-                <div class="box_categoria">
-                    <!-- CARD PLATILLO-->
-                    <div class="box">
-                        <div class="box_image">
-                            <img src="img/menu-1.jpg" alt="Imagén del platillo">
-                            <i class="fas fa-heart"></i>
+                <div id="accordion">
+            
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+                                <i class="fas fa-arrow-down"></i> Snack
+                            </a>
                         </div>
-                        <div class="box_content"> 
-                            <div class="box_texto">
-                                <h3>Papas con queso y chile</h3>
-                                <p>Papas rizadas con queso cheddar, chili beans y jalapeños.</p>
+                
+                        <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+                            <div class="card-body">
+                                <div class="box_categoria">
+                                    <!-- CARD PLATILLO-->
+                                    <div class="box">
+                                        <div class="box_image">
+                                            <img src="img/menu-1.jpg" alt="Imagén del platillo">
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                        <div class="box_content"> 
+                                            <div class="box_texto">
+                                                <h3>Papas con queso y chile</h3>
+                                                <p>Papas rizadas con queso cheddar, chili beans y jalapeños.</p>
+                                            </div>
+                                            <div class="box_footer">
+                                                <span>$195</span>
+                                                <a href="#" title="Agregar al carrito" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Próximamente disponible."><i class="fas fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <div class="box">
+                                        <div class="box_image">
+                                            <img src="img/menu-2.jpg" alt="Imagén del platillo">
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                        <div class="box_content"> 
+                                            <div class="box_texto">
+                                                <h3>Mega Snack Combo</h3>
+                                                <p>Media docena de Boneless Fiery Hot Wings (170grs.), Chili Cheese Curls y Cheese Sticks.</p>
+                                            </div>
+                                            <div class="box_footer">
+                                                <span>$270</span>
+                                                <a href="#" title="Agregar al carrito" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Próximamente disponible."><i class="fas fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="box_image">
+                                            <img src="img/menu-3.jpg" alt="Imagén del platillo">
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                        <div class="box_content"> 
+                                            <div class="box_texto">
+                                                <h3>Nachos de sirlon</h3>
+                                                <p>Tortilla nacho con frijoles y mezcla de quesos, pork belly y sirloin asado con topping de crema, pico de gallo y aguacate</p>
+                                            </div>
+                                            <div class="box_footer">
+                                                <span>$250</span>
+                                                <a href="#" title="Agregar al carrito" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Próximamente disponible."><i class="fas fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="box_image">
+                                            <img src="img/menu-4.jpg" alt="Imagén del platillo">
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                        <div class="box_content"> 
+                                            <div class="box_texto">
+                                                <h3>Mini Burguers</h3>
+                                                <p>5 hamburgesas Xtra Small de 80grs cada una con sabor Xtra Large. Con papas fritas</p>
+                                            </div>
+                                            <div class="box_footer">
+                                                <span>$199</span>
+                                                <a href="#" title="Agregar al carrito" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Próximamente disponible."><i class="fas fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="box_image">
+                                            <img src="img/menu-5.jpg" alt="Imagén del platillo">
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                        <div class="box_content"> 
+                                            <div class="box_texto">
+                                                <h3>Boneless Fiery</h3>
+                                                <p>6 pzs de pechuguitas de pollo con salsa Fiery</p>
+                                            </div>
+                                            <div class="box_footer">
+                                                <span>$125</span>
+                                                <a href="#" title="Agregar al carrito" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Próximamente disponible."><i class="fas fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <span>$195</span>
-                            <!-- <a href="#" class="boton">Agregar al carrito</a>         -->
-                        </div>
-                    </div>    
-                    <div class="box">
-                        <div class="box_image">
-                            <img src="img/menu-2.jpg" alt="Imagén del platillo">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <div class="box_content"> 
-                            <div class="box_texto">
-                                <h3>Mega Snack Combo</h3>
-                                <p>Media docena de Boneless Fiery Hot Wings (170grs.), Chili Cheese Curls y Cheese Sticks.</p>
-                            </div>
-                            <span>$270</span>
-                            <!-- <a href="#" class="boton">Agregar al carrito</a>         -->
                         </div>
                     </div>
-                    <div class="box">
-                        <div class="box_image">
-                            <img src="img/menu-3.jpg" alt="Imagén del platillo">
-                            <i class="fas fa-heart"></i>
+            
+                    <div class="card"> 
+                        <div class="card-header">
+                            <a class="btn" data-bs-toggle="collapse" href="#collapseTwo">
+                                <i class="fas fa-arrow-down"></i> Platillo fuerte
+                            </a>
                         </div>
-                        <div class="box_content"> 
-                            <div class="box_texto">
-                                <h3>Nachos de sirlon</h3>
-                                <p>Tortilla nacho con frijoles y mezcla de quesos, pork belly y sirloin asado con topping de crema, pico de gallo y aguacate</p>
+                        <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">                        
+                            <div class="card-body">
+                                <div class="box_categoria">
+                                    <!-- CARD PLATILLO-->
+                                    <div class="box">
+                                        <div class="box_image">
+                                            <img src="img/menu-11.jpg" alt="Imagén del platillo">
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                        <div class="box_content"> 
+                                            <div class="box_texto">
+                                                <h3>Costillas a la BBQ</h3>
+                                                <p>800 grs de res o puerco, todo el rack, ahumadas, suaves y jugosas.</p>
+                                            </div>
+                                            <div class="box_footer">
+                                                <span>$450</span>
+                                                <a href="#" title="Agregar al carrito" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Próximamente disponible."><i class="fas fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <div class="box">
+                                        <div class="box_image">
+                                            <img src="img/menu-12.jpg" alt="Imagén del platillo">
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                        <div class="box_content"> 
+                                            <div class="box_texto">
+                                                <h3>Sirlon Grill</h3>
+                                                <p>600 grs de Sirlon al grill. Incluye sopa del día y 1/2 cerveza de la casa</p>
+                                            </div>
+                                            <div class="box_footer">
+                                                <span>$499</span>
+                                                <a href="#" title="Agregar al carrito" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Próximamente disponible."><i class="fas fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="box_image">
+                                            <img src="img/menu-13.jpg" alt="Imagén del platillo">
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                        <div class="box_content"> 
+                                            <div class="box_texto">
+                                                <h3>Churrasco King</h3>
+                                                <p>400 grs de Rib Eye al grill, sopa de la casa y 1/2 litro de cerveza de la casa</p>
+                                            </div>
+                                            <div class="box_footer">
+                                                <span>$599</span>
+                                                <a href="#" title="Agregar al carrito" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Próximamente disponible."><i class="fas fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="box_image">
+                                            <img src="img/menu-14.jpg" alt="Imagén del platillo">
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                        <div class="box_content"> 
+                                            <div class="box_texto">
+                                                <h3>Fajitas de res / pollo</h3>
+                                                <p>300 grs de fajitas de Tip Sirlon y pollo a la parrilla, cebolla, pimientos salteados, gratinadas con queso Monterey Jack y champiñones al vino blanco</p>
+                                            </div>
+                                            <div class="box_footer">
+                                                <span>$299</span>
+                                                <a href="#" title="Agregar al carrito" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Próximamente disponible."><i class="fas fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="box_image">
+                                            <img src="img/menu-15.jpg" alt="Imagén del platillo">
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                        <div class="box_content"> 
+                                            <div class="box_texto">
+                                                <h3>Pechuga de Pollo</h3>
+                                                <p>220grs de pechuga de pollo a la parrilla rellena con queso crema y espinacas sobre fetuccini al burro y chipotle</p>
+                                            </div>
+                                            <div class="box_footer">
+                                                <span>$255</span>
+                                                <a href="#" title="Agregar al carrito" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Próximamente disponible."><i class="fas fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <span>$250</span>
-                            <!-- <a href="#" class="boton">Agregar al carrito</a>         -->
                         </div>
                     </div>
-                    <div class="box">
-                        <div class="box_image">
-                            <img src="img/menu-4.jpg" alt="Imagén del platillo">
-                            <i class="fas fa-heart"></i>
+            
+                    <div class="card">
+                        <div class="card-header">
+                            <a class="btn" data-bs-toggle="collapse" href="#collapseThree">
+                                <i class="fas fa-arrow-down"></i> Las clásicas
+                            </a>
                         </div>
-                        <div class="box_content"> 
-                            <div class="box_texto">
-                                <h3>Mini Burguers</h3>
-                                <p>5 hamburgesas Xtra Small de 80grs cada una con sabor Xtra Large. Con papas fritas</p>
+                        <div id="collapseThree" class="collapse" data-bs-parent="#accordion">                        
+                            <div class="card-body">
+                                <div class="box_categoria">
+                                    <!-- CARD PLATILLO-->
+                                    <div class="box">
+                                        <div class="box_image">
+                                            <img src="img/menu-6.jpg" alt="Imagén del platillo">
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                        <div class="box_content"> 
+                                            <div class="box_texto">
+                                                <h3>Bacon BBQ Burger</h3>
+                                                <p>200 grs de carne de res a la BBQ, queso chedar, tocino, lechuga, tomate y aros de cebolla con papas fritas.</p>
+                                            </div>
+                                            <div class="box_footer">
+                                                <span>$225</span>
+                                                <a href="#" title="Agregar al carrito" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Próximamente disponible."><i class="fas fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                    <div class="box">
+                                        <div class="box_image">
+                                            <img src="img/menu-7.jpg" alt="Imagén del platillo">
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                        <div class="box_content"> 
+                                            <div class="box_texto">
+                                                <h3>Madre Burger</h3>
+                                                <p>200 grs de carne de res gratinada con queso cheddar, cebolla morada, lechuga, tomate y aguacate, con papas fritas.</p>
+                                            </div>
+                                            <div class="box_footer">
+                                                <span>$200</span>
+                                                <a href="#" title="Agregar al carrito" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Próximamente disponible."><i class="fas fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="box_image">
+                                            <img src="img/menu-8.jpg" alt="Imagén del platillo">
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                        <div class="box_content"> 
+                                            <div class="box_texto">
+                                                <h3>La Mexicana</h3>
+                                                <p>200 grs de carne de res con frijoles refritos, tomate, pimiento, cebolla, tocino, guacamole, queso Monterey Jack y papas fritas</p>
+                                            </div>
+                                            <div class="box_footer">
+                                                <span>$215</span>
+                                                <a href="#" title="Agregar al carrito" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Próximamente disponible."><i class="fas fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="box_image">
+                                            <img src="img/menu-9.jpg" alt="Imagén del platillo">
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                        <div class="box_content"> 
+                                            <div class="box_texto">
+                                                <h3>Crispy Pork & Burger</h3>
+                                                <p>150 grs de carne de res, Pulled Pork Quest Cheddar, salsa BBQ y crujiente cebolla con papas a la francesa</p>
+                                            </div>
+                                            <div class="box_footer">
+                                                <span>$250</span>
+                                                <a href="#" title="Agregar al carrito" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Próximamente disponible."><i class="fas fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="box_image">
+                                            <img src="img/menu-10.jpg" alt="Imagén del platillo">
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                        <div class="box_content"> 
+                                            <div class="box_texto">
+                                                <h3>Texas Burger</h3>
+                                                <p>150 grs de carne de res, brisket texano, pork belly y onion rings. Incluye papas a la francesa.</p>
+                                            </div>
+                                            <div class="box_footer">
+                                                <span>$220</span>
+                                                <a href="#" title="Agregar al carrito" data-bs-toggle="popover" data-bs-trigger="focus" data-bs-content="Próximamente disponible."><i class="fas fa-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <span>$199</span>
-                            <!-- <a href="#" class="boton">Agregar al carrito</a>         -->
                         </div>
                     </div>
-                    <div class="box">
-                        <div class="box_image">
-                            <img src="img/menu-5.jpg" alt="Imagén del platillo">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <div class="box_content"> 
-                            <div class="box_texto">
-                                <h3>Boneless Fiery</h3>
-                                <p>6 pzs de pechuguitas de pollo con salsa Fiery</p>
-                            </div>
-                            <span>$125</span>
-                            <!-- <a href="#" class="boton">Agregar al carrito</a>         -->
-                        </div>
-                    </div>
-                </div>
-
-                <h3>PLATILLO FUERTE</h3>
-                <div class="box_categoria">
-                    <!-- CARD PLATILLO-->
-                    <div class="box">
-                        <div class="box_image">
-                            <img src="img/menu-11.jpg" alt="Imagén del platillo">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <div class="box_content"> 
-                            <div class="box_texto">
-                                <h3>Costillas a la BBQ</h3>
-                                <p>800 grs de res o puerco, todo el rack, ahumadas, suaves y jugosas.</p>
-                            </div>
-                            <span>$495</span>
-                            <!-- <a href="#" class="boton">Agregar al carrito</a>         -->
-                        </div>
-                    </div>    
-                    <div class="box">
-                        <div class="box_image">
-                            <img src="img/menu-12.jpg" alt="Imagén del platillo">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <div class="box_content"> 
-                            <div class="box_texto">
-                                <h3>Sirlon Grill</h3>
-                                <p>600 grs de Sirlon al grill. Incluye sopa del día y 1/2 cerveza de la casa</p>
-                            </div>
-                            <span>$499</span>
-                            <!-- <a href="#" class="boton">Agregar al carrito</a>         -->
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="box_image">
-                            <img src="img/menu-13.jpg" alt="Imagén del platillo">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <div class="box_content"> 
-                            <div class="box_texto">
-                                <h3>Churrasco King</h3>
-                                <p>400 grs de Rib Eye al grill, sopa de la casa y 1/2 litro de cerveza de la casa</p>
-                            </div>
-                            <span>$599</span>
-                            <!-- <a href="#" class="boton">Agregar al carrito</a>         -->
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="box_image">
-                            <img src="img/menu-14.jpg" alt="Imagén del platillo">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <div class="box_content"> 
-                            <div class="box_texto">
-                                <h3>Fajitas de res / pollo</h3>
-                                <p>300 grs de fajitas de Tip Sirlon y pollo a la parrilla, cebolla, pimientos salteados, gratinadas con queso Monterey Jack y champiñones al vino blanco</p>
-                            </div>
-                            <span>$298</span>
-                            <!-- <a href="#" class="boton">Agregar al carrito</a>         -->
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="box_image">
-                            <img src="img/menu-15.jpg" alt="Imagén del platillo">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <div class="box_content"> 
-                            <div class="box_texto">
-                                <h3>Pechuga de Pollo</h3>
-                                <p>220grs de pechuga de pollo a la parrilla rellena con queso crema y espinacas sobre fetuccini al burro y chipotle</p>
-                            </div>
-                            <span>$256</span>
-                            <!-- <a href="#" class="boton">Agregar al carrito</a>         -->
-                        </div>
-                    </div>
-                </div>
-
-                <h3>CLASSIC BURGERS</h3>
-                <div class="box_categoria">
-                    <!-- CARD PLATILLO-->
-                    <div class="box">
-                        <div class="box_image">
-                            <img src="img/menu-6.jpg" alt="Imagén del platillo">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <div class="box_content"> 
-                            <div class="box_texto">
-                                <h3>Bacon BBQ Burger</h3>
-                                <p>200 grs de carne de res a la BBQ, queso chedar, tocino, lechuga, tomate y aros de cebolla con papas fritas.</p>
-                            </div>
-                            <span>$225</span>
-                            <!-- <a href="#" class="boton">Agregar al carrito</a>         -->
-                        </div>
-                    </div>    
-                    <div class="box">
-                        <div class="box_image">
-                            <img src="img/menu-7.jpg" alt="Imagén del platillo">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <div class="box_content"> 
-                            <div class="box_texto">
-                                <h3>Madre Burger</h3>
-                                <p>200 grs de carne de res gratinada con queso cheddar, cebolla morada, lechuga, tomate y aguacate, con papas fritas.</p>
-                            </div>
-                            <span>$200</span>
-                            <!-- <a href="#" class="boton">Agregar al carrito</a>         -->
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="box_image">
-                            <img src="img/menu-8.jpg" alt="Imagén del platillo">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <div class="box_content"> 
-                            <div class="box_texto">
-                                <h3>La Mexicana</h3>
-                                <p>200 grs de carne de res con frijoles refritos, tomate, pimiento, cebolla, tocino, guacamole, queso Monterey Jack y papas fritas</p>
-                            </div>
-                            <span>$215</span>
-                            <!-- <a href="#" class="boton">Agregar al carrito</a>         -->
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="box_image">
-                            <img src="img/menu-9.jpg" alt="Imagén del platillo">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <div class="box_content"> 
-                            <div class="box_texto">
-                                <h3>Crispy Pork & Burger</h3>
-                                <p>150 grs de carne de res, Pulled Pork Quest Cheddar, salsa BBQ y crujiente cebolla con papas a la francesa</p>
-                            </div>
-                            <span>$250</span>
-                            <!-- <a href="#" class="boton">Agregar al carrito</a>         -->
-                        </div>
-                    </div>
-                    <div class="box">
-                        <div class="box_image">
-                            <img src="img/menu-10.jpg" alt="Imagén del platillo">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <div class="box_content"> 
-                            <div class="box_texto">
-                                <h3>Texas Burger</h3>
-                                <p>150 grs de carne de res, brisket texano, pork belly y onion rings. Incluye papas a la francesa.</p>
-                            </div>
-                            <span>$220</span>
-                            <!-- <a href="#" class="boton">Agregar al carrito</a>         -->
-                        </div>
-                    </div>
-                </div>
+                </div>            
             </div>
-
+            
         </section>
 
     </main>
 
     <!-- FOOTER -->
-    <footer>
-        <div class="footer">
-            <img src="img/FondoFooter.jpg" alt="Fondo en el Footer" class="fondoSecciones bkgFiltro">        
-            <!-- Menu de Opciones -->
-            <div class="footer_content">
-                <div class="footer_Box">
-                    <h3>Menú</h3>
-                    <div>
-                        <a href="index.html" id="miInicio">Inicio</a>
-                        <a href="#" id="miMenu">Menú</a>
-                        <a href="promos.html" id="miPromos">Promociones</a>
-                        <a href="galeria.html" id="miGaleria">Galería</a>
-                        <a href="blog.html" id="miBlog">Blog</a>
-                        <a href="contacto.html" id="miContacto">Contacto</a>
-                    </div>
-                </div>
-                <!-- Dirección -->
-                <div class="footer_Box">
-                    <h3>Dirección</h3>                    
-                    <div>
-                        <p><i class="fas fa-map-marker-alt"></i> Av. Insurgentes 345, Centro, Mty, N.L.</p>
-                        <a><i class="fas fa-phone-alt"></i> +52 811 999 9999</a>
-                        <a><i class="fas fa-envelope"></i> ventas@turesteak.com</a>
-                        <p><i class="fas fa-clock"></i> Lunes a Domingo de 12pm a 1am</p>
-                    </div>
-                </div>
-                <!-- Redes Sociales -->
-                <div class="footer_Box">
-                    <h3>Redes Sociales</h3>
-                    <div class="redesSociales">
-                        <i class="fab fa-facebook iconos"></i>
-                        <i class="fab fa-instagram iconos"></i>
-                        <i class="fab fa-youtube iconos"></i>
-                        <i class="fab fa-whatsapp iconos"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="derechos">
-            <p class="mt-3">Todos los derechos reservados 2021 -  Desarrollado por <span>Alejandro Rdz</span></p>
-            <div class="legales">
-                <a href="#">Terminos y condiciones</a>
-                <p class="mx-5">-</p>
-                <a href="#">Política de privacidad</a>
-            </div>
-        </div>
-    </footer> 
+    <div data-include="assets/footer.html"></div>
+
+
+    <!-- ! LISTA DE SCRIPTS -->
+    <!-- ! --------------------------------------------------------------------------------- -->
+
+    <!-- ? LIBRERÍA PARA COLOCAR ARCHIVOS HTML DENTRO DE OTRO HTML -->
+    <script src="js/include-html.min.js"></script> 
     
     <!-- ? JQUERY -->
     <script src="js/jquery.js"></script>
@@ -416,6 +428,7 @@
     <!-- ? BOOTSTRAPT -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 
+    
     <script src="js/main.js"></script>
 
 </body>

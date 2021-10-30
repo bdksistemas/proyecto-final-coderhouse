@@ -56,179 +56,187 @@
     }
     
     .menu {
-        @include mixFlex(flex,center,center,wrap,0);
+
+        width: 100%;
         margin: 15px 0;
         max-width: 1200px;
 
-        > h3 {
-            font-size: 2rem;
-            border-bottom: $borde;
-            width: 100%;
-            margin: 10px;
-            text-transform: uppercase;
-        }
+        .card {
 
-        .box_categoria {
-            
-            @include mixFlex(flex,center,0,wrap,0);
-            width: 100%;
+            .card-header {
 
-            .box {
-                @include mixFlex(flex,0,0,0,column);
-                background: $blanco;
-                border-radius: 1rem;
-                // border: $borde;
-                box-shadow: $box-shadow;
-                width: 220px;
-                height: 370px;
-                margin: 1rem;
-                // padding: 1.5rem;    
+                a {
+                    font-size: 1.8rem;
 
-                .box_image {
-                    width: 100%;
-                    height: 220px;
-                    overflow: hidden;
-                    position: relative;
-                    border-top-left-radius: 1rem;
-                    border-top-right-radius: 1rem;
+                    margin: 10px;
+                    text-align: left;
+                    text-transform: uppercase;
+                }                    
+            }
 
-                    img {
-                        height: 100%;
+            .box_categoria {
+                    
+                @include mixFlex(flex,center,0,wrap,0);
+                width: 100%;
+
+                .box {
+                    @include mixFlex(flex,center,0,0,column);
+                    border-radius: 1rem;
+                    box-shadow: $box-shadow;
+                    width: 18%;
+                    height: 320px;
+                    margin: 1.5rem 1rem;
+
+                    .box_image {
                         width: 100%;
-                        object-fit: cover;
+                        height: 50%;
+                        overflow: hidden;
+                        position: relative;
                         border-top-left-radius: 1rem;
                         border-top-right-radius: 1rem;
 
+                        img {
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                            border-top-left-radius: 1rem;
+                            border-top-right-radius: 1rem;
+
+                            @include mixMQ($movil) {
+                                border-top-right-radius: 0;
+                            };
+                        }
+
+                        .fa-heart{
+                            position: absolute;
+                            top: 1rem; right: 1rem;
+                            @include mixIcono(4rem, 1.5rem);
+                            background: $blanco;
+                            color: $light-color;
+
+                            &:hover {
+                                background: $red;
+                                color: $blanco;
+                            } 
+                            
+                            @include mixMQ($movil) {
+                                left: 1rem;
+                            };
+                        }          
+                        
+                        //.box_image
                         @include mixMQ($movil) {
+                            height: 100%;
+                            width: 35%;
+                            border-top-left-radius: 1rem;
+                            border-bottom-left-radius: 1rem;
                             border-top-right-radius: 0;
                         };
-                    }
+                    }            
 
-                    .fa-heart{
-                        position: absolute;
-                        top: 1rem; right: 1rem;
-                        background: $blanco;
-                        border-radius: 50%;
-                        height: 5rem;
-                        width: 5rem;
-                        line-height: 5rem;
-                        font-size: 2rem;
-                        text-align: center;
-                        color: $black;
+                    .box_content {
+                        padding: 1rem 1rem 0 1rem;
+                        @include mixFlex(flex,0,0,0,column);
+                        height: 50%;
 
-                        &:hover {
-                            background: $red;
-                            color: $blanco;
-                        } 
+                        .box_texto {
+                            height: 70%;
+                            overflow-y: auto;
+
+                            // NOMBRE DEL PLATILLO
+                            h3 {
+                                font-size: 1.5rem;
+                                font-weight: 800;
+
+                                @include mixMQ($desk) {
+                                    font-size: 1.35rem;
+                                };
+
+                                @include mixMQ($movil) {
+                                    font-size: 1.8rem;
+                                };
+                            }
+
+                            // DESCRIPCIÓN DEL PRODUCTO
+                            p {
+                                font-size: 1.2rem;
+                                color: $light-color;
+
+                                @include mixMQ($movil) {
+                                    font-size: 1.3rem;
+                                };                                
+                            }
+                        }
+
+                        .box_footer {
+                            @include mixFlex(flex,space-between,center,0,0);
+                            height: 30%;
+                            border-top: $borde;
+                            padding: 5px;
+
+                            i {
+                                @include mixIcono(3rem, 1.5rem);
+                                color: $light-color;
+                                border: $borde;
+                                margin-left: 0;
+
+                                &:hover {
+                                    background: $red;
+                                    color: $blanco;
+                                    border: none;
+                                } 
+    
+                            }
+
+                            span {
+                                display: inline-block;
+                                color: $red;
+                                font-size: 2rem;
+                                font-weight: 800;
+                                text-align: right;
+                            }
+
+                            // .box_footer
+                            @include mixMQ($movil) {
+                                border-top: none;
+                            };
+
+
+                        }
                         
+                        //.box_content
                         @include mixMQ($movil) {
-                            left: 1rem;
+                            height: 100%;
+                            width: 65%;
+                            padding: 1.2rem 1.2rem .8rem 1.2rem;
                         };
-                    }          
-                    
-                    @include mixMQ($deskXL) {
-                        height: 200px;
-                    };
-                    @include mixMQ($movil) {
-                        height: 100%;
-                        width: 35%;
-                        border-top-left-radius: 1rem;
-                        border-bottom-left-radius: 1rem;
-                        border-top-right-radius: 0;
-                    };
-                }            
-
-                .box_content {
-                    padding: 1.5rem;
-                    @include mixFlex(flex,0,0,0,column);
-
-                    .box_texto {
-                        height: 95px;
-                        overflow-y: hidden;
-
-                        h3 {
-                            font-size: 1.5rem;
-                            font-weight: 800;
-
-                            // @include mixMQ($movilSM) {
-                            //     font-size: 1.5rem;
-                            // };
-                        }
-
-                        p {
-                            font-size: 1.3rem;
-                            color: $light-color;
-                            // line-height: 1.3rem;
-
-                            // @include mixMQ($movilSM) {
-                            //     font-size: 1.3rem;
-                            // };                    
-                        }
-
-                        //@include mixMQ($movil) {
-                        //    height: 150px;
-                        //};
-                    }
-                    
-                    span {
-                        display: inline-block;
-                        width: 100%;
-                        color: $red;
-                        // margin-left: 1rem;
-                        font-size: 2.5rem;
-                        font-weight: 800;
-                        text-align: right;
-                        border-top: $borde;
-                        padding-top: 3px;
-                    }
-
-                    a {
-                        text-align: center;
-
-                        // @include mixMQ($movil) {
-                        //     font-size: 1.4rem;
-                        // };
-                        // @include mixMQ($movilSM) {
-                        //     font-size: 1rem;
-                        // };
                     }   
-                    
-                    @include mixMQ($movil) {
-                        width: 65%;
-                    };
-                }   
 
-    
-                &:hover .box_image img {
-                    // -webkit-filter: grayscale(0);
-                    -webkit-transform: scale(1.05);
-                }
-    
-                
-                // .box
-                @include mixMQ($deskXL) {
-                    width: 18%;
-                    height: 350px;    
-                };
-                @include mixMQ($desk) {
-                    width: 17%;
-                    height: 350px;    
-                };
-                @include mixMQ($tablet) {
-                    width: 30%;
-                };
-                @include mixMQ($movil) {
-                    width: 100%;
-                    height: 150px;
-                    flex-direction: row;
-                };
-            }             
+        
+                    &:hover .box_image img {
+                        -webkit-transform: scale(1.05);
+                    }
+        
+                    
+                    // .box
+                    @include mixMQ($desk) {
+                        width: 17%;
+                    };
+                    @include mixMQ($tablet) {
+                        width: 30%;
+                    };
+                    @include mixMQ($movil) {
+                        width: 100%;
+                        height: 120px;
+                        flex-direction: row;
+                    };
+                }             
+            }
         }
         
         //.menu
         @include mixMQ($deskXL) {
             width: 95%;
-            justify-content: space-evenly
         };
 
 

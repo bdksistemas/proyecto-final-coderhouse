@@ -9,7 +9,12 @@
 
         // console.log(window.location.pathname);
         // console.log(window.location.href);
+
+        if (document.querySelector("#libAOS")) {
+            AOS.init();
+        }
         
+
         // * CÓDIGO PARA ACTIVAR LA LIBRERÍA VANILLATILT, ANIMACIONES EN LAS CARD DEL INDEX.HTML
         if (document.querySelector("#secDestacados")) {
             VanillaTilt.init(document.querySelectorAll(".destacados_card"), {
@@ -23,7 +28,7 @@
         document.addEventListener('click', (e) => {
             e.preventDefault();
 
-            console.log(e.target);        
+            // console.log(e.target);        
 
             // ? BOTÓN PARA REPRODUCIR EL VÍDEO PROMOCIONAL
             if ( e.target.matches('#play') || e.target.matches('#close') || e.target.matches('#imgPlay') ) {
@@ -34,7 +39,7 @@
             if ( e.target.matches('#botInicio') ) {
                 $('html, body').animate({
                     scrollTop: 0
-                }, 600);        
+                }, 100);        
             }
 
             // ? LINK A PAGINA DE INICIO
@@ -73,6 +78,11 @@
                 apertura();
             }
 
+            // ? LINK A WHATSAPP
+            if ( e.target.matches('#botWP')) {
+                let url = 'https://api.whatsapp.com/send?phone=528118222666&text=Hola,%20necesito%20informes%20de%20su%20restaurante';
+                window.open(url, '_blank');
+            } 
 
             // * fin del EvenListener de los clicks
         });
@@ -131,6 +141,7 @@
             });    
         };
         
+        preparaPopups();
 
     });
 
@@ -155,17 +166,33 @@
         if (cerrado) {
             menu.style.width = '70vw';
             cerrado = false;
-            botSubir.style.visibility = 'hidden';
+            if (botSubir) {
+                botSubir.style.visibility = 'hidden';
+            }
         } else {
             menu.style.width = '0%';
             menu.style.overflow = 'hidden';
             cerrado = true;
-            menuLat = false;                
-            botSubir.style.visibility = 'visible';
+            menuLat = false;
+            if (botSubir) {
+                botSubir.style.visibility = 'visible';
+            }
         }
         menu.classList.toggle('menu2');
-    }        
+    };   
 
+    // ! SE ACTIVAN LOS POPOVER Y TOOLTIP DE BOOTSTRAPT 
+    function preparaPopups() {        
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
+        
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    }
 
 })();
 
