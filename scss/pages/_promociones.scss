@@ -1,52 +1,60 @@
 /* ? OFERTAS */
 /* ?___________________________________________________________________________________________________________________________________________ */
 
+.cardOferta {
+    margin: 10px 0 20px 0;
+    width: 31%;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: $box-shadow2;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:hover img {
+        // -webkit-filter: grayscale(0);
+        -webkit-transform: scale(1.05);
+    }
+
+    @include mixMQ($movil) {
+        width: 47%;
+    };
+    @include mixMQ($movilSM) {
+        width: 90%;
+    };
+}
+
+
 .secOfertas {
 
     @include mixFlex(flex,0,center,0,column);
 
-    width: 100%;
+    width: 100vw;
     height: auto;
-    // margin: 10px;
 
     .ofertas {
 
         @include mixFlex(flex,center,center,0,0);
-        width: 90%;
+        width: 95%;
 
+        .ofertas_promo {
+            @extend .cardOferta;
+        }
+    
     }    
-
-    .ofertas_promo {
-        margin: 10px 0 20px 0;
-        width: 31%;
-
-        img {
-            width: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: $box-shadow2;
-        }
-
-        &:hover {
-            cursor: pointer;
-        }
-
-        &:hover img {
-            // -webkit-filter: grayscale(0);
-            -webkit-transform: scale(1.05);
-        }
-
-        @include mixMQ($movil) {
-            width: 47%;
-        };
-        @include mixMQ($movilSM) {
-            width: 90%;
-        };
-    }
 
     .pagOfertas {
         @include mixFlex(flex,space-between,0,wrap,0);
         max-width: 1200px;
+
+        .ofertas_promo_ext {            
+            @extend .cardOferta;
+        }
     }
 
 }

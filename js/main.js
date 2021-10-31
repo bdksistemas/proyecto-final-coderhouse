@@ -110,7 +110,10 @@
                     1024: {
                         slidesPerView: 3,
                     },                
-                }
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                  },
             });    
         };
 
@@ -137,7 +140,10 @@
                     1024: {
                         slidesPerView: 3,
                     },                
-                }
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                  },
             });    
         };
         
