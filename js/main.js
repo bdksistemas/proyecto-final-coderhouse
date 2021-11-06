@@ -28,7 +28,7 @@
         document.addEventListener('click', (e) => {
             e.preventDefault();
 
-            // console.log(e.target);        
+            //console.log(e.target);        
 
             // ? BOTÓN PARA REPRODUCIR EL VÍDEO PROMOCIONAL
             if ( e.target.matches('#play') || e.target.matches('#close') || e.target.matches('#imgPlay') ) {
@@ -83,6 +83,26 @@
                 let url = 'https://api.whatsapp.com/send?phone=528118222666&text=Hola,%20necesito%20informes%20de%20su%20restaurante';
                 window.open(url, '_blank');
             } 
+
+            // ? LINKS A FACEBOOK
+            if ( e.target.matches('.botFB')) {               
+                let url = 'https://www.facebook.com/';
+                window.open(url, '_blank');
+            } 
+
+            // ? LINKS A ISNTAGRAM
+            if ( e.target.matches('.botInsta')) {
+                console.log('Si recibo el click de Insta');                
+                let url = 'https://www.instagram.com/';
+                window.open(url, '_blank');
+            } 
+
+            // ? LINKS A YOUTUBE
+            if ( e.target.matches('.botYT')) {
+                let url = 'https://www.youtube.com/';
+                window.open(url, '_blank');
+            } 
+
 
             // * fin del EvenListener de los clicks
         });
